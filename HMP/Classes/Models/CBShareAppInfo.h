@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CBShareAppInfo : CBBaseModel
+
 @property (nonatomic,assign)BOOL needReview;//捷径发布时是否需要审核
 @property (nonatomic,assign)BOOL needReLogin;//首次进入APP时是否需要重新登录
 @property (nonatomic,assign)BOOL isRepairing;

@@ -289,6 +289,9 @@
     return (viewController.isViewLoaded && viewController.view.window);
 }
 +(NSDictionary *)parseJSONStringToNSDictionary:(NSString *)JSONString {
+    if (!JSONString) {
+        return nil;
+    }
     NSData *JSONData = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];
     return responseJSON;

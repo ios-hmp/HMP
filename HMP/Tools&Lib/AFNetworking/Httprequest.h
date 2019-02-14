@@ -29,9 +29,9 @@
 typedef void (^returnObject)(id obj);
 typedef void (^returnError)(id error);
 +(Httprequest *)share;
++(AFHTTPSessionManager *)shareSessionManger;
 
 @property(nonatomic,retain) AFHTTPSessionManager * manager;
-
 
 /**
  *  get请求

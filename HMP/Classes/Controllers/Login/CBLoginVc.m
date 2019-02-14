@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "CBRegisterVc.h"
 #import "CBWebVc.h"
+#import "CBBaseTabbarVc.h"
 
 
 typedef void (^returnObject)(id obj);
@@ -39,6 +40,35 @@ typedef void (^returnError)(id error);
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"登录";
+    
+}
+
+-(void)doLogin{
+    
+    NSString *url = @"user/public/login";
+    
+    NSDictionary *par = @{
+                          @"username":_accountField.text,
+                          @"password":_pwdField.text,
+                          @"device_type":@"ios",
+                          };
+    [[Httprequest share] postObjectByParameters:par andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
+        CBUser *u = [CBUser share];
+        if (ISDIC(obj) && obj[@"data"]) {
+            u.token = obj[@"data"][@"token"];
+            [u setValuesForKeysWithDictionary:obj[@"data"][@"user"]];
+            [u save];
+            [[Httprequest share].manager.requestSerializer setValue:[CBUser share].token forHTTPHeaderField:@"Marriage-Love-Token"];
+            [[Httprequest share].manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"Marriage-Love-Device-Type"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"loginEM" object:u.uid];
+            
+            [self presentViewController:[[CBBaseTabbarVc alloc]init] animated:YES completion:nil];
+        }
+        [LoadingView stopLoading];
+    } andError:^(id error) {
+        
+    }];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -59,6 +89,11 @@ typedef void (^returnError)(id error);
     
     [CBFastUI addRoundCornerAnBorder:self.registerBn];
     
+#warning test
+    if (_accountField.text.length<1) {
+        _accountField.text  = @"18629450667";
+        _pwdField.text = @"18629450667";
+    }
     
 }
 
@@ -94,7 +129,7 @@ typedef void (^returnError)(id error);
 }
 
 - (IBAction)loginAction:(UIButton *)sender {
-  
+    
     if (self.accountField.text.length<1) {
         [LoadingView showAMessage:@"请输入正确的用户名"];
         return;
@@ -106,36 +141,10 @@ typedef void (^returnError)(id error);
     [self.view endEditing:YES];
 
     [self savePwd];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-    });
+    
     [LoadingView showLoading];
-    [[CBBaseModel share] request:@"" par:nil callback:^(BOOL succs, id  _Nonnull value, NSError * _Nonnull error) {
-    
-        if ([AppManager isCurrentViewControllerVisible:self]) {
-            
-            if (!error) {
-//                UITabBarController *bar = (UITabBarController *)[AppManager getVCInBoard:@"Main" ID:@"barvc"];
-//
-//                [self presentViewController:bar animated:YES completion:nil];
-                if (self.backEvent) {
-                    self.backEvent(@1);
-                }
-                POP;
-                
-            }else{
-                if (error.code==101) {
-                    [LoadingView showAMessage:@"用户名或密码错误"];
-                    
-                }else
-                    [LoadingView showAMessage:@"登录失败,请检查网络"];
-                
-            }
-        }
-        [LoadingView stopLoading];
+    [self doLogin];
 
-    }];
-    
 }
 - (IBAction)forget:(UIButton *)sender {
     

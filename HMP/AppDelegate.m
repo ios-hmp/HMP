@@ -10,7 +10,7 @@
 #import "CBBaseTabbarVc.h"
 #import <HyphenateLite/HyphenateLite.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<EMClientDelegate>
 
 @end
 
@@ -20,7 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[UINavigationBar appearance] setTintColor:MainColor];
-    BOOL goLogin = NO;
+    //无token，去登录；登录后保存token
+    
+    BOOL goLogin = ![CBUser share].token;
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     if (goLogin) {
         UIViewController *vc = [AppManager getVCInBoard:@"Login" ID:@"loginNav"];
@@ -35,10 +37,37 @@
     EMOptions *options = [EMOptions optionsWithAppkey:@"1114190110181664#0dbb17f5117bcf7ebfb860180f91c1fb"];
     options.apnsCertName = @"istore_dev";
     [[EMClient sharedClient] initializeSDKWithOptions:options];
+    [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
 
+    //用户登录app后同步登录环信
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginEM:) name:@"loginEM" object:nil];
+    
     return YES;
 }
 
+- (void)loginEM:(NSNotification *)noti{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        //调用登录时，未设置自动登录，则登录，登录成功设置自动登录
+        BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
+        if (!isAutoLogin) {
+            EMError *error = [[EMClient sharedClient] loginWithUsername:[noti.object stringValue] password:[noti.object stringValue]];
+            if (error) {
+                NSLog(@"环信登录出错L：%@",error);
+            }else{
+                [[EMClient sharedClient].options setIsAutoLogin:YES];
+            }
+        }
+    });
+}
+
+/*!
+ *  自动登录返回结果
+ *
+ *  @param error 错误信息
+ */
+- (void)autoLoginDidCompleteWithError:(EMError *)error{
+    NSLog(@"环信自动登录完成:%@",error);
+}
 // APP进入后台
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {

@@ -24,6 +24,8 @@
 #import "CBWebVc.h"
 #import "Httprequest.h"
 #import "CBUser.h"
+#import <HyphenateLite/HyphenateLite.h>
+
 #endif
 
 

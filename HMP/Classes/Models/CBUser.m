@@ -21,6 +21,22 @@ CBUser *_user;
     return _user;
 }
 
+-(instancetype)init{
+    self = [super init];
+    if (self) {
+        NSString *oldInfo = [[NSUserDefaults standardUserDefaults] objectForKey:@"UINFO"];
+        NSDictionary *dic = [AppManager parseJSONStringToNSDictionary:oldInfo];
+        if (ISDIC(dic)) {
+            [self setValuesForKeysWithDictionary:dic];
+        }
+        if (_token) {
+            [Httprequest share].manager = [Httprequest shareSessionManger];
+            [[Httprequest share].manager.requestSerializer setValue:_token forHTTPHeaderField:@"Marriage-Love-Token"];
+            [[Httprequest share].manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"Marriage-Love-Device-Type"];
+        }
+    }
+    return self;
+}
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{
     if ([key isEqualToString:@"id"]) {
@@ -28,5 +44,13 @@ CBUser *_user;
     }
 }
 
+-(void)save{
+    [[NSUserDefaults standardUserDefaults] setObject:[self mj_JSONString] forKey:@"UINFO"];
+}
+
+-(void)logout{
+    self.token = nil;
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"UINFO"];
+}
 
 @end

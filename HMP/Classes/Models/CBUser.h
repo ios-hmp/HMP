@@ -53,6 +53,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy)NSString *balance;
 @property (nonatomic,copy)NSString *signature;
 @property (nonatomic,copy)NSString *constellation;
+
+- (void)save;
+- (void)logout;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view.
     tag = 1;
     [self testData];
-    [self testLogin];
+//    [self testLogin];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self testAPI];
     });
@@ -107,7 +107,7 @@
 //                            @"pics":@[@"http://love.test2.yikeapp.cn/upload/20190213/03c0377b36a4b2bb1848b993b4cf3fd5.png"]
 //                            }];
 //    [self testAPI:@"user/profile/getPhotos" par:nil];
-//    [self testAPI:@"user/share/getList" par:nil];
+    [self testAPI:@"user/share/getList" par:nil];
 //    [self testAPI:@"/user/cryptolalia/send" par:@{@"rev_uids":@"5,27",@"content":@"这里是谜语内容"}];
 
     
@@ -170,9 +170,10 @@
         if (ISDIC(obj) && obj[@"data"]) {
             u.token = obj[@"data"][@"token"];
             [u setValuesForKeysWithDictionary:obj[@"data"][@"user"]];
-            
+            [u save];
             [[Httprequest share].manager.requestSerializer setValue:[CBUser share].token forHTTPHeaderField:@"Marriage-Love-Token"];
             [[Httprequest share].manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"Marriage-Love-Device-Type"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"loginEM" object:u.uid];
             
         }
     } andError:^(id error) {

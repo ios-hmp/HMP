@@ -88,7 +88,18 @@ static AFHTTPSessionManager *manager;
                 [LoadingView showAMessage:mmsg];
             }
         }
+        
         if ([dd isKindOfClass:[NSDictionary class]]) {
+            if ([dd[@"code"] integerValue]==10001) {
+                //登录失效，清楚信息，退出环信
+                [[CBUser share] logout];
+                dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                    EMError *error = [[EMClient sharedClient] logout:YES];
+                    if (!error) {
+                        NSLog(@"退出环信成功");
+                    }
+                });
+            }
             complain(responseObject);
         }else{
             Error(responseObject);

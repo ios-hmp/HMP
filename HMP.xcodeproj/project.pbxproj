@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2074B882221564C700D03214 /* CBMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B881221564C700D03214 /* CBMessageVC.m */; };
+		2074B88822156D2D00D03214 /* CBMemberVIPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B88722156D2D00D03214 /* CBMemberVIPVC.m */; };
 		4323603521FC589700D86862 /* CBHomeMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 4323603421FC589700D86862 /* CBHomeMsg.m */; };
 		4332291021F8C19C0071B16E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 433227FD21F8C19C0071B16E /* icon.png */; };
 		4332291121F8C19C0071B16E /* myCline.png in Resources */ = {isa = PBXBuildFile; fileRef = 4332280221F8C19C0071B16E /* myCline.png */; };
@@ -141,6 +143,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2074B880221564C700D03214 /* CBMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMessageVC.h; sourceTree = "<group>"; };
+		2074B881221564C700D03214 /* CBMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMessageVC.m; sourceTree = "<group>"; };
+		2074B88622156D2D00D03214 /* CBMemberVIPVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMemberVIPVC.h; sourceTree = "<group>"; };
+		2074B88722156D2D00D03214 /* CBMemberVIPVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMemberVIPVC.m; sourceTree = "<group>"; };
 		4323603321FC589700D86862 /* CBHomeMsg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHomeMsg.h; sourceTree = "<group>"; };
 		4323603421FC589700D86862 /* CBHomeMsg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHomeMsg.m; sourceTree = "<group>"; };
 		433227FD21F8C19C0071B16E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -849,6 +855,10 @@
 			children = (
 				434151CF21FC304000577405 /* CBMineVc.h */,
 				434151D021FC304000577405 /* CBMineVc.m */,
+				2074B880221564C700D03214 /* CBMessageVC.h */,
+				2074B881221564C700D03214 /* CBMessageVC.m */,
+				2074B88622156D2D00D03214 /* CBMemberVIPVC.h */,
+				2074B88722156D2D00D03214 /* CBMemberVIPVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1098,6 +1108,7 @@
 				4332296321F8C19C0071B16E /* SDWebImageCompat.m in Sources */,
 				4332292C21F8C19C0071B16E /* UIView+MJExtension.m in Sources */,
 				4332291421F8C19C0071B16E /* UIView+YYAdd.m in Sources */,
+				2074B88822156D2D00D03214 /* CBMemberVIPVC.m in Sources */,
 				4332293421F8C19C0071B16E /* MJRefreshStateHeader.m in Sources */,
 				4332296A21F8C19C0071B16E /* UIButton+WebCache.m in Sources */,
 				4332296921F8C19C0071B16E /* UIView+WebCacheOperation.m in Sources */,
@@ -1118,6 +1129,7 @@
 				4332293C21F8C19C0071B16E /* TZVideoPlayerController.m in Sources */,
 				4332297C21F8C19C0071B16E /* CBWebVc.m in Sources */,
 				4332292D21F8C19C0071B16E /* MJRefreshBackGifFooter.m in Sources */,
+				2074B882221564C700D03214 /* CBMessageVC.m in Sources */,
 				4332292721F8C19C0071B16E /* MJFoundation.m in Sources */,
 				4332295D21F8C19C0071B16E /* SDWebImageManager.m in Sources */,
 				434151BC21FC21A000577405 /* CBBaseInfoVc.m in Sources */,

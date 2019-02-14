@@ -11,7 +11,6 @@
 @implementation CBMemberVIPVC
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"消息";
     self.title = @"会员";
     // Do any additional setup after loading the view.
 }

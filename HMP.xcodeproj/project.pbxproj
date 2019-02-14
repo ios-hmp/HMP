@@ -140,6 +140,7 @@
 		438337F9221311F600B04CFA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337F0221311F600B04CFA /* AFSecurityPolicy.m */; };
 		438337FC221317FE00B04CFA /* CBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337FB221317FE00B04CFA /* CBUser.m */; };
 		43AC71E421FB257000B33EFF /* CBFastUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AC71E321FB257000B33EFF /* CBFastUI.m */; };
+		A0BCC92F221581D20093EEF9 /* CBRedBagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -403,6 +404,8 @@
 		43AC71E221FB257000B33EFF /* CBFastUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBFastUI.h; sourceTree = "<group>"; };
 		43AC71E321FB257000B33EFF /* CBFastUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBFastUI.m; sourceTree = "<group>"; };
 		43AC71E521FB282700B33EFF /* AllDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllDefines.h; sourceTree = "<group>"; };
+		A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRedBagVC.h; sourceTree = "<group>"; };
+		A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRedBagVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -859,6 +862,8 @@
 				2074B881221564C700D03214 /* CBMessageVC.m */,
 				2074B88622156D2D00D03214 /* CBMemberVIPVC.h */,
 				2074B88722156D2D00D03214 /* CBMemberVIPVC.m */,
+				A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */,
+				A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1121,6 +1126,7 @@
 				4332295F21F8C19C0071B16E /* UIImageView+HighlightedWebCache.m in Sources */,
 				4332294E21F8C19C0071B16E /* IQKeyboardManager.m in Sources */,
 				4332291C21F8C19C0071B16E /* MJPropertyType.m in Sources */,
+				A0BCC92F221581D20093EEF9 /* CBRedBagVC.m in Sources */,
 				4332295C21F8C19C0071B16E /* TAAbstractDotView.m in Sources */,
 				4332296121F8C19C0071B16E /* UIImage+GIF.m in Sources */,
 				4332295921F8C19C0071B16E /* TADotView.m in Sources */,

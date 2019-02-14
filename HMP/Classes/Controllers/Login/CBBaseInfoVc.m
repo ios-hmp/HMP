@@ -33,8 +33,12 @@
 */
 
 - (IBAction)sureAction:(UIButton *)sender {
-    CBBaseTabbarVc *vc = [[CBBaseTabbarVc alloc]init];
-    [self presentViewController:vc animated:YES completion:nil];
+    if (!self.isFromSearch) {
+        CBBaseTabbarVc *vc = [[CBBaseTabbarVc alloc]init];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else{
+        POP;
+    }
 }
 
 - (IBAction)userTypeAction:(UIButton *)sender {
@@ -61,5 +65,14 @@
     self.man.selected = NO;
     self.woman.selected = NO;
     sender.selected = YES;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
 }
 @end

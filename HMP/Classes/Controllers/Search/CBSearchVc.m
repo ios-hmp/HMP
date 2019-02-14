@@ -7,6 +7,7 @@
 //
 
 #import "CBSearchVc.h"
+#import "CBBaseInfoVc.h"
 
 #define CB_SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 #define CB_SCREENHIGH  [UIScreen mainScreen].bounds.size.height
@@ -51,7 +52,7 @@
     });
     
     //cell点击后大图显示
-//    左右滑动切换相册其他照片，上下滑动切换人
+    //    左右滑动切换相册其他照片，上下滑动切换人
 }
 
 -(void)configUI{
@@ -62,8 +63,8 @@
     UIBarButtonItem *item3 = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"nav_search"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(search)];
     self.navigationItem.leftBarButtonItems = @[item1,item2];
     self.navigationItem.rightBarButtonItem = item3;
-
-
+    
+    
 }
 
 -(void)settings{
@@ -96,7 +97,7 @@
     [self.tableDatas addObject:@"用户mdasdsaar1asd"];
     [self.tableDatas addObject:@""];
     [self.tableDatas addObject:@"vnv那你m1"];
-
+    
     
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -130,6 +131,10 @@
     return CB_BRANDDEV;
 }
 - (IBAction)goFill:(UIButton *)sender {
+    
+    CBBaseInfoVc *vc = (CBBaseInfoVc *)[AppManager getVCInBoard:@"Login" ID:@"CBBaseInfoVc"];
+    vc.isFromSearch = YES;
+    PUSH(vc);
     
     [UIView animateWithDuration:0.3 animations:^{
         self.fillInfoView.alpha = 0;

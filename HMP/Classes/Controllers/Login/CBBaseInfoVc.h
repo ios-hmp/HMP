@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)sureAction:(UIButton *)sender;
 - (IBAction)userTypeAction:(UIButton *)sender;
 - (IBAction)sexAction:(UIButton *)sender;
-
+@property (nonatomic,assign)BOOL isFromSearch;
 @end
 
 NS_ASSUME_NONNULL_END

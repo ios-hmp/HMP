@@ -38,8 +38,9 @@
         self.tableview.tableFooterView = [[UIView alloc]init];
 
     }
-
+    
     [self configUI];
+    [self loadNetData];
 }
 
 - (void)loadNetData{

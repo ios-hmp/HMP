@@ -38,14 +38,6 @@
     
 }
 
-
-//- (void)viewWillDisappear:(BOOL)animated{
-//    [super viewWillDisappear:animated];
-//    if (self.isFroget) {
-//        self.navigationController.navigationBar.hidden = YES;
-//    }
-//}
-
 - (IBAction)backAct:(id)sender {
     GOBACK;
 }
@@ -67,26 +59,42 @@
         [LoadingView showAMessage:@"两次密码输入不一致"];
         return;
     }
-    [LoadingView showLoading];
-    [[CBBaseModel share] request:@"" par:nil callback:^(BOOL succs, id  _Nonnull value, NSError * _Nonnull error) {
+    
+    
+    NSString *url = @"user/public/register";
+    
+    NSDictionary *par = @{
+                          @"username":_phone.text,
+                          @"password":_pwdField2.text,
+                          @"verification_code":_verifycode.text,
+                          @"device_type":@"ios",
+                          };
+    [[Httprequest share] postObjectByParameters:par andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
         [LoadingView stopLoading];
-        
-        [self registerDone];
-        if (error) {
-            NSLog(@"%@",error);
-           
-                [LoadingView showAMessage:error.description];
-            
-        }else{
-            [LoadingView showAMessage:@"注册成功"];
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//
-//                if (self.backEvent) {
-//                    self.backEvent(@{@"acc":self.phone.text,@"pwd":self.pwdField2.text});
-//                }
-//                POP;
-//            });
+        //注册完成后，直接进入完善信息页面，
+        if (ISDIC(obj) && obj[@"data"] && obj[@"data"][@"token"]) {
+            CBUser *u = [CBUser share];
+            u.token = obj[@"data"][@"token"];
+            [u setValuesForKeysWithDictionary:obj[@"data"][@"user"]];
+            [u save];
+            [[Httprequest share].manager.requestSerializer setValue:[CBUser share].token forHTTPHeaderField:@"Marriage-Love-Token"];
+            [[Httprequest share].manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"Marriage-Love-Device-Type"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"loginEM" object:u.uid];
+            [self registerDone];
         }
+        /*
+        if ([obj[@"code"] integerValue]==0) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                if (self.backEvent) {
+                    self.backEvent(@{@"acc":self.phone.text,@"pwd":self.pwdField2.text});
+                }
+                POP;
+            });
+        }
+         */
+    } andError:^(id error) {
+        
     }];
 }
 
@@ -101,28 +109,36 @@
     SHOW(web);
 }
 -(void)codeAction:(UIButton *)sender{
+    if (_phone.text.length<11) {
+        [LoadingView showAMessage:@"请输入正确手机号"];
+        return;
+    }
     __weak typeof(self) weakSelf = self;
     sender.userInteractionEnabled = NO;
-    [[CBBaseModel share] request:@"" par:nil callback:^(BOOL succs, id  _Nonnull value, NSError * _Nonnull error) {
-        [LoadingView stopLoading];
+    
+    NSString *url = @"user/verification_code/send";
+    
+    NSDictionary *par = @{
+                          @"username":_phone.text,
+                          @"is_register":@1,
+                          };
+    [[Httprequest share] postObjectByParameters:par andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
         
-        if (error) {
-            sender.userInteractionEnabled = YES;
-            NSLog(@"%@",error);
-            
-            [LoadingView showAMessage:error.description];
-            
-        }else{
-            NSDictionary *info = value;
-            if (ISDIC(info) && [info[@"code"] integerValue]==1) {
+        if ([obj[@"code"] integerValue]==0) {
+            NSDictionary *info = obj;
+            if (ISDIC(info) && [info[@"code"] integerValue]==0) {
                 [LoadingView showAMessage:@"验证码发送成功"];
                 
                 [weakSelf countDown];
-            }else if(ISDIC(info)){
-                [LoadingView showAMessage:info[@"msg"]];
+            }else{
+                sender.userInteractionEnabled = YES;
             }
-            
+        }else{
+            sender.userInteractionEnabled = YES;
         }
+    } andError:^(id error) {
+        sender.userInteractionEnabled = YES;
+
     }];
 }
 
@@ -132,7 +148,7 @@
 }
 
 - (void)cutTime{
-    self.codeBtn.title = [NSString stringWithFormat:@"%d",curTime];
+    self.codeBtn.title = [NSString stringWithFormat:@"%ds",curTime];
     curTime -= 1;
     if (curTime<0) {
         self.codeBtn.userInteractionEnabled = YES;
@@ -145,5 +161,6 @@
     [timer invalidate];
 }
 - (IBAction)findPwdAct:(id)sender {
+    
 }
 @end

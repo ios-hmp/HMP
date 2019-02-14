@@ -90,16 +90,7 @@ static AFHTTPSessionManager *manager;
         }
         
         if ([dd isKindOfClass:[NSDictionary class]]) {
-            if ([dd[@"code"] integerValue]==10001) {
-                //登录失效，清楚信息，退出环信
-                [[CBUser share] logout];
-                dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                    EMError *error = [[EMClient sharedClient] logout:YES];
-                    if (!error) {
-                        NSLog(@"退出环信成功");
-                    }
-                });
-            }
+            [self handleServerMsg:dd];
             complain(responseObject);
         }else{
             Error(responseObject);
@@ -129,6 +120,21 @@ static AFHTTPSessionManager *manager;
     
 }
 
+- (void)handleServerMsg:(NSDictionary *)info{
+    //登录失效，清楚信息，退出环信
+    NSString *msg = info[@"msg"];
+    if ([msg containsString:@"失效"]) {
+        [[CBUser share] logout];
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            EMError *error = [[EMClient sharedClient] logout:YES];
+            if (!error) {
+                NSLog(@"退出环信成功");
+            }
+        });
+    }else if([msg containsString:@"请先补充信息"]){
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"fillInfo" object:nil];
+    }
+}
 
 //post上传文件
 -(void)postFileKey:(NSString *)fileKey file:(id)file andUrl:(NSString *)urlString showLoading:(BOOL)showLoading showMsg:(BOOL)showMsg isFullUrk:(BOOL)isFull andComplain:(returnObject)complain andError:(returnError)Error{

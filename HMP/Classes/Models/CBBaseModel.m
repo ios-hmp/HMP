@@ -24,8 +24,8 @@ CBBaseModel *_md;
 }
 
 -(void)request:(NSString *)url par:(NSDictionary *)dic callback:(NetCallback)callback{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        callback(1,@"",nil);
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        callback(1,@"",nil);
+//    });
 }
 @end

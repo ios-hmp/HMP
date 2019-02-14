@@ -24,8 +24,6 @@ typedef void (^returnError)(id error);
     BOOL canLogin;
     NSString *showmsg;
     NSInteger retry;
-   
-    
 }
 @property (weak, nonatomic) IBOutlet UITextField *accountField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdField;
@@ -54,7 +52,7 @@ typedef void (^returnError)(id error);
                           };
     [[Httprequest share] postObjectByParameters:par andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
         CBUser *u = [CBUser share];
-        if (ISDIC(obj) && obj[@"data"]) {
+        if (ISDIC(obj) && obj[@"data"] && obj[@"data"][@"token"]) {
             u.token = obj[@"data"][@"token"];
             [u setValuesForKeysWithDictionary:obj[@"data"][@"user"]];
             [u save];
@@ -88,13 +86,7 @@ typedef void (^returnError)(id error);
     [CBFastUI addGradintBg:self.login];
     
     [CBFastUI addRoundCornerAnBorder:self.registerBn];
-    
-#warning test
-    if (_accountField.text.length<1) {
-        _accountField.text  = @"18629450667";
-        _pwdField.text = @"18629450667";
-    }
-    
+
 }
 
 
@@ -142,7 +134,7 @@ typedef void (^returnError)(id error);
 
     [self savePwd];
     
-    [LoadingView showLoading];
+    
     [self doLogin];
 
 }

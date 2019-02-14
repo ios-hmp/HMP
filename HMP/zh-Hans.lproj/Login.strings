@@ -1,0 +1,117 @@
+
+/* Class = "UILabel"; text = "Find in webPages"; ObjectID = "01l-cw-ecx"; */
+"01l-cw-ecx.text" = "Find in webPages";
+
+/* Class = "UILabel"; text = "密码:"; ObjectID = "140-0H-KDD"; */
+"140-0H-KDD.text" = "密码:";
+
+/* Class = "UITextField"; placeholder = "用户名"; ObjectID = "2DH-zA-V6l"; */
+"2DH-zA-V6l.placeholder" = "用户名";
+
+/* Class = "UINavigationItem"; title = "社区"; ObjectID = "2de-Ud-CYp"; */
+"2de-Ud-CYp.title" = "社区";
+
+/* Class = "UIButton"; normalTitle = "100"; ObjectID = "8Sp-SP-ga4"; */
+"8Sp-SP-ga4.normalTitle" = "100";
+
+/* Class = "UILabel"; text = "浏览10次"; ObjectID = "A2M-lg-VYn"; */
+"A2M-lg-VYn.text" = "浏览10次";
+
+/* Class = "UILabel"; text = "LV.2"; ObjectID = "Dml-Yn-enD"; */
+"Dml-Yn-enD.text" = "LV.2";
+
+/* Class = "UIButton"; normalTitle = "发送邮件并重置"; ObjectID = "F41-9C-SEl"; */
+"F41-9C-SEl.normalTitle" = "发送邮件并重置";
+
+/* Class = "UILabel"; text = "密码:"; ObjectID = "Fb3-pJ-D2Q"; */
+"Fb3-pJ-D2Q.text" = "密码:";
+
+/* Class = "UITextField"; placeholder = "用于找回密码"; ObjectID = "J8u-29-XTd"; */
+"J8u-29-XTd.placeholder" = "用于找回密码";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "JDP-hO-H7q"; */
+"JDP-hO-H7q.text" = "name";
+
+/* Class = "UILabel"; text = "time"; ObjectID = "Kwj-yG-bou"; */
+"Kwj-yG-bou.text" = "time";
+
+/* Class = "UILabel"; text = "content"; ObjectID = "MQr-lf-LoR"; */
+"MQr-lf-LoR.text" = "content";
+
+/* Class = "UILabel"; text = "账号:"; ObjectID = "NVS-mA-b3v"; */
+"NVS-mA-b3v.text" = "账号:";
+
+/* Class = "UILabel"; text = "密码:"; ObjectID = "ODV-b9-Snk"; */
+"ODV-b9-Snk.text" = "密码:";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "Rc3-HT-Ecg"; */
+"Rc3-HT-Ecg.normalTitle" = "登录";
+
+/* Class = "UINavigationItem"; title = "我的"; ObjectID = "SWV-Rf-swN"; */
+"SWV-Rf-swN.title" = "我的";
+
+/* Class = "UITextField"; placeholder = "确认密码"; ObjectID = "XJM-yY-1Xl"; */
+"XJM-yY-1Xl.placeholder" = "确认密码";
+
+/* Class = "UILabel"; text = "邮箱:"; ObjectID = "XNf-L4-yFY"; */
+"XNf-L4-yFY.text" = "邮箱:";
+
+/* Class = "UILabel"; text = "将向您注册时填写的邮箱中发送一封重置密码邮件，请注意查收并及时重置密码"; ObjectID = "amq-0J-cpQ"; */
+"amq-0J-cpQ.text" = "将向您注册时填写的邮箱中发送一封重置密码邮件，请注意查收并及时重置密码";
+
+/* Class = "UIButton"; normalTitle = "还没有账号？"; ObjectID = "atP-iH-oIs"; */
+"atP-iH-oIs.normalTitle" = "还没有账号？";
+
+/* Class = "UIButton"; normalTitle = "立即注册"; ObjectID = "dcT-TU-eiP"; */
+"dcT-TU-eiP.normalTitle" = "立即注册";
+
+/* Class = "UITabBarItem"; title = "我的"; ObjectID = "fp8-Ow-6Kz"; */
+"fp8-Ow-6Kz.title" = "我的";
+
+/* Class = "UILabel"; text = "Admin"; ObjectID = "h5O-Ph-BUK"; */
+"h5O-Ph-BUK.text" = "Admin";
+
+/* Class = "UITabBarItem"; title = "社区"; ObjectID = "imT-YV-5E5"; */
+"imT-YV-5E5.title" = "社区";
+
+/* Class = "UILabel"; text = "邮箱:"; ObjectID = "lfe-IM-5Wv"; */
+"lfe-IM-5Wv.text" = "邮箱:";
+
+/* Class = "UINavigationItem"; title = "捷径库"; ObjectID = "lvq-wi-WHn"; */
+"lvq-wi-WHn.title" = "捷径库";
+
+/* Class = "UILabel"; text = "账号:"; ObjectID = "pDg-fY-tuc"; */
+"pDg-fY-tuc.text" = "账号:";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "qRW-8g-oB6"; */
+"qRW-8g-oB6.placeholder" = "密码";
+
+/* Class = "UIButton"; normalTitle = "忘记密码?"; ObjectID = "qaO-2A-BGg"; */
+"qaO-2A-BGg.normalTitle" = "忘记密码?";
+
+/* Class = "UIButton"; normalTitle = "立即注册"; ObjectID = "rAD-FC-EBu"; */
+"rAD-FC-EBu.normalTitle" = "立即注册";
+
+/* Class = "UITextField"; placeholder = "用户名/电子邮箱"; ObjectID = "rrw-aR-RW0"; */
+"rrw-aR-RW0.placeholder" = "用户名/电子邮箱";
+
+/* Class = "UITabBarItem"; title = "捷径库"; ObjectID = "tIH-Jh-ahs"; */
+"tIH-Jh-ahs.title" = "捷径库";
+
+/* Class = "UITextField"; placeholder = "用于找回密码"; ObjectID = "tUX-hm-tex"; */
+"tUX-hm-tex.placeholder" = "用于找回密码";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tZd-7L-GtC"; */
+"tZd-7L-GtC.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "300"; ObjectID = "tnh-jS-Iwt"; */
+"tnh-jS-Iwt.normalTitle" = "300";
+
+/* Class = "UILabel"; text = "注册使用本软件，即代表您同意我们的用户协议和隐私政策"; ObjectID = "vbh-tm-4FO"; */
+"vbh-tm-4FO.text" = "注册使用本软件，即代表您同意我们的用户协议和隐私政策";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "veM-Cn-bTi"; */
+"veM-Cn-bTi.placeholder" = "密码";
+
+/* Class = "UILabel"; text = "点击头像登录"; ObjectID = "x4M-Ia-fL3"; */
+"x4M-Ia-fL3.text" = "点击头像登录";

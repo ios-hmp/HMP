@@ -140,8 +140,24 @@
 		438337F9221311F600B04CFA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337F0221311F600B04CFA /* AFSecurityPolicy.m */; };
 		438337FC221317FE00B04CFA /* CBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337FB221317FE00B04CFA /* CBUser.m */; };
 		43AC71E421FB257000B33EFF /* CBFastUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AC71E321FB257000B33EFF /* CBFastUI.m */; };
+		43C0B8B1221592BC00F22A8F /* HyphenateLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C0B8AF221592B000F22A8F /* HyphenateLite.framework */; };
+		43C0B8B2221592BC00F22A8F /* HyphenateLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43C0B8AF221592B000F22A8F /* HyphenateLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0BCC92F221581D20093EEF9 /* CBRedBagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43C0B8B3221592BD00F22A8F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43C0B8B2221592BC00F22A8F /* HyphenateLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2074B880221564C700D03214 /* CBMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMessageVC.h; sourceTree = "<group>"; };
@@ -404,6 +420,7 @@
 		43AC71E221FB257000B33EFF /* CBFastUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBFastUI.h; sourceTree = "<group>"; };
 		43AC71E321FB257000B33EFF /* CBFastUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBFastUI.m; sourceTree = "<group>"; };
 		43AC71E521FB282700B33EFF /* AllDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllDefines.h; sourceTree = "<group>"; };
+		43C0B8AF221592B000F22A8F /* HyphenateLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HyphenateLite.framework; sourceTree = "<group>"; };
 		A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRedBagVC.h; sourceTree = "<group>"; };
 		A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRedBagVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -413,6 +430,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C0B8B1221592BC00F22A8F /* HyphenateLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +448,7 @@
 		433227FE21F8C19C0071B16E /* Tools&Lib */ = {
 			isa = PBXGroup;
 			children = (
+				43C0B8AF221592B000F22A8F /* HyphenateLite.framework */,
 				433228C321F8C19C0071B16E /* PrefixHeader.pch */,
 				433227FF21F8C19C0071B16E /* AppManager.h */,
 				4332286F21F8C19C0071B16E /* AppManager.m */,
@@ -968,6 +987,7 @@
 				4345DADA21F470F0008DCA65 /* Sources */,
 				4345DADB21F470F0008DCA65 /* Frameworks */,
 				4345DADC21F470F0008DCA65 /* Resources */,
+				43C0B8B3221592BD00F22A8F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

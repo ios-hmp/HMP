@@ -1,41 +1,32 @@
 //
-//  CBPhotoListVC.m
+//  CBBlacklistVC.m
 //  HMP
 //
 //  Created by zhanbing han on 2019/2/15.
 //  Copyright © 2019年 mac. All rights reserved.
 //
 
-#import "CBPhotoListVC.h"
+#import "CBBlacklistVC.h"
 
 // 多少列
-#define CB_BRANDSECTION 2
+#define CB_BRANDSECTION 3
 // 列表间隔距离
 #define CB_BRANDDEV 10
 // cell宽度
 #define CB_LIST1CELLWIDTH (CB_SCREENWIDTH - (CB_BRANDSECTION + 1)*CB_BRANDDEV) / CB_BRANDSECTION
 
 
-@interface CBPhotoListVC ()
-{
-    NSArray *dataSource;
-}
-@property (weak, nonatomic) IBOutlet UICollectionView *photoCollView;
-@property (weak, nonatomic) IBOutlet UIButton *navRightBtn;
+@interface CBBlacklistVC ()
+
 @end
 
-@implementation CBPhotoListVC
+@implementation CBBlacklistVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configUI];
+    // Do any additional setup after loading the view.
 }
 
--(void)configUI{
-    dataSource = @[@"test",@"test",@"test",@"test",@"test"];
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:_navRightBtn];
-    self.navigationItem.rightBarButtonItem = item1;
-}
 
 #pragma mark ---- UICollectionViewDataSource
 
@@ -47,28 +38,18 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return dataSource.count+1;;
+    return 20;;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    PhotoCollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCollViewCell" forIndexPath:indexPath];
-    if (indexPath.row<dataSource.count) {
-        cell.photoImgView.image = [UIImage imageNamed:dataSource[indexPath.row]];
-        cell.photoImgView.contentMode = UIViewContentModeScaleAspectFill;
-    }
-    else {
-        cell.photoImgView.image = [UIImage imageNamed:@"photo_add"];
-        cell.photoImgView.contentMode = UIViewContentModeCenter;
-    }
+    BlacKCollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BlacKCollViewCell" forIndexPath:indexPath];
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row==dataSource.count) {
-        NSLog(@"添加照片");
-    }
+   
 }
 
 
@@ -93,6 +74,7 @@
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return CB_BRANDDEV;
 }
+
 /*
 #pragma mark - Navigation
 
@@ -105,6 +87,6 @@
 
 @end
 
-@implementation PhotoCollViewCell
+@implementation BlacKCollViewCell
 
 @end

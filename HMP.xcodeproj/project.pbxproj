@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2000A2F32216593100E3B68E /* CBMarryMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A2F22216593100E3B68E /* CBMarryMessageVC.m */; };
 		2000A2F622165D5900E3B68E /* CBPhotoListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A2F522165D5900E3B68E /* CBPhotoListVC.m */; };
+		2000A2F8221668EA00E3B68E /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 2000A2F7221668E900E3B68E /* test.png */; };
+		2000A2FB22166C0100E3B68E /* CBBlacklistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */; };
 		201ED5592216534B00362420 /* CBRedBagRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 201ED5582216534B00362420 /* CBRedBagRecordVC.m */; };
 		2074B882221564C700D03214 /* CBMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B881221564C700D03214 /* CBMessageVC.m */; };
 		2074B88822156D2D00D03214 /* CBMemberVIPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B88722156D2D00D03214 /* CBMemberVIPVC.m */; };
@@ -167,6 +169,10 @@
 		2000A2F22216593100E3B68E /* CBMarryMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMarryMessageVC.m; sourceTree = "<group>"; };
 		2000A2F422165D5900E3B68E /* CBPhotoListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPhotoListVC.h; sourceTree = "<group>"; };
 		2000A2F522165D5900E3B68E /* CBPhotoListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBPhotoListVC.m; sourceTree = "<group>"; };
+		2000A2F7221668E900E3B68E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		2000A2F922166C0100E3B68E /* CBBlacklistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBBlacklistVC.h; sourceTree = "<group>"; };
+		2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBBlacklistVC.m; sourceTree = "<group>"; };
+		2000A2FC22166E0200E3B68E /* ConstantInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantInfo.h; sourceTree = "<group>"; };
 		201ED5572216534B00362420 /* CBRedBagRecordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRedBagRecordVC.h; sourceTree = "<group>"; };
 		201ED5582216534B00362420 /* CBRedBagRecordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRedBagRecordVC.m; sourceTree = "<group>"; };
 		2074B880221564C700D03214 /* CBMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMessageVC.h; sourceTree = "<group>"; };
@@ -459,6 +465,7 @@
 			children = (
 				43C0B8AF221592B000F22A8F /* HyphenateLite.framework */,
 				433228C321F8C19C0071B16E /* PrefixHeader.pch */,
+				2000A2FC22166E0200E3B68E /* ConstantInfo.h */,
 				433227FF21F8C19C0071B16E /* AppManager.h */,
 				4332286F21F8C19C0071B16E /* AppManager.m */,
 				438337E3221311F600B04CFA /* AFNetworking */,
@@ -898,6 +905,8 @@
 				2000A2F22216593100E3B68E /* CBMarryMessageVC.m */,
 				2000A2F422165D5900E3B68E /* CBPhotoListVC.h */,
 				2000A2F522165D5900E3B68E /* CBPhotoListVC.m */,
+				2000A2F922166C0100E3B68E /* CBBlacklistVC.h */,
+				2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -932,6 +941,7 @@
 		4345DAE021F470F0008DCA65 /* HMP */ = {
 			isa = PBXGroup;
 			children = (
+				2000A2F7221668E900E3B68E /* test.png */,
 				4345DAE121F470F0008DCA65 /* AppDelegate.h */,
 				4345DAE221F470F0008DCA65 /* AppDelegate.m */,
 				4345DAE421F470F0008DCA65 /* ViewController.h */,
@@ -1065,6 +1075,7 @@
 				4345DAEB21F470F2008DCA65 /* Assets.xcassets in Resources */,
 				434151C421FC277000577405 /* Mine.storyboard in Resources */,
 				4332292A21F8C19C0071B16E /* MJRefresh.bundle in Resources */,
+				2000A2F8221668EA00E3B68E /* test.png in Resources */,
 				434151C821FC278F00577405 /* Search.storyboard in Resources */,
 				4345DAE921F470F0008DCA65 /* Login.storyboard in Resources */,
 			);
@@ -1140,6 +1151,7 @@
 				4340D21021FBFF88000D2DA7 /* UIButton+CBButton.m in Sources */,
 				4332297A21F8C19C0071B16E /* CBBaseVc.m in Sources */,
 				4332296521F8C19C0071B16E /* SDImageCache.m in Sources */,
+				2000A2FB22166C0100E3B68E /* CBBlacklistVC.m in Sources */,
 				4332293221F8C19C0071B16E /* MJRefreshAutoNormalFooter.m in Sources */,
 				201ED5592216534B00362420 /* CBRedBagRecordVC.m in Sources */,
 				4332292821F8C19C0071B16E /* UIScrollView+MJRefresh.m in Sources */,

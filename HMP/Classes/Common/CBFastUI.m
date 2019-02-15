@@ -20,6 +20,7 @@
 }
 
 + (void)addGradintBg:(UIButton *)btn{
+    btn.backgroundColor = MainColor;
     CAGradientLayer *gradientLayer =  [CAGradientLayer layer];
     gradientLayer.frame = btn.bounds;
     gradientLayer.startPoint = CGPointMake(0, 0);

@@ -52,7 +52,7 @@
         if (!isAutoLogin) {
             EMError *error = [[EMClient sharedClient] loginWithUsername:[noti.object stringValue] password:[noti.object stringValue]];
             if (error) {
-                NSLog(@"环信登录出错L：%@",error);
+                NSLog(@"环信登录出错L：%@",error.errorDescription);
             }else{
                 [[EMClient sharedClient].options setIsAutoLogin:YES];
             }

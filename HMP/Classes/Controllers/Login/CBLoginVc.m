@@ -53,11 +53,11 @@ typedef void (^returnError)(id error);
                           };
     [[Httprequest share] postObjectByParameters:par andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
         CBUser *u = [CBUser share];
-        if (ISDIC(obj) && obj[@"data"] && obj[@"data"][@"token"]) {
+        if (ISDIC(obj) && ISDIC(obj[@"data"]) && obj[@"data"][@"token"]) {
             u.token = obj[@"data"][@"token"];
             [u setValuesForKeysWithDictionary:obj[@"data"][@"user"]];
             [u save];
-            [[Httprequest share].manager.requestSerializer setValue:[CBUser share].token forHTTPHeaderField:@"Marriage-Love-Token"];
+            [[Httprequest share].manager.requestSerializer setValue:[CBUser share].token forHTTPHeaderField:@"Marriage-Love-.Token"];
             [[Httprequest share].manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"Marriage-Love-Device-Type"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"loginEM" object:u.uid];
             

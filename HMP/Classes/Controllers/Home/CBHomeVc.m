@@ -10,6 +10,7 @@
 #import "CBHomeMsg.h"
 #import "CBBaseInfoVc.h"
 #import "SDCycleScrollView.h"
+#import "CBFriendsVc.h"
 
 
 @interface CBHomeVc ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
@@ -21,7 +22,7 @@
     NSMutableArray *slideDatas;
     NSDictionary *askDatas;
     SDCycleScrollView *bannerScrollView;
-    
+    CBFriendsVc *friendVc;
 }
 @end
 
@@ -469,6 +470,16 @@
     self.askTableview.estimatedRowHeight = 100;
     self.askTableview.rowHeight = UITableViewAutomaticDimension;
     self.askTableview.hidden = YES;
+    
+    friendVc = [[CBFriendsVc alloc]init];
+    
+    friendVc.view.frame = self.askTableview.frame;
+    friendVc.tableview.frame = friendVc.view.bounds;
+    [self addChildViewController:friendVc];
+    [self.view insertSubview:friendVc.view atIndex:5];
+    [friendVc didMoveToParentViewController:self];
+    friendVc.view.hidden = YES;
+    hunlianquanView = friendVc.view;
 }
 
 -(void)testData{
@@ -595,6 +606,9 @@
 }
 
 - (IBAction)askAnswerAct:(UIButton *)sender {
+    if (!askTableDatas.count) {
+        return;
+    }
     [self.askTableview scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:askTableDatas.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 @end

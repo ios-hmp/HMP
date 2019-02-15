@@ -38,7 +38,8 @@ typedef void (^returnError)(id error);
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"登录";
-    
+    _accountField.text = @"18629450667";
+    _pwdField.text = @"18629450667";
 }
 
 -(void)doLogin{

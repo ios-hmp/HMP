@@ -1,23 +1,22 @@
 //
-//  CBMessageVC.m
+//  CBRedBagRecordVC.m
 //  HMP
 //
-//  Created by zhanbing han on 2019/2/14.
+//  Created by zhanbing han on 2019/2/15.
 //  Copyright © 2019年 mac. All rights reserved.
 //
 
-#import "CBMessageVC.h"
+#import "CBRedBagRecordVC.h"
 
-@interface CBMessageVC ()
+@interface CBRedBagRecordVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
-@implementation CBMessageVC
+@implementation CBRedBagRecordVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"消息";
-    // Do any additional setup after loading the view.
+    self.title = @"红包记录";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -25,9 +24,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MessageTabCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessageTabCell"];
+    CBRedBagRecordTabCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CBRedBagRecordTabCell"];
     return cell;
 }
+
+
 
 /*
 #pragma mark - Navigation
@@ -41,6 +42,6 @@
 
 @end
 
-@implementation MessageTabCell
+@implementation CBRedBagRecordTabCell
 
 @end

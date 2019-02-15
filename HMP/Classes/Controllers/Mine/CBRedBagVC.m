@@ -9,6 +9,7 @@
 #import "CBRedBagVC.h"
 
 @interface CBRedBagVC ()
+@property (weak, nonatomic) IBOutlet UIButton *navRightBtn;
 
 @end
 
@@ -16,7 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"红包";
+    [self configUI];
+}
+
+-(void)configUI{
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:_navRightBtn];
+    self.navigationItem.rightBarButtonItem = item1;
 }
 
 /*

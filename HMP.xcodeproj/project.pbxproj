@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2000A2F32216593100E3B68E /* CBMarryMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A2F22216593100E3B68E /* CBMarryMessageVC.m */; };
+		2000A2F622165D5900E3B68E /* CBPhotoListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A2F522165D5900E3B68E /* CBPhotoListVC.m */; };
+		201ED5592216534B00362420 /* CBRedBagRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 201ED5582216534B00362420 /* CBRedBagRecordVC.m */; };
 		2074B882221564C700D03214 /* CBMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B881221564C700D03214 /* CBMessageVC.m */; };
 		2074B88822156D2D00D03214 /* CBMemberVIPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B88722156D2D00D03214 /* CBMemberVIPVC.m */; };
 		4323603521FC589700D86862 /* CBHomeMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 4323603421FC589700D86862 /* CBHomeMsg.m */; };
@@ -160,6 +163,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2000A2F12216593100E3B68E /* CBMarryMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMarryMessageVC.h; sourceTree = "<group>"; };
+		2000A2F22216593100E3B68E /* CBMarryMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMarryMessageVC.m; sourceTree = "<group>"; };
+		2000A2F422165D5900E3B68E /* CBPhotoListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPhotoListVC.h; sourceTree = "<group>"; };
+		2000A2F522165D5900E3B68E /* CBPhotoListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBPhotoListVC.m; sourceTree = "<group>"; };
+		201ED5572216534B00362420 /* CBRedBagRecordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRedBagRecordVC.h; sourceTree = "<group>"; };
+		201ED5582216534B00362420 /* CBRedBagRecordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRedBagRecordVC.m; sourceTree = "<group>"; };
 		2074B880221564C700D03214 /* CBMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMessageVC.h; sourceTree = "<group>"; };
 		2074B881221564C700D03214 /* CBMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMessageVC.m; sourceTree = "<group>"; };
 		2074B88622156D2D00D03214 /* CBMemberVIPVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMemberVIPVC.h; sourceTree = "<group>"; };
@@ -883,6 +892,12 @@
 				2074B88722156D2D00D03214 /* CBMemberVIPVC.m */,
 				A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */,
 				A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */,
+				201ED5572216534B00362420 /* CBRedBagRecordVC.h */,
+				201ED5582216534B00362420 /* CBRedBagRecordVC.m */,
+				2000A2F12216593100E3B68E /* CBMarryMessageVC.h */,
+				2000A2F22216593100E3B68E /* CBMarryMessageVC.m */,
+				2000A2F422165D5900E3B68E /* CBPhotoListVC.h */,
+				2000A2F522165D5900E3B68E /* CBPhotoListVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1069,10 +1084,12 @@
 				4332293521F8C19C0071B16E /* MJRefreshGifHeader.m in Sources */,
 				4332292021F8C19C0071B16E /* NSObject+MJCoding.m in Sources */,
 				4332295E21F8C19C0071B16E /* SDWebImageDecoder.m in Sources */,
+				2000A2F622165D5900E3B68E /* CBPhotoListVC.m in Sources */,
 				4332292F21F8C19C0071B16E /* MJRefreshBackNormalFooter.m in Sources */,
 				4332292121F8C19C0071B16E /* MJExtensionConst.m in Sources */,
 				4332295621F8C19C0071B16E /* SDCycleScrollView.m in Sources */,
 				4345DAE621F470F0008DCA65 /* ViewController.m in Sources */,
+				2000A2F32216593100E3B68E /* CBMarryMessageVC.m in Sources */,
 				4332292621F8C19C0071B16E /* MJDictionaryCache.m in Sources */,
 				4332294F21F8C19C0071B16E /* IQNSArray+Sort.m in Sources */,
 				4332296F21F8C19C0071B16E /* CBBaseModel.m in Sources */,
@@ -1124,6 +1141,7 @@
 				4332297A21F8C19C0071B16E /* CBBaseVc.m in Sources */,
 				4332296521F8C19C0071B16E /* SDImageCache.m in Sources */,
 				4332293221F8C19C0071B16E /* MJRefreshAutoNormalFooter.m in Sources */,
+				201ED5592216534B00362420 /* CBRedBagRecordVC.m in Sources */,
 				4332292821F8C19C0071B16E /* UIScrollView+MJRefresh.m in Sources */,
 				4332293D21F8C19C0071B16E /* TZAssetModel.m in Sources */,
 				4332298821F8C19C0071B16E /* CBRegisterVc.m in Sources */,

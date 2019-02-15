@@ -1,32 +1,22 @@
 //
-//  CBMessageVC.m
+//  CBPhotoListVC.m
 //  HMP
 //
-//  Created by zhanbing han on 2019/2/14.
+//  Created by zhanbing han on 2019/2/15.
 //  Copyright © 2019年 mac. All rights reserved.
 //
 
-#import "CBMessageVC.h"
+#import "CBPhotoListVC.h"
 
-@interface CBMessageVC ()
+@interface CBPhotoListVC ()
 
 @end
 
-@implementation CBMessageVC
+@implementation CBPhotoListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"消息";
     // Do any additional setup after loading the view.
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MessageTabCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessageTabCell"];
-    return cell;
 }
 
 /*
@@ -41,6 +31,6 @@
 
 @end
 
-@implementation MessageTabCell
+@implementation PhotoCollViewCell
 
 @end

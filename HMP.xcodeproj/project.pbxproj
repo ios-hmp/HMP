@@ -476,6 +476,7 @@
 		433227FC21F8C19C0071B16E /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				2000A2F7221668E900E3B68E /* test.png */,
 				433227FD21F8C19C0071B16E /* icon.png */,
 			);
 			path = Others;
@@ -976,7 +977,6 @@
 		4345DAE021F470F0008DCA65 /* HMP */ = {
 			isa = PBXGroup;
 			children = (
-				2000A2F7221668E900E3B68E /* test.png */,
 				4345DAE121F470F0008DCA65 /* AppDelegate.h */,
 				4345DAE221F470F0008DCA65 /* AppDelegate.m */,
 				4345DAE421F470F0008DCA65 /* ViewController.h */,

@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2000A2F32216593100E3B68E /* CBMarryMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A2F22216593100E3B68E /* CBMarryMessageVC.m */; };
+		2000A2F622165D5900E3B68E /* CBPhotoListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A2F522165D5900E3B68E /* CBPhotoListVC.m */; };
+		2000A2F8221668EA00E3B68E /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 2000A2F7221668E900E3B68E /* test.png */; };
+		2000A2FB22166C0100E3B68E /* CBBlacklistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */; };
+		2000A2FF22168AD400E3B68E /* CBBlackOperateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A2FE22168AD400E3B68E /* CBBlackOperateVC.m */; };
+		2000A302221690EC00E3B68E /* CBAccountSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A301221690EC00E3B68E /* CBAccountSettingVC.m */; };
+		2000A3052216940A00E3B68E /* CBChangePhoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A3042216940A00E3B68E /* CBChangePhoneVC.m */; };
+		2000A308221699BE00E3B68E /* CBChangePwdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A307221699BE00E3B68E /* CBChangePwdVC.m */; };
+		2000A30B2216A6C500E3B68E /* CBLogoutAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A30A2216A6C500E3B68E /* CBLogoutAccountVC.m */; };
+		2000A30E2216A9F100E3B68E /* CBComplaintVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A30D2216A9F100E3B68E /* CBComplaintVC.m */; };
+		2000A3112216B80900E3B68E /* CBRequireVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2000A3102216B80900E3B68E /* CBRequireVC.m */; };
+		201ED5592216534B00362420 /* CBRedBagRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 201ED5582216534B00362420 /* CBRedBagRecordVC.m */; };
 		2074B882221564C700D03214 /* CBMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B881221564C700D03214 /* CBMessageVC.m */; };
 		2074B88822156D2D00D03214 /* CBMemberVIPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B88722156D2D00D03214 /* CBMemberVIPVC.m */; };
 		4323603521FC589700D86862 /* CBHomeMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 4323603421FC589700D86862 /* CBHomeMsg.m */; };
@@ -160,6 +172,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2000A2F12216593100E3B68E /* CBMarryMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMarryMessageVC.h; sourceTree = "<group>"; };
+		2000A2F22216593100E3B68E /* CBMarryMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMarryMessageVC.m; sourceTree = "<group>"; };
+		2000A2F422165D5900E3B68E /* CBPhotoListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPhotoListVC.h; sourceTree = "<group>"; };
+		2000A2F522165D5900E3B68E /* CBPhotoListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBPhotoListVC.m; sourceTree = "<group>"; };
+		2000A2F7221668E900E3B68E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		2000A2F922166C0100E3B68E /* CBBlacklistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBBlacklistVC.h; sourceTree = "<group>"; };
+		2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBBlacklistVC.m; sourceTree = "<group>"; };
+		2000A2FC22166E0200E3B68E /* ConstantInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantInfo.h; sourceTree = "<group>"; };
+		2000A2FD22168AD400E3B68E /* CBBlackOperateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBBlackOperateVC.h; sourceTree = "<group>"; };
+		2000A2FE22168AD400E3B68E /* CBBlackOperateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBBlackOperateVC.m; sourceTree = "<group>"; };
+		2000A300221690EC00E3B68E /* CBAccountSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAccountSettingVC.h; sourceTree = "<group>"; };
+		2000A301221690EC00E3B68E /* CBAccountSettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBAccountSettingVC.m; sourceTree = "<group>"; };
+		2000A3032216940A00E3B68E /* CBChangePhoneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBChangePhoneVC.h; sourceTree = "<group>"; };
+		2000A3042216940A00E3B68E /* CBChangePhoneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBChangePhoneVC.m; sourceTree = "<group>"; };
+		2000A306221699BE00E3B68E /* CBChangePwdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBChangePwdVC.h; sourceTree = "<group>"; };
+		2000A307221699BE00E3B68E /* CBChangePwdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBChangePwdVC.m; sourceTree = "<group>"; };
+		2000A3092216A6C500E3B68E /* CBLogoutAccountVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBLogoutAccountVC.h; sourceTree = "<group>"; };
+		2000A30A2216A6C500E3B68E /* CBLogoutAccountVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLogoutAccountVC.m; sourceTree = "<group>"; };
+		2000A30C2216A9F100E3B68E /* CBComplaintVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBComplaintVC.h; sourceTree = "<group>"; };
+		2000A30D2216A9F100E3B68E /* CBComplaintVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBComplaintVC.m; sourceTree = "<group>"; };
+		2000A30F2216B80900E3B68E /* CBRequireVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRequireVC.h; sourceTree = "<group>"; };
+		2000A3102216B80900E3B68E /* CBRequireVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRequireVC.m; sourceTree = "<group>"; };
+		201ED5572216534B00362420 /* CBRedBagRecordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRedBagRecordVC.h; sourceTree = "<group>"; };
+		201ED5582216534B00362420 /* CBRedBagRecordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRedBagRecordVC.m; sourceTree = "<group>"; };
 		2074B880221564C700D03214 /* CBMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMessageVC.h; sourceTree = "<group>"; };
 		2074B881221564C700D03214 /* CBMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMessageVC.m; sourceTree = "<group>"; };
 		2074B88622156D2D00D03214 /* CBMemberVIPVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMemberVIPVC.h; sourceTree = "<group>"; };
@@ -440,6 +476,7 @@
 		433227FC21F8C19C0071B16E /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				2000A2F7221668E900E3B68E /* test.png */,
 				433227FD21F8C19C0071B16E /* icon.png */,
 			);
 			path = Others;
@@ -450,6 +487,7 @@
 			children = (
 				43C0B8AF221592B000F22A8F /* HyphenateLite.framework */,
 				433228C321F8C19C0071B16E /* PrefixHeader.pch */,
+				2000A2FC22166E0200E3B68E /* ConstantInfo.h */,
 				433227FF21F8C19C0071B16E /* AppManager.h */,
 				4332286F21F8C19C0071B16E /* AppManager.m */,
 				438337E3221311F600B04CFA /* AFNetworking */,
@@ -883,6 +921,28 @@
 				2074B88722156D2D00D03214 /* CBMemberVIPVC.m */,
 				A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */,
 				A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */,
+				201ED5572216534B00362420 /* CBRedBagRecordVC.h */,
+				201ED5582216534B00362420 /* CBRedBagRecordVC.m */,
+				2000A30F2216B80900E3B68E /* CBRequireVC.h */,
+				2000A3102216B80900E3B68E /* CBRequireVC.m */,
+				2000A2F12216593100E3B68E /* CBMarryMessageVC.h */,
+				2000A2F22216593100E3B68E /* CBMarryMessageVC.m */,
+				2000A2F422165D5900E3B68E /* CBPhotoListVC.h */,
+				2000A2F522165D5900E3B68E /* CBPhotoListVC.m */,
+				2000A2F922166C0100E3B68E /* CBBlacklistVC.h */,
+				2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */,
+				2000A2FD22168AD400E3B68E /* CBBlackOperateVC.h */,
+				2000A2FE22168AD400E3B68E /* CBBlackOperateVC.m */,
+				2000A300221690EC00E3B68E /* CBAccountSettingVC.h */,
+				2000A301221690EC00E3B68E /* CBAccountSettingVC.m */,
+				2000A3032216940A00E3B68E /* CBChangePhoneVC.h */,
+				2000A3042216940A00E3B68E /* CBChangePhoneVC.m */,
+				2000A306221699BE00E3B68E /* CBChangePwdVC.h */,
+				2000A307221699BE00E3B68E /* CBChangePwdVC.m */,
+				2000A3092216A6C500E3B68E /* CBLogoutAccountVC.h */,
+				2000A30A2216A6C500E3B68E /* CBLogoutAccountVC.m */,
+				2000A30C2216A9F100E3B68E /* CBComplaintVC.h */,
+				2000A30D2216A9F100E3B68E /* CBComplaintVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1050,6 +1110,7 @@
 				4345DAEB21F470F2008DCA65 /* Assets.xcassets in Resources */,
 				434151C421FC277000577405 /* Mine.storyboard in Resources */,
 				4332292A21F8C19C0071B16E /* MJRefresh.bundle in Resources */,
+				2000A2F8221668EA00E3B68E /* test.png in Resources */,
 				434151C821FC278F00577405 /* Search.storyboard in Resources */,
 				4345DAE921F470F0008DCA65 /* Login.storyboard in Resources */,
 			);
@@ -1069,10 +1130,12 @@
 				4332293521F8C19C0071B16E /* MJRefreshGifHeader.m in Sources */,
 				4332292021F8C19C0071B16E /* NSObject+MJCoding.m in Sources */,
 				4332295E21F8C19C0071B16E /* SDWebImageDecoder.m in Sources */,
+				2000A2F622165D5900E3B68E /* CBPhotoListVC.m in Sources */,
 				4332292F21F8C19C0071B16E /* MJRefreshBackNormalFooter.m in Sources */,
 				4332292121F8C19C0071B16E /* MJExtensionConst.m in Sources */,
 				4332295621F8C19C0071B16E /* SDCycleScrollView.m in Sources */,
 				4345DAE621F470F0008DCA65 /* ViewController.m in Sources */,
+				2000A2F32216593100E3B68E /* CBMarryMessageVC.m in Sources */,
 				4332292621F8C19C0071B16E /* MJDictionaryCache.m in Sources */,
 				4332294F21F8C19C0071B16E /* IQNSArray+Sort.m in Sources */,
 				4332296F21F8C19C0071B16E /* CBBaseModel.m in Sources */,
@@ -1096,7 +1159,9 @@
 				4332295321F8C19C0071B16E /* IQUIView+Hierarchy.m in Sources */,
 				434151D121FC304000577405 /* CBMineVc.m in Sources */,
 				4332295221F8C19C0071B16E /* IQUIScrollView+Additions.m in Sources */,
+				2000A302221690EC00E3B68E /* CBAccountSettingVC.m in Sources */,
 				4332293921F8C19C0071B16E /* MJRefreshAutoFooter.m in Sources */,
+				2000A3052216940A00E3B68E /* CBChangePhoneVC.m in Sources */,
 				4332293121F8C19C0071B16E /* MJRefreshAutoGifFooter.m in Sources */,
 				4332291521F8C19C0071B16E /* LDView.m in Sources */,
 				4332292921F8C19C0071B16E /* MJRefreshConst.m in Sources */,
@@ -1108,6 +1173,7 @@
 				434151CB21FC2CC800577405 /* CBHomeVc.m in Sources */,
 				4332292421F8C19C0071B16E /* NSString+MJExtension.m in Sources */,
 				438337F6221311F600B04CFA /* AFURLSessionManager.m in Sources */,
+				2000A2FF22168AD400E3B68E /* CBBlackOperateVC.m in Sources */,
 				438337F9221311F600B04CFA /* AFSecurityPolicy.m in Sources */,
 				4332293821F8C19C0071B16E /* MJRefreshBackFooter.m in Sources */,
 				438337F8221311F600B04CFA /* AFNetworkReachabilityManager.m in Sources */,
@@ -1123,13 +1189,16 @@
 				4340D21021FBFF88000D2DA7 /* UIButton+CBButton.m in Sources */,
 				4332297A21F8C19C0071B16E /* CBBaseVc.m in Sources */,
 				4332296521F8C19C0071B16E /* SDImageCache.m in Sources */,
+				2000A2FB22166C0100E3B68E /* CBBlacklistVC.m in Sources */,
 				4332293221F8C19C0071B16E /* MJRefreshAutoNormalFooter.m in Sources */,
+				201ED5592216534B00362420 /* CBRedBagRecordVC.m in Sources */,
 				4332292821F8C19C0071B16E /* UIScrollView+MJRefresh.m in Sources */,
 				4332293D21F8C19C0071B16E /* TZAssetModel.m in Sources */,
 				4332298821F8C19C0071B16E /* CBRegisterVc.m in Sources */,
 				4332295721F8C19C0071B16E /* UIView+SDExtension.m in Sources */,
 				4345DAF121F470F2008DCA65 /* main.m in Sources */,
 				4332296721F8C19C0071B16E /* NSData+ImageContentType.m in Sources */,
+				2000A308221699BE00E3B68E /* CBChangePwdVC.m in Sources */,
 				4332296321F8C19C0071B16E /* SDWebImageCompat.m in Sources */,
 				4332292C21F8C19C0071B16E /* UIView+MJExtension.m in Sources */,
 				4332291421F8C19C0071B16E /* UIView+YYAdd.m in Sources */,
@@ -1158,12 +1227,14 @@
 				2074B882221564C700D03214 /* CBMessageVC.m in Sources */,
 				4332292721F8C19C0071B16E /* MJFoundation.m in Sources */,
 				4332295D21F8C19C0071B16E /* SDWebImageManager.m in Sources */,
+				2000A30B2216A6C500E3B68E /* CBLogoutAccountVC.m in Sources */,
 				434151BC21FC21A000577405 /* CBBaseInfoVc.m in Sources */,
 				438337FC221317FE00B04CFA /* CBUser.m in Sources */,
 				4332291721F8C19C0071B16E /* InfiniteRotationView.m in Sources */,
 				4332291B21F8C19C0071B16E /* UIView+GlowView.m in Sources */,
 				4332291921F8C19C0071B16E /* UIView+AnimationProperty.m in Sources */,
 				4332293721F8C19C0071B16E /* MJRefreshHeader.m in Sources */,
+				2000A30E2216A9F100E3B68E /* CBComplaintVC.m in Sources */,
 				4323603521FC589700D86862 /* CBHomeMsg.m in Sources */,
 				434151B921FC217300577405 /* CBRegDoneVc.m in Sources */,
 				4332296021F8C19C0071B16E /* SDWebImageDownloader.m in Sources */,
@@ -1179,6 +1250,7 @@
 				4332294021F8C19C0071B16E /* TZPhotoPreviewController.m in Sources */,
 				4332293E21F8C19C0071B16E /* NSBundle+TZImagePicker.m in Sources */,
 				4332295821F8C19C0071B16E /* SDCollectionViewCell.m in Sources */,
+				2000A3112216B80900E3B68E /* CBRequireVC.m in Sources */,
 				4332294621F8C19C0071B16E /* AppManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1325,8 +1397,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N294699B43;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",
@@ -1340,6 +1412,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zrtc.hmp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1349,8 +1422,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N294699B43;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",
@@ -1364,6 +1437,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zrtc.hmp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

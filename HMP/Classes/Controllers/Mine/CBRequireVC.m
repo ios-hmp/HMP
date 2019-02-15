@@ -11,6 +11,7 @@
 @interface CBRequireVC ()
 {
     NSArray *titleArr;
+    UIScrollView *scrollV;
 }
 @end
 
@@ -21,6 +22,10 @@
     self.tableview.mj_header = nil;
     self.tableview.mj_footer = nil;
     titleArr = @[@"结婚安居地区",@"",@"民族",@"宗教",@"最低学历要求",@"婚姻情况",@"入赘要求",@"收入范围",@"吸烟情况",@"彩礼情况",@"身高"];
+    scrollV = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, CB_SCREENWIDTH, CB_SCREENHIGH-64)];
+    [self.view addSubview:scrollV];
+    [scrollV addSubview:self.tableview];
+    scrollV.contentSize = CGSizeMake(0, self.tableview.contentSize.height+1000);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

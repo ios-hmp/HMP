@@ -49,7 +49,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-   
+    UIViewController *vc = [AppManager getVCInBoard:@"Mine" ID:@"CBBlackOperateVC"];
+    PUSH(vc);
 }
 
 
@@ -88,5 +89,11 @@
 @end
 
 @implementation BlacKCollViewCell
-
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    NSLog(@"%f",self.headPhotoImgView.frame.size.width);
+    NSLog(@"%f",self.headPhotoImgView.frame.size.height);
+    self.headPhotoImgView.layer.cornerRadius = 30;
+    // 获取到约束后的控件frame
+}
 @end

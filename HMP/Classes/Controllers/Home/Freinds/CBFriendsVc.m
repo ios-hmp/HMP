@@ -43,19 +43,32 @@ char* const buttonKey = "buttonKey";
     dataSource = [[NSMutableArray alloc]init];
     NSDictionary *JSONDic =@{@"group":
                                  @[
-                                     @{@"groupName":@"爱人",@"groupCount":@"",@"groupArray":@[]},
-                                     @{@"groupName":@"恋人(2/5)",@"groupCount":@"3",@"groupArray":@[]},
-                                     @{@"groupName":@"好友(8/30)",@"groupCount":@"3",@"groupArray":@[]},
-                                     @{@"groupName":@"朋友(2/200)",@"groupCount":@"3",@"groupArray":@[]}
+                                     @{@"groupName":@"爱人",@"groupArray":@[]},
+                                     @{@"groupName":@"恋人(2/5)",@"groupArray":@[]},
+                                     @{@"groupName":@"好友(8/30)",@"groupArray":@[]},
+                                     @{@"groupName":@"朋友(2/200)",@"groupArray":@[]}
                                      ]
                                      };
+    NSArray *imgs = @[@"http://img.52z.com/upload/news/image/20180828/20180828090306_57295.jpg",@"http://img.52z.com/upload/news/image/20171113/20171113103706_61654.jpg",@"http://img.52z.com/upload/news/image/20180309/20180309090651_48055.jpg"];
+    NSMutableArray *friends = [NSMutableArray array];
+    for (int i=0; i<3; i++) {
+        CBFriends *fr = [[CBFriends alloc]init];
+        fr.name = [NSString stringWithFormat:@"%c%c%c-%c%c",arc4random()%50+50,arc4random()%50+50,arc4random()%50+50,arc4random()%50+50,arc4random()%50+50];
+        fr.vip = arc4random()%2;
+        fr.uid = i+10;
+        fr.star = arc4random()%2?@"双鱼":@"狮子";
+        fr.head = imgs[i];
+        fr.qmd = [@(arc4random()%100) stringValue];
+        fr.hyd = [@(arc4random()%100) stringValue];
+        [friends addObject:fr];
+    }
     
     for (NSDictionary *groupInfoDic in JSONDic[@"group"]) {
         GroupModel *model = [[GroupModel alloc]init];
         model.groupName = groupInfoDic[@"groupName"];
         model.groupCount = [groupInfoDic[@"groupCount"] integerValue];
         model.isOpened = NO;
-        model.groupFriends = groupInfoDic[@"groupArray"];
+        model.groupFriends = friends;
         [dataSource addObject:model];
     }
 }
@@ -64,7 +77,10 @@ char* const buttonKey = "buttonKey";
     expandTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     expandTable.dataSource = self;
     expandTable.delegate =  self;
+    expandTable.rowHeight = UITableViewAutomaticDimension;
+    expandTable.estimatedRowHeight = 81;
     expandTable.tableFooterView = [UIView new];
+    
     [expandTable registerNib:[UINib nibWithNibName:@"FriendCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:expandTable];
 }
@@ -86,20 +102,16 @@ char* const buttonKey = "buttonKey";
 {
     FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     GroupModel *groupModel = dataSource[indexPath.section];
-    NSDictionary *friendInfoDic = groupModel.groupFriends[indexPath.row];
-    cell.nameLabel.text = friendInfoDic[@"name"];
-    
-    if ([friendInfoDic[@"status"] isEqualToString:@"1"]) {
-        cell.statusLabel.textColor = [UIColor greenColor];
-        cell.statusLabel.text = @"在线";
-    }else{
-        cell.statusLabel.textColor = [UIColor lightGrayColor];
-        cell.statusLabel.text = @"不在线";
-    }
-    cell.shuoshuoLabel.text = friendInfoDic[@"shuoshuo"];
-    cell.backgroundColor = [UIColor whiteColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-    cell.contentView.backgroundColor = [UIColor whiteColor];
+    CBFriends *fr = groupModel.groupFriends[indexPath.row];
+    cell.nameLabel.text = fr.name;
+    [cell.avatarIV sd_setImageWithURL:[NSURL URLWithString:fr.head?:@""]];
+    [cell.qmd setTitle:fr.qmd?:@"--" forState:UIControlStateNormal];
+    [cell.hyd setTitle:fr.hyd?:@"--" forState:UIControlStateNormal];
+    cell.star.text = fr.star?:@"--";
+    cell.vip.hidden = fr.vip;
+    [cell.nameLabel sizeToFit];
+    cell.vip.left = cell.nameLabel.right+5;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -109,6 +121,8 @@ char* const buttonKey = "buttonKey";
         top = 35;
     }
     UIView *sectionView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60+top)];
+    sectionView.backgroundColor = [UIColor colorWithWhite:0.94 alpha:1.0];
+
     GroupModel *groupModel = dataSource[section];
     if (section==0) {
         sectionView.backgroundColor = [UIColor whiteColor];
@@ -154,19 +168,7 @@ char* const buttonKey = "buttonKey";
         
     }
     //有爱人以后，组右侧显示加锁
-    
-    
-//    UILabel *numberLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width-40, (44-20)/2, 40, 20)];
-//    [numberLabel setBackgroundColor:[UIColor clearColor]];
-//    [numberLabel setFont:[UIFont systemFontOfSize:14]];
-//    NSInteger onLineCount = 0;
-//    for (NSDictionary *friendInfoDic in groupModel.groupFriends) {
-//        if ([friendInfoDic[@"status"] isEqualToString:@"1"]) {
-//            onLineCount++;
-//        }
-//    }
-//    [numberLabel setText:[NSString stringWithFormat:@"%ld/%ld",onLineCount,groupModel.groupCount]];
-//    [sectionView addSubview:numberLabel];
+
     
     return sectionView;
 }
@@ -175,8 +177,7 @@ char* const buttonKey = "buttonKey";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GroupModel *groupModel = dataSource[indexPath.section];
-    NSDictionary *friendInfoDic = groupModel.groupFriends[indexPath.row];
-    NSLog(@"%@ %@",friendInfoDic[@"name"],friendInfoDic[@"shuoshuo"]);
+    CBFriends *friendInfoDic = groupModel.groupFriends[indexPath.row];
 }
 
 - (void)buttonPress:(UIButton *)sender//headButton点击
@@ -217,10 +218,6 @@ char* const buttonKey = "buttonKey";
     [expandTable reloadSections:[NSIndexSet indexSetWithIndex:sender.tag] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 66;
-}
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 0.00001;

@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[UINavigationBar appearance] setTintColor:MainColor];
+    [[UINavigationBar appearance] setTintColor:[UIColor darkGrayColor]];
     //无token，去登录；登录后保存token
     
     BOOL goLogin = ![CBUser share].token;

@@ -11,3 +11,8 @@
 @implementation GroupModel
 
 @end
+@implementation CBFriends
+
+
+
+@end

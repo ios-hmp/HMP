@@ -509,11 +509,11 @@
             </objects>
             <point key="canvasLocation" x="-735.20000000000005" y="-545.57721139430294"/>
         </scene>
-        <!--捷径库-->
+        <!--Base Navi Vc-->
         <scene sceneID="ikH-Vk-KwT">
             <objects>
                 <navigationController storyboardIdentifier="loginNav" id="2GP-lY-Ilu" customClass="CBBaseNaviVc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="捷径库" image="捷径home" id="2Ph-3r-z54"/>
+                    <tabBarItem key="tabBarItem" title="" id="2Ph-3r-z54"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z0t-DK-8qQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -970,6 +970,5 @@
         <image name="weixin" width="39" height="40"/>
         <image name="zcwc" width="160" height="112"/>
         <image name="zfb" width="40" height="40"/>
-        <image name="捷径home" width="16" height="16"/>
     </resources>
 </document>

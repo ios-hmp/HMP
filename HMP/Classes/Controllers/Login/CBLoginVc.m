@@ -57,7 +57,7 @@ typedef void (^returnError)(id error);
             u.token = obj[@"data"][@"token"];
             [u setValuesForKeysWithDictionary:obj[@"data"][@"user"]];
             [u save];
-            [[Httprequest share].manager.requestSerializer setValue:[CBUser share].token forHTTPHeaderField:@"Marriage-Love-.Token"];
+            [[Httprequest share].manager.requestSerializer setValue:[CBUser share].token forHTTPHeaderField:@"Marriage-Love-Token"];
             [[Httprequest share].manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"Marriage-Love-Device-Type"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"loginEM" object:u.uid];
             

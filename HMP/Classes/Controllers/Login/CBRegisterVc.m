@@ -106,6 +106,7 @@
 - (IBAction)userProtcolAct:(id)sender {
     CBWebVc *web = [[CBWebVc alloc]init];
     web.title = @"用户使用协议";
+    web.url = [NSURL URLWithString:@"http://love.test2.yikeapp.cn/html/single_article/2.html"];
     SHOW(web);
 }
 -(void)codeAction:(UIButton *)sender{

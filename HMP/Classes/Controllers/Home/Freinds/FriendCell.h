@@ -11,7 +11,10 @@
 @interface FriendCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *avatarIV;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *vip;
 
-@property (weak, nonatomic) IBOutlet UILabel *shuoshuoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *star;
+@property (weak, nonatomic) IBOutlet UIButton *qmd;
+@property (weak, nonatomic) IBOutlet UIButton *hyd;
+
 @end

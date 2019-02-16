@@ -143,6 +143,13 @@
 		4345DAEB21F470F2008DCA65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4345DAEA21F470F2008DCA65 /* Assets.xcassets */; };
 		4345DAEE21F470F2008DCA65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4345DAEC21F470F2008DCA65 /* LaunchScreen.storyboard */; };
 		4345DAF121F470F2008DCA65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4345DAF021F470F2008DCA65 /* main.m */; };
+		437DC04D2217BB690071F5D2 /* CBFriendsVc.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712741221799CF00DC3C20 /* CBFriendsVc.m */; };
+		437DC04E2217BB690071F5D2 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712742221799CF00DC3C20 /* FriendCell.m */; };
+		437DC04F2217BB690071F5D2 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712743221799CF00DC3C20 /* GroupModel.m */; };
+		437DC0632217C7FC0071F5D2 /* CBHomeSetingsVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0622217C7FC0071F5D2 /* CBHomeSetingsVc.m */; };
+		437DC06A2217CAA40071F5D2 /* CBHomeSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0682217CAA40071F5D2 /* CBHomeSettings.m */; };
+		437DC06B2217CAA40071F5D2 /* CBHomeSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0692217CAA40071F5D2 /* CBHomeSettings.xib */; };
+		437DC06E2217D5C40071F5D2 /* CBCusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC06D2217D5C40071F5D2 /* CBCusService.m */; };
 		438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E8221311F600B04CFA /* AFURLResponseSerialization.m */; };
 		438337F4221311F600B04CFA /* Httprequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E9221311F600B04CFA /* Httprequest.m */; };
 		438337F5221311F600B04CFA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337EA221311F600B04CFA /* AFHTTPSessionManager.m */; };
@@ -155,10 +162,6 @@
 		43C0B8B1221592BC00F22A8F /* HyphenateLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C0B8AF221592B000F22A8F /* HyphenateLite.framework */; };
 		43C0B8B2221592BC00F22A8F /* HyphenateLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43C0B8AF221592B000F22A8F /* HyphenateLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0712744221799D000DC3C20 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A071273E221799CF00DC3C20 /* FriendCell.xib */; };
-		A0712745221799D000DC3C20 /* CBFriendsVc.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712741221799CF00DC3C20 /* CBFriendsVc.m */; };
-		A0712746221799D000DC3C20 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712742221799CF00DC3C20 /* FriendCell.m */; };
-		A0712747221799D000DC3C20 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712743221799CF00DC3C20 /* GroupModel.m */; };
-		A071274A22179FC100DC3C20 /* CBSecretWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A071274922179FC100DC3C20 /* CBSecretWordVC.m */; };
 		A0BCC92F221581D20093EEF9 /* CBRedBagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */; };
 		A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CE799F2217D94000927242 /* CBSendSecretVC.m */; };
 /* End PBXBuildFile section */
@@ -442,6 +445,13 @@
 		4345DAED21F470F2008DCA65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4345DAEF21F470F2008DCA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4345DAF021F470F2008DCA65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		437DC0612217C7FC0071F5D2 /* CBHomeSetingsVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHomeSetingsVc.h; sourceTree = "<group>"; };
+		437DC0622217C7FC0071F5D2 /* CBHomeSetingsVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHomeSetingsVc.m; sourceTree = "<group>"; };
+		437DC0672217CAA40071F5D2 /* CBHomeSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHomeSettings.h; sourceTree = "<group>"; };
+		437DC0682217CAA40071F5D2 /* CBHomeSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHomeSettings.m; sourceTree = "<group>"; };
+		437DC0692217CAA40071F5D2 /* CBHomeSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CBHomeSettings.xib; sourceTree = "<group>"; };
+		437DC06C2217D5C30071F5D2 /* CBCusService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCusService.h; sourceTree = "<group>"; };
+		437DC06D2217D5C40071F5D2 /* CBCusService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBCusService.m; sourceTree = "<group>"; };
 		438337E4221311F600B04CFA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		438337E5221311F600B04CFA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		438337E6221311F600B04CFA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -905,6 +915,9 @@
 				4332290E21F8C19C0071B16E /* CBArticleCell.m */,
 				4332290921F8C19C0071B16E /* CBColorImage.h */,
 				4332290D21F8C19C0071B16E /* CBColorImage.m */,
+				437DC0672217CAA40071F5D2 /* CBHomeSettings.h */,
+				437DC0682217CAA40071F5D2 /* CBHomeSettings.m */,
+				437DC0692217CAA40071F5D2 /* CBHomeSettings.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -915,6 +928,10 @@
 				A071273C221799CF00DC3C20 /* Freinds */,
 				434151C921FC2CC800577405 /* CBHomeVc.h */,
 				434151CA21FC2CC800577405 /* CBHomeVc.m */,
+				437DC0612217C7FC0071F5D2 /* CBHomeSetingsVc.h */,
+				437DC0622217C7FC0071F5D2 /* CBHomeSetingsVc.m */,
+				437DC06C2217D5C30071F5D2 /* CBCusService.h */,
+				437DC06D2217D5C40071F5D2 /* CBCusService.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1144,6 +1161,7 @@
 				4345DAEE21F470F2008DCA65 /* LaunchScreen.storyboard in Resources */,
 				4332291321F8C19C0071B16E /* wordLoading@2x.png in Resources */,
 				4345DAEB21F470F2008DCA65 /* Assets.xcassets in Resources */,
+				437DC06B2217CAA40071F5D2 /* CBHomeSettings.xib in Resources */,
 				434151C421FC277000577405 /* Mine.storyboard in Resources */,
 				A0712744221799D000DC3C20 /* FriendCell.xib in Resources */,
 				4332292A21F8C19C0071B16E /* MJRefresh.bundle in Resources */,
@@ -1197,7 +1215,7 @@
 				434151D121FC304000577405 /* CBMineVc.m in Sources */,
 				4332295221F8C19C0071B16E /* IQUIScrollView+Additions.m in Sources */,
 				2000A302221690EC00E3B68E /* CBAccountSettingVC.m in Sources */,
-				A0712747221799D000DC3C20 /* GroupModel.m in Sources */,
+				437DC04F2217BB690071F5D2 /* GroupModel.m in Sources */,
 				4332293921F8C19C0071B16E /* MJRefreshAutoFooter.m in Sources */,
 				2000A3052216940A00E3B68E /* CBChangePhoneVC.m in Sources */,
 				4332293121F8C19C0071B16E /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1208,6 +1226,7 @@
 				4332291F21F8C19C0071B16E /* MJProperty.m in Sources */,
 				4332292521F8C19C0071B16E /* MJPropertyKey.m in Sources */,
 				4332294721F8C19C0071B16E /* IQTextView.m in Sources */,
+				437DC06A2217CAA40071F5D2 /* CBHomeSettings.m in Sources */,
 				434151CB21FC2CC800577405 /* CBHomeVc.m in Sources */,
 				4332292421F8C19C0071B16E /* NSString+MJExtension.m in Sources */,
 				438337F6221311F600B04CFA /* AFURLSessionManager.m in Sources */,
@@ -1219,6 +1238,8 @@
 				4332298D21F8C19C0071B16E /* CBArticleCell.m in Sources */,
 				A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */,
 				A0712746221799D000DC3C20 /* FriendCell.m in Sources */,
+				437DC06E2217D5C40071F5D2 /* CBCusService.m in Sources */,
+				437DC04E2217BB690071F5D2 /* FriendCell.m in Sources */,
 				438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */,
 				434151CE21FC303600577405 /* CBChatVc.m in Sources */,
 				4332298C21F8C19C0071B16E /* CBColorImage.m in Sources */,
@@ -1262,11 +1283,10 @@
 				4332298721F8C19C0071B16E /* CBLoginVc.m in Sources */,
 				4332294C21F8C19C0071B16E /* IQPreviousNextView.m in Sources */,
 				4332293C21F8C19C0071B16E /* TZVideoPlayerController.m in Sources */,
-				A0712745221799D000DC3C20 /* CBFriendsVc.m in Sources */,
+				437DC04D2217BB690071F5D2 /* CBFriendsVc.m in Sources */,
 				4332297C21F8C19C0071B16E /* CBWebVc.m in Sources */,
 				4332292D21F8C19C0071B16E /* MJRefreshBackGifFooter.m in Sources */,
 				2074B882221564C700D03214 /* CBMessageVC.m in Sources */,
-				A071274A22179FC100DC3C20 /* CBSecretWordVC.m in Sources */,
 				4332292721F8C19C0071B16E /* MJFoundation.m in Sources */,
 				4332295D21F8C19C0071B16E /* SDWebImageManager.m in Sources */,
 				2000A30B2216A6C500E3B68E /* CBLogoutAccountVC.m in Sources */,
@@ -1286,6 +1306,7 @@
 				4332297321F8C19C0071B16E /* CBShareAppInfo.m in Sources */,
 				438337F7221311F600B04CFA /* AFURLRequestSerialization.m in Sources */,
 				4332295121F8C19C0071B16E /* IQUITextFieldView+Additions.m in Sources */,
+				437DC0632217C7FC0071F5D2 /* CBHomeSetingsVc.m in Sources */,
 				4332293621F8C19C0071B16E /* MJRefreshFooter.m in Sources */,
 				4332294321F8C19C0071B16E /* TZPhotoPickerController.m in Sources */,
 				4332297B21F8C19C0071B16E /* CBBaseNaviVc.m in Sources */,
@@ -1439,6 +1460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1464,6 +1486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (

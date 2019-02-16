@@ -446,7 +446,7 @@
     </scenes>
     <resources>
         <image name="arrow_more" width="7" height="12"/>
-        <image name="no" width="96" height="83"/>
+        <image name="no" width="96.5" height="83.5"/>
         <image name="ppd" width="15" height="15"/>
         <image name="wdvip" width="27" height="27"/>
         <image name="wsxx" width="138" height="105"/>

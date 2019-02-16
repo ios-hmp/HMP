@@ -11,7 +11,7 @@
 #import "CBBaseInfoVc.h"
 #import "SDCycleScrollView.h"
 #import "CBFriendsVc.h"
-
+#import "CBHomeSetingsVc.h"
 
 @interface CBHomeVc ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 {
@@ -24,6 +24,7 @@
     SDCycleScrollView *bannerScrollView;
     CBFriendsVc *friendVc;
 }
+- (IBAction)goSettings:(UIBarButtonItem *)sender;
 @end
 
 @implementation AskCommentCell
@@ -610,5 +611,9 @@
         return;
     }
     [self.askTableview scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:askTableDatas.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+}
+- (IBAction)goSettings:(UIBarButtonItem *)sender {
+//    CBHomeSetingsVc *vc = [[CBHomeSetingsVc alloc]init];
+//    SHOW(vc);
 }
 @end

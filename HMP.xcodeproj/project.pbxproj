@@ -152,7 +152,6 @@
 		437DC06E2217D5C40071F5D2 /* CBCusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC06D2217D5C40071F5D2 /* CBCusService.m */; };
 		437DC0712217F02D0071F5D2 /* CBChatDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */; };
 		437DC08E2217FBBC0071F5D2 /* ChatDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0822217FBBC0071F5D2 /* ChatDetailVc.m */; };
-		437DC08F2217FBBC0071F5D2 /* chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0832217FBBC0071F5D2 /* chat.storyboard */; };
 		437DC0902217FBBC0071F5D2 /* ChatCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0882217FBBC0071F5D2 /* ChatCell2.xib */; };
 		437DC0912217FBBC0071F5D2 /* ChatImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0892217FBBC0071F5D2 /* ChatImgCell.xib */; };
 		437DC0922217FBBC0071F5D2 /* ChatData.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC08A2217FBBC0071F5D2 /* ChatData.m */; };
@@ -171,6 +170,8 @@
 		43C0B8B1221592BC00F22A8F /* HyphenateLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C0B8AF221592B000F22A8F /* HyphenateLite.framework */; };
 		43C0B8B2221592BC00F22A8F /* HyphenateLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43C0B8AF221592B000F22A8F /* HyphenateLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0712744221799D000DC3C20 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A071273E221799CF00DC3C20 /* FriendCell.xib */; };
+		A09D317222182E55000F5532 /* CBSecretWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A071274922179FC100DC3C20 /* CBSecretWordVC.m */; };
+		A09D317522183008000F5532 /* CBLookReplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D317422183008000F5532 /* CBLookReplyVC.m */; };
 		A0BCC92F221581D20093EEF9 /* CBRedBagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */; };
 		A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CE799F2217D94000927242 /* CBSendSecretVC.m */; };
 /* End PBXBuildFile section */
@@ -464,7 +465,6 @@
 		437DC06F2217F02C0071F5D2 /* CBChatDetailVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBChatDetailVc.h; sourceTree = "<group>"; };
 		437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBChatDetailVc.m; sourceTree = "<group>"; };
 		437DC0822217FBBC0071F5D2 /* ChatDetailVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDetailVc.m; sourceTree = "<group>"; };
-		437DC0832217FBBC0071F5D2 /* chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = chat.storyboard; sourceTree = "<group>"; };
 		437DC0842217FBBC0071F5D2 /* ChatDetailVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDetailVc.h; sourceTree = "<group>"; };
 		437DC0862217FBBC0071F5D2 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
 		437DC0872217FBBC0071F5D2 /* ChatData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatData.h; sourceTree = "<group>"; };
@@ -504,6 +504,8 @@
 		A0712743221799CF00DC3C20 /* GroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupModel.m; sourceTree = "<group>"; };
 		A071274822179FC100DC3C20 /* CBSecretWordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBSecretWordVC.h; sourceTree = "<group>"; };
 		A071274922179FC100DC3C20 /* CBSecretWordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBSecretWordVC.m; sourceTree = "<group>"; };
+		A09D317322183008000F5532 /* CBLookReplyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBLookReplyVC.h; sourceTree = "<group>"; };
+		A09D317422183008000F5532 /* CBLookReplyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLookReplyVC.m; sourceTree = "<group>"; };
 		A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRedBagVC.h; sourceTree = "<group>"; };
 		A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRedBagVC.m; sourceTree = "<group>"; };
 		A0CE799E2217D94000927242 /* CBSendSecretVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBSendSecretVC.h; sourceTree = "<group>"; };
@@ -993,6 +995,8 @@
 				A071274922179FC100DC3C20 /* CBSecretWordVC.m */,
 				A0CE799E2217D94000927242 /* CBSendSecretVC.h */,
 				A0CE799F2217D94000927242 /* CBSendSecretVC.m */,
+				A09D317322183008000F5532 /* CBLookReplyVC.h */,
+				A09D317422183008000F5532 /* CBLookReplyVC.m */,
 				2000A2F922166C0100E3B68E /* CBBlacklistVC.h */,
 				2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */,
 				2000A2FD22168AD400E3B68E /* CBBlackOperateVC.h */,
@@ -1066,7 +1070,6 @@
 			children = (
 				437DC0842217FBBC0071F5D2 /* ChatDetailVc.h */,
 				437DC0822217FBBC0071F5D2 /* ChatDetailVc.m */,
-				437DC0832217FBBC0071F5D2 /* chat.storyboard */,
 				437DC0852217FBBC0071F5D2 /* View */,
 			);
 			path = Message;
@@ -1203,7 +1206,6 @@
 				4332291621F8C19C0071B16E /* wordLoading@3x.png in Resources */,
 				437DC0912217FBBC0071F5D2 /* ChatImgCell.xib in Resources */,
 				4332291121F8C19C0071B16E /* myCline.png in Resources */,
-				437DC08F2217FBBC0071F5D2 /* chat.storyboard in Resources */,
 				4332294D21F8C19C0071B16E /* IQKeyboardManager.bundle in Resources */,
 				434151C621FC277900577405 /* Chat.storyboard in Resources */,
 				4332291021F8C19C0071B16E /* icon.png in Resources */,
@@ -1234,6 +1236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09D317222182E55000F5532 /* CBSecretWordVC.m in Sources */,
 				434151D721FC433A00577405 /* CBSearchInputVc.m in Sources */,
 				4332297D21F8C19C0071B16E /* CBBaseTabbarVc.m in Sources */,
 				438337F4221311F600B04CFA /* Httprequest.m in Sources */,
@@ -1286,6 +1289,7 @@
 				437DC06A2217CAA40071F5D2 /* CBHomeSettings.m in Sources */,
 				434151CB21FC2CC800577405 /* CBHomeVc.m in Sources */,
 				4332292421F8C19C0071B16E /* NSString+MJExtension.m in Sources */,
+				A09D317522183008000F5532 /* CBLookReplyVC.m in Sources */,
 				438337F6221311F600B04CFA /* AFURLSessionManager.m in Sources */,
 				2000A2FF22168AD400E3B68E /* CBBlackOperateVC.m in Sources */,
 				438337F9221311F600B04CFA /* AFSecurityPolicy.m in Sources */,
@@ -1520,8 +1524,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3A6XD8P7R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",
@@ -1546,8 +1550,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3A6XD8P7R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",

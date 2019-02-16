@@ -1895,28 +1895,39 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="QhK-d3-7WK">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15:47" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5v-lv-uG9">
-                                            <rect key="frame" x="51" y="10" width="304" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:47" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5v-lv-uG9">
+                                            <rect key="frame" x="15" y="10" width="345" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="53x-w2-KCa"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="的难念的经大家简单" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-Sk-DCn">
-                                            <rect key="frame" x="15" y="40" width="340" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="的难念的经大家简单" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-Sk-DCn">
+                                            <rect key="frame" x="15" y="40" width="340" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="p5v-lv-uG9" secondAttribute="trailing" constant="15" id="F9i-2P-hoI"/>
+                                        <constraint firstAttribute="bottom" secondItem="xpI-Sk-DCn" secondAttribute="bottom" constant="20" id="G80-he-g7k"/>
+                                        <constraint firstItem="p5v-lv-uG9" firstAttribute="top" secondItem="QhK-d3-7WK" secondAttribute="top" constant="10" id="GkU-hl-Lsw"/>
+                                        <constraint firstItem="xpI-Sk-DCn" firstAttribute="top" secondItem="p5v-lv-uG9" secondAttribute="bottom" constant="10" id="NDq-Em-t1D"/>
+                                        <constraint firstItem="xpI-Sk-DCn" firstAttribute="leading" secondItem="QhK-d3-7WK" secondAttribute="leading" constant="15" id="ZvZ-by-x5X"/>
+                                        <constraint firstItem="p5v-lv-uG9" firstAttribute="leading" secondItem="QhK-d3-7WK" secondAttribute="leading" constant="15" id="b4U-A8-1Be"/>
+                                        <constraint firstItem="xpI-Sk-DCn" firstAttribute="top" secondItem="p5v-lv-uG9" secondAttribute="bottom" constant="10" id="cPZ-Kx-YUw"/>
+                                        <constraint firstAttribute="trailing" secondItem="xpI-Sk-DCn" secondAttribute="trailing" constant="20" id="tuv-9N-EiW"/>
+                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CBLookReplyTabCell" rowHeight="81" id="urw-fq-aJG" customClass="CBLookReplyTabCell">
-                                        <rect key="frame" x="0.0" y="171" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="128" width="375" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="urw-fq-aJG" id="GnO-Tm-Uw1">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>

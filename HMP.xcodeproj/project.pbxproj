@@ -160,6 +160,7 @@
 		A0712747221799D000DC3C20 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712743221799CF00DC3C20 /* GroupModel.m */; };
 		A071274A22179FC100DC3C20 /* CBSecretWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A071274922179FC100DC3C20 /* CBSecretWordVC.m */; };
 		A0BCC92F221581D20093EEF9 /* CBRedBagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */; };
+		A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CE799F2217D94000927242 /* CBSendSecretVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -473,6 +474,8 @@
 		A071274922179FC100DC3C20 /* CBSecretWordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBSecretWordVC.m; sourceTree = "<group>"; };
 		A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRedBagVC.h; sourceTree = "<group>"; };
 		A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRedBagVC.m; sourceTree = "<group>"; };
+		A0CE799E2217D94000927242 /* CBSendSecretVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBSendSecretVC.h; sourceTree = "<group>"; };
+		A0CE799F2217D94000927242 /* CBSendSecretVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBSendSecretVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -946,6 +949,8 @@
 				2000A2F522165D5900E3B68E /* CBPhotoListVC.m */,
 				A071274822179FC100DC3C20 /* CBSecretWordVC.h */,
 				A071274922179FC100DC3C20 /* CBSecretWordVC.m */,
+				A0CE799E2217D94000927242 /* CBSendSecretVC.h */,
+				A0CE799F2217D94000927242 /* CBSendSecretVC.m */,
 				2000A2F922166C0100E3B68E /* CBBlacklistVC.h */,
 				2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */,
 				2000A2FD22168AD400E3B68E /* CBBlackOperateVC.h */,
@@ -1212,6 +1217,7 @@
 				438337F8221311F600B04CFA /* AFNetworkReachabilityManager.m in Sources */,
 				4332294A21F8C19C0071B16E /* IQBarButtonItem.m in Sources */,
 				4332298D21F8C19C0071B16E /* CBArticleCell.m in Sources */,
+				A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */,
 				A0712746221799D000DC3C20 /* FriendCell.m in Sources */,
 				438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */,
 				434151CE21FC303600577405 /* CBChatVc.m in Sources */,

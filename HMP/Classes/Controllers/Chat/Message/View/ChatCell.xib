@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="122" id="KGk-i7-Jjw" customClass="ChatCell">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="121.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-6c-6X7">
+                        <rect key="frame" x="90" y="3" width="143" height="21"/>
+                        <color key="backgroundColor" red="0.92419495559999998" green="0.92419495559999998" blue="0.92419495559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="9nA-Va-AFY"/>
+                            <constraint firstAttribute="width" constant="143" id="aGS-4f-p3B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2I-ID-Wrc">
+                        <rect key="frame" x="10" y="61.5" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.71974143400000001" green="0.71974143400000001" blue="0.71974143400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="7MJ-VG-m3p"/>
+                            <constraint firstAttribute="height" constant="50" id="sab-8g-lLM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNL-Fw-9Ov">
+                        <rect key="frame" x="70" y="34" width="59.5" height="77.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsj-Xv-S8k">
+                        <rect key="frame" x="80" y="44" width="39.5" height="57.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="6tB-qx-hVD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.2384002221" green="0.2384002221" blue="0.2384002221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQK-ES-o4r">
+                        <rect key="frame" x="70" y="96" width="19" height="15"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="5VD-cd-81I"/>
+                            <constraint firstAttribute="width" constant="19" id="xn0-zu-pp4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="T2I-ID-Wrc" firstAttribute="bottom" secondItem="SNL-Fw-9Ov" secondAttribute="bottom" id="0zH-2S-OnY"/>
+                    <constraint firstAttribute="bottom" secondItem="lsj-Xv-S8k" secondAttribute="bottom" constant="20" id="HCQ-Lu-I3i"/>
+                    <constraint firstItem="fCB-6c-6X7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="KwT-aY-ewh"/>
+                    <constraint firstItem="TQK-ES-o4r" firstAttribute="leading" secondItem="lsj-Xv-S8k" secondAttribute="leading" constant="-10" id="QnI-De-3Qx"/>
+                    <constraint firstItem="lsj-Xv-S8k" firstAttribute="top" secondItem="fCB-6c-6X7" secondAttribute="bottom" constant="20" id="Rll-wN-ykV"/>
+                    <constraint firstItem="SNL-Fw-9Ov" firstAttribute="top" secondItem="lsj-Xv-S8k" secondAttribute="top" constant="-10" id="Wea-Km-cMQ"/>
+                    <constraint firstItem="T2I-ID-Wrc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="d2e-kl-JVs"/>
+                    <constraint firstItem="SNL-Fw-9Ov" firstAttribute="leading" secondItem="lsj-Xv-S8k" secondAttribute="leading" constant="-10" id="dfC-bj-54n"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lsj-Xv-S8k" secondAttribute="trailing" constant="50" id="eSV-K4-8XX"/>
+                    <constraint firstItem="fCB-6c-6X7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="jjg-Jq-eGe"/>
+                    <constraint firstItem="lsj-Xv-S8k" firstAttribute="leading" secondItem="T2I-ID-Wrc" secondAttribute="trailing" constant="20" id="lbe-LN-qR4"/>
+                    <constraint firstItem="SNL-Fw-9Ov" firstAttribute="trailing" secondItem="lsj-Xv-S8k" secondAttribute="trailing" constant="10" id="ueE-OO-0GL"/>
+                    <constraint firstItem="SNL-Fw-9Ov" firstAttribute="bottom" secondItem="lsj-Xv-S8k" secondAttribute="bottom" constant="10" id="v6B-ua-zwk"/>
+                    <constraint firstItem="TQK-ES-o4r" firstAttribute="bottom" secondItem="lsj-Xv-S8k" secondAttribute="bottom" constant="10" id="xCm-gQ-Leb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="content" destination="lsj-Xv-S8k" id="8ds-n1-Lm4"/>
+                <outlet property="head" destination="T2I-ID-Wrc" id="RlM-3v-EBq"/>
+                <outlet property="lbbg" destination="TQK-ES-o4r" id="3pg-fN-mrd"/>
+                <outlet property="time" destination="fCB-6c-6X7" id="LSl-Fj-RTh"/>
+            </connections>
+            <point key="canvasLocation" x="219" y="278"/>
+        </tableViewCell>
+    </objects>
+</document>

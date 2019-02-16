@@ -77,10 +77,6 @@
     [self.navigationController.navigationBar addSubview:_titleView];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [_titleView removeFromSuperview];
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.tableDatas.count;

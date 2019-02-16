@@ -151,6 +151,14 @@
 		437DC06B2217CAA40071F5D2 /* CBHomeSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0692217CAA40071F5D2 /* CBHomeSettings.xib */; };
 		437DC06E2217D5C40071F5D2 /* CBCusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC06D2217D5C40071F5D2 /* CBCusService.m */; };
 		437DC0712217F02D0071F5D2 /* CBChatDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */; };
+		437DC08E2217FBBC0071F5D2 /* ChatDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0822217FBBC0071F5D2 /* ChatDetailVc.m */; };
+		437DC08F2217FBBC0071F5D2 /* chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0832217FBBC0071F5D2 /* chat.storyboard */; };
+		437DC0902217FBBC0071F5D2 /* ChatCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0882217FBBC0071F5D2 /* ChatCell2.xib */; };
+		437DC0912217FBBC0071F5D2 /* ChatImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0892217FBBC0071F5D2 /* ChatImgCell.xib */; };
+		437DC0922217FBBC0071F5D2 /* ChatData.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC08A2217FBBC0071F5D2 /* ChatData.m */; };
+		437DC0932217FBBC0071F5D2 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC08B2217FBBC0071F5D2 /* ChatCell.m */; };
+		437DC0942217FBBC0071F5D2 /* ChatImgCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC08C2217FBBC0071F5D2 /* ChatImgCell2.xib */; };
+		437DC0952217FBBC0071F5D2 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC08D2217FBBC0071F5D2 /* ChatCell.xib */; };
 		438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E8221311F600B04CFA /* AFURLResponseSerialization.m */; };
 		438337F4221311F600B04CFA /* Httprequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E9221311F600B04CFA /* Httprequest.m */; };
 		438337F5221311F600B04CFA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337EA221311F600B04CFA /* AFHTTPSessionManager.m */; };
@@ -455,6 +463,17 @@
 		437DC06D2217D5C40071F5D2 /* CBCusService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBCusService.m; sourceTree = "<group>"; };
 		437DC06F2217F02C0071F5D2 /* CBChatDetailVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBChatDetailVc.h; sourceTree = "<group>"; };
 		437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBChatDetailVc.m; sourceTree = "<group>"; };
+		437DC0822217FBBC0071F5D2 /* ChatDetailVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDetailVc.m; sourceTree = "<group>"; };
+		437DC0832217FBBC0071F5D2 /* chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = chat.storyboard; sourceTree = "<group>"; };
+		437DC0842217FBBC0071F5D2 /* ChatDetailVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDetailVc.h; sourceTree = "<group>"; };
+		437DC0862217FBBC0071F5D2 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		437DC0872217FBBC0071F5D2 /* ChatData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatData.h; sourceTree = "<group>"; };
+		437DC0882217FBBC0071F5D2 /* ChatCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell2.xib; sourceTree = "<group>"; };
+		437DC0892217FBBC0071F5D2 /* ChatImgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatImgCell.xib; sourceTree = "<group>"; };
+		437DC08A2217FBBC0071F5D2 /* ChatData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatData.m; sourceTree = "<group>"; };
+		437DC08B2217FBBC0071F5D2 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		437DC08C2217FBBC0071F5D2 /* ChatImgCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatImgCell2.xib; sourceTree = "<group>"; };
+		437DC08D2217FBBC0071F5D2 /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
 		438337E4221311F600B04CFA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		438337E5221311F600B04CFA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		438337E6221311F600B04CFA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -942,6 +961,7 @@
 		434151BE21FC270B00577405 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				437DC0802217FBBC0071F5D2 /* Message */,
 				434151CC21FC303600577405 /* CBChatVc.h */,
 				434151CD21FC303600577405 /* CBChatVc.m */,
 				437DC06F2217F02C0071F5D2 /* CBChatDetailVc.h */,
@@ -1039,6 +1059,32 @@
 				4345DAF021F470F2008DCA65 /* main.m */,
 			);
 			path = HMP;
+			sourceTree = "<group>";
+		};
+		437DC0802217FBBC0071F5D2 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				437DC0842217FBBC0071F5D2 /* ChatDetailVc.h */,
+				437DC0822217FBBC0071F5D2 /* ChatDetailVc.m */,
+				437DC0832217FBBC0071F5D2 /* chat.storyboard */,
+				437DC0852217FBBC0071F5D2 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		437DC0852217FBBC0071F5D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				437DC0862217FBBC0071F5D2 /* ChatCell.h */,
+				437DC0872217FBBC0071F5D2 /* ChatData.h */,
+				437DC0882217FBBC0071F5D2 /* ChatCell2.xib */,
+				437DC0892217FBBC0071F5D2 /* ChatImgCell.xib */,
+				437DC08A2217FBBC0071F5D2 /* ChatData.m */,
+				437DC08B2217FBBC0071F5D2 /* ChatCell.m */,
+				437DC08C2217FBBC0071F5D2 /* ChatImgCell2.xib */,
+				437DC08D2217FBBC0071F5D2 /* ChatCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		438337E3221311F600B04CFA /* AFNetworking */ = {
@@ -1155,14 +1201,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4332291621F8C19C0071B16E /* wordLoading@3x.png in Resources */,
+				437DC0912217FBBC0071F5D2 /* ChatImgCell.xib in Resources */,
 				4332291121F8C19C0071B16E /* myCline.png in Resources */,
+				437DC08F2217FBBC0071F5D2 /* chat.storyboard in Resources */,
 				4332294D21F8C19C0071B16E /* IQKeyboardManager.bundle in Resources */,
 				434151C621FC277900577405 /* Chat.storyboard in Resources */,
 				4332291021F8C19C0071B16E /* icon.png in Resources */,
+				437DC0942217FBBC0071F5D2 /* ChatImgCell2.xib in Resources */,
+				437DC0902217FBBC0071F5D2 /* ChatCell2.xib in Resources */,
 				4332291821F8C19C0071B16E /* rotate1@2x.png in Resources */,
 				4332294121F8C19C0071B16E /* TZImagePickerController.bundle in Resources */,
 				4332291A21F8C19C0071B16E /* rotate1@3x.png in Resources */,
 				434151C221FC275C00577405 /* Main.storyboard in Resources */,
+				437DC0952217FBBC0071F5D2 /* ChatCell.xib in Resources */,
 				4345DAEE21F470F2008DCA65 /* LaunchScreen.storyboard in Resources */,
 				4332291321F8C19C0071B16E /* wordLoading@2x.png in Resources */,
 				4345DAEB21F470F2008DCA65 /* Assets.xcassets in Resources */,
@@ -1243,10 +1294,10 @@
 				4332294A21F8C19C0071B16E /* IQBarButtonItem.m in Sources */,
 				4332298D21F8C19C0071B16E /* CBArticleCell.m in Sources */,
 				A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */,
-				A0712746221799D000DC3C20 /* FriendCell.m in Sources */,
 				437DC06E2217D5C40071F5D2 /* CBCusService.m in Sources */,
 				437DC04E2217BB690071F5D2 /* FriendCell.m in Sources */,
 				438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */,
+				437DC08E2217FBBC0071F5D2 /* ChatDetailVc.m in Sources */,
 				434151CE21FC303600577405 /* CBChatVc.m in Sources */,
 				4332298C21F8C19C0071B16E /* CBColorImage.m in Sources */,
 				4332292B21F8C19C0071B16E /* UIScrollView+MJExtension.m in Sources */,
@@ -1291,10 +1342,12 @@
 				4332293C21F8C19C0071B16E /* TZVideoPlayerController.m in Sources */,
 				437DC04D2217BB690071F5D2 /* CBFriendsVc.m in Sources */,
 				4332297C21F8C19C0071B16E /* CBWebVc.m in Sources */,
+				437DC0922217FBBC0071F5D2 /* ChatData.m in Sources */,
 				4332292D21F8C19C0071B16E /* MJRefreshBackGifFooter.m in Sources */,
 				2074B882221564C700D03214 /* CBMessageVC.m in Sources */,
 				4332292721F8C19C0071B16E /* MJFoundation.m in Sources */,
 				4332295D21F8C19C0071B16E /* SDWebImageManager.m in Sources */,
+				437DC0932217FBBC0071F5D2 /* ChatCell.m in Sources */,
 				2000A30B2216A6C500E3B68E /* CBLogoutAccountVC.m in Sources */,
 				434151BC21FC21A000577405 /* CBBaseInfoVc.m in Sources */,
 				438337FC221317FE00B04CFA /* CBUser.m in Sources */,

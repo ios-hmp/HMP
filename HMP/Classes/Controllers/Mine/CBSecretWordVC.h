@@ -9,9 +9,20 @@
 #import "CBBaseVc.h"
 
 NS_ASSUME_NONNULL_BEGIN
+@interface SecretTabCell2 : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLab;
+@property (weak, nonatomic) IBOutlet UILabel *timeLab;
+@property (weak, nonatomic) IBOutlet UILabel *stateLab;
 
+@end
 @interface CBSecretWordVC : CBBaseVc
+@property (weak, nonatomic) IBOutlet UIView *titleView;
+@property (weak, nonatomic) IBOutlet UIButton *titleLeftBtn;
+@property (weak, nonatomic) IBOutlet UIButton *titleRightBtn;
+@property (weak, nonatomic) IBOutlet UIButton *navRightBtn;
 
+- (IBAction)titleBtnAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIView *titleLineView;
 @end
 
 NS_ASSUME_NONNULL_END

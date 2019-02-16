@@ -150,6 +150,7 @@
 		437DC06A2217CAA40071F5D2 /* CBHomeSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0682217CAA40071F5D2 /* CBHomeSettings.m */; };
 		437DC06B2217CAA40071F5D2 /* CBHomeSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0692217CAA40071F5D2 /* CBHomeSettings.xib */; };
 		437DC06E2217D5C40071F5D2 /* CBCusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC06D2217D5C40071F5D2 /* CBCusService.m */; };
+		437DC0712217F02D0071F5D2 /* CBChatDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */; };
 		438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E8221311F600B04CFA /* AFURLResponseSerialization.m */; };
 		438337F4221311F600B04CFA /* Httprequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E9221311F600B04CFA /* Httprequest.m */; };
 		438337F5221311F600B04CFA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337EA221311F600B04CFA /* AFHTTPSessionManager.m */; };
@@ -451,6 +452,8 @@
 		437DC0692217CAA40071F5D2 /* CBHomeSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CBHomeSettings.xib; sourceTree = "<group>"; };
 		437DC06C2217D5C30071F5D2 /* CBCusService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCusService.h; sourceTree = "<group>"; };
 		437DC06D2217D5C40071F5D2 /* CBCusService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBCusService.m; sourceTree = "<group>"; };
+		437DC06F2217F02C0071F5D2 /* CBChatDetailVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBChatDetailVc.h; sourceTree = "<group>"; };
+		437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBChatDetailVc.m; sourceTree = "<group>"; };
 		438337E4221311F600B04CFA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		438337E5221311F600B04CFA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		438337E6221311F600B04CFA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -938,6 +941,8 @@
 			children = (
 				434151CC21FC303600577405 /* CBChatVc.h */,
 				434151CD21FC303600577405 /* CBChatVc.m */,
+				437DC06F2217F02C0071F5D2 /* CBChatDetailVc.h */,
+				437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1201,6 +1206,7 @@
 				4332294221F8C19C0071B16E /* TZImageManager.m in Sources */,
 				4332296821F8C19C0071B16E /* UIImageView+WebCache.m in Sources */,
 				4332294921F8C19C0071B16E /* IQTitleBarButtonItem.m in Sources */,
+				437DC0712217F02D0071F5D2 /* CBChatDetailVc.m in Sources */,
 				4332298A21F8C19C0071B16E /* CBCommentCell.m in Sources */,
 				438337F5221311F600B04CFA /* AFHTTPSessionManager.m in Sources */,
 				4332291D21F8C19C0071B16E /* PathHelper.m in Sources */,

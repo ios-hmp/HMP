@@ -10,7 +10,9 @@
 #import "CBBaseModel.h"
 
 @interface CBBaseVc ()
-
+{
+    BOOL hasConfigUI;
+}
 @end
 
 @implementation CBBaseVc
@@ -38,11 +40,15 @@
         self.tableview.tableFooterView = [[UIView alloc]init];
 
     }
-    
-    [self configUI];
     [self loadNetData];
 }
 
+-(void)viewDidLayoutSubviews{
+    if (!hasConfigUI) {
+        hasConfigUI = YES;
+        [self configUI];
+    }
+}
 - (void)loadNetData{
     
 }

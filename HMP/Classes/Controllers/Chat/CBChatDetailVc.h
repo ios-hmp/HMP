@@ -1,8 +1,8 @@
 //
-//  CBChatVc.h
+//  CBChatDetailVc.h
 //  HMP
 //
-//  Created by hcb on 2019/1/26.
+//  Created by hcb on 2019/2/16.
 //  Copyright © 2019 mac. All rights reserved.
 //
 
@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CBChatVc : CBBaseVc
-
-
+@interface CBChatDetailVc : CBBaseVc
 
 @end
 

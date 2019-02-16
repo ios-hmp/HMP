@@ -143,6 +143,10 @@
 		4345DAEB21F470F2008DCA65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4345DAEA21F470F2008DCA65 /* Assets.xcassets */; };
 		4345DAEE21F470F2008DCA65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4345DAEC21F470F2008DCA65 /* LaunchScreen.storyboard */; };
 		4345DAF121F470F2008DCA65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4345DAF021F470F2008DCA65 /* main.m */; };
+		437DC03F2216E9790071F5D2 /* CBFriendsVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC03E2216E9790071F5D2 /* CBFriendsVc.m */; };
+		437DC0482216E9C40071F5D2 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0442216E9C40071F5D2 /* GroupModel.m */; };
+		437DC0492216E9C40071F5D2 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0452216E9C40071F5D2 /* FriendCell.xib */; };
+		437DC04A2216E9C40071F5D2 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0462216E9C40071F5D2 /* FriendCell.m */; };
 		438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E8221311F600B04CFA /* AFURLResponseSerialization.m */; };
 		438337F4221311F600B04CFA /* Httprequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E9221311F600B04CFA /* Httprequest.m */; };
 		438337F5221311F600B04CFA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337EA221311F600B04CFA /* AFHTTPSessionManager.m */; };
@@ -436,6 +440,13 @@
 		4345DAED21F470F2008DCA65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4345DAEF21F470F2008DCA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4345DAF021F470F2008DCA65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		437DC03D2216E9790071F5D2 /* CBFriendsVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBFriendsVc.h; sourceTree = "<group>"; };
+		437DC03E2216E9790071F5D2 /* CBFriendsVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBFriendsVc.m; sourceTree = "<group>"; };
+		437DC0422216E9C30071F5D2 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		437DC0432216E9C30071F5D2 /* GroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupModel.h; sourceTree = "<group>"; };
+		437DC0442216E9C40071F5D2 /* GroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupModel.m; sourceTree = "<group>"; };
+		437DC0452216E9C40071F5D2 /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		437DC0462216E9C40071F5D2 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 		438337E4221311F600B04CFA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		438337E5221311F600B04CFA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		438337E6221311F600B04CFA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -897,6 +908,7 @@
 			children = (
 				434151C921FC2CC800577405 /* CBHomeVc.h */,
 				434151CA21FC2CC800577405 /* CBHomeVc.m */,
+				437DC0402216E9A50071F5D2 /* Freinds */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -995,6 +1007,20 @@
 				4345DAF021F470F2008DCA65 /* main.m */,
 			);
 			path = HMP;
+			sourceTree = "<group>";
+		};
+		437DC0402216E9A50071F5D2 /* Freinds */ = {
+			isa = PBXGroup;
+			children = (
+				437DC03D2216E9790071F5D2 /* CBFriendsVc.h */,
+				437DC03E2216E9790071F5D2 /* CBFriendsVc.m */,
+				437DC0422216E9C30071F5D2 /* FriendCell.h */,
+				437DC0462216E9C40071F5D2 /* FriendCell.m */,
+				437DC0452216E9C40071F5D2 /* FriendCell.xib */,
+				437DC0432216E9C30071F5D2 /* GroupModel.h */,
+				437DC0442216E9C40071F5D2 /* GroupModel.m */,
+			);
+			path = Freinds;
 			sourceTree = "<group>";
 		};
 		438337E3221311F600B04CFA /* AFNetworking */ = {
@@ -1109,6 +1135,7 @@
 				4332291321F8C19C0071B16E /* wordLoading@2x.png in Resources */,
 				4345DAEB21F470F2008DCA65 /* Assets.xcassets in Resources */,
 				434151C421FC277000577405 /* Mine.storyboard in Resources */,
+				437DC0492216E9C40071F5D2 /* FriendCell.xib in Resources */,
 				4332292A21F8C19C0071B16E /* MJRefresh.bundle in Resources */,
 				2000A2F8221668EA00E3B68E /* test.png in Resources */,
 				434151C821FC278F00577405 /* Search.storyboard in Resources */,
@@ -1210,6 +1237,7 @@
 				4332295021F8C19C0071B16E /* IQUIWindow+Hierarchy.m in Sources */,
 				4332295521F8C19C0071B16E /* IQKeyboardReturnKeyHandler.m in Sources */,
 				4332294B21F8C19C0071B16E /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				437DC04A2216E9C40071F5D2 /* FriendCell.m in Sources */,
 				4332293021F8C19C0071B16E /* MJRefreshAutoStateFooter.m in Sources */,
 				4332294821F8C19C0071B16E /* IQToolbar.m in Sources */,
 				4332295F21F8C19C0071B16E /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -1222,9 +1250,11 @@
 				4332298721F8C19C0071B16E /* CBLoginVc.m in Sources */,
 				4332294C21F8C19C0071B16E /* IQPreviousNextView.m in Sources */,
 				4332293C21F8C19C0071B16E /* TZVideoPlayerController.m in Sources */,
+				437DC03F2216E9790071F5D2 /* CBFriendsVc.m in Sources */,
 				4332297C21F8C19C0071B16E /* CBWebVc.m in Sources */,
 				4332292D21F8C19C0071B16E /* MJRefreshBackGifFooter.m in Sources */,
 				2074B882221564C700D03214 /* CBMessageVC.m in Sources */,
+				437DC0482216E9C40071F5D2 /* GroupModel.m in Sources */,
 				4332292721F8C19C0071B16E /* MJFoundation.m in Sources */,
 				4332295D21F8C19C0071B16E /* SDWebImageManager.m in Sources */,
 				2000A30B2216A6C500E3B68E /* CBLogoutAccountVC.m in Sources */,
@@ -1397,8 +1427,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N294699B43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",
@@ -1422,8 +1453,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N294699B43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",

@@ -146,11 +146,6 @@
 		437DC04D2217BB690071F5D2 /* CBFriendsVc.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712741221799CF00DC3C20 /* CBFriendsVc.m */; };
 		437DC04E2217BB690071F5D2 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712742221799CF00DC3C20 /* FriendCell.m */; };
 		437DC04F2217BB690071F5D2 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0712743221799CF00DC3C20 /* GroupModel.m */; };
-		437DC05C2217C7E30071F5D2 /* CBBaseTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0542217C7E30071F5D2 /* CBBaseTableViewDataSource.m */; };
-		437DC05D2217C7E30071F5D2 /* CBTableViewDataSourceMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0562217C7E30071F5D2 /* CBTableViewDataSourceMaker.m */; };
-		437DC05E2217C7E30071F5D2 /* CBTableViewSectionMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0572217C7E30071F5D2 /* CBTableViewSectionMaker.m */; };
-		437DC05F2217C7E30071F5D2 /* CBDataSourceSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0582217C7E30071F5D2 /* CBDataSourceSection.m */; };
-		437DC0602217C7E30071F5D2 /* UITableView+CBTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0592217C7E30071F5D2 /* UITableView+CBTableViewDataSource.m */; };
 		437DC0632217C7FC0071F5D2 /* CBHomeSetingsVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0622217C7FC0071F5D2 /* CBHomeSetingsVc.m */; };
 		437DC06A2217CAA40071F5D2 /* CBHomeSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0682217CAA40071F5D2 /* CBHomeSettings.m */; };
 		437DC06B2217CAA40071F5D2 /* CBHomeSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0692217CAA40071F5D2 /* CBHomeSettings.xib */; };
@@ -449,17 +444,6 @@
 		4345DAED21F470F2008DCA65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4345DAEF21F470F2008DCA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4345DAF021F470F2008DCA65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		437DC0512217C7E30071F5D2 /* CBDataSourceSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDataSourceSection.h; sourceTree = "<group>"; };
-		437DC0522217C7E30071F5D2 /* CBTableViewSectionMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTableViewSectionMaker.h; sourceTree = "<group>"; };
-		437DC0532217C7E30071F5D2 /* CBTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTableViewDataSource.h; sourceTree = "<group>"; };
-		437DC0542217C7E30071F5D2 /* CBBaseTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBaseTableViewDataSource.m; sourceTree = "<group>"; };
-		437DC0552217C7E30071F5D2 /* UITableView+CBTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CBTableViewDataSource.h"; sourceTree = "<group>"; };
-		437DC0562217C7E30071F5D2 /* CBTableViewDataSourceMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTableViewDataSourceMaker.m; sourceTree = "<group>"; };
-		437DC0572217C7E30071F5D2 /* CBTableViewSectionMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTableViewSectionMaker.m; sourceTree = "<group>"; };
-		437DC0582217C7E30071F5D2 /* CBDataSourceSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDataSourceSection.m; sourceTree = "<group>"; };
-		437DC0592217C7E30071F5D2 /* UITableView+CBTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CBTableViewDataSource.m"; sourceTree = "<group>"; };
-		437DC05A2217C7E30071F5D2 /* CBBaseTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBaseTableViewDataSource.h; sourceTree = "<group>"; };
-		437DC05B2217C7E30071F5D2 /* CBTableViewDataSourceMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTableViewDataSourceMaker.h; sourceTree = "<group>"; };
 		437DC0612217C7FC0071F5D2 /* CBHomeSetingsVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHomeSetingsVc.h; sourceTree = "<group>"; };
 		437DC0622217C7FC0071F5D2 /* CBHomeSetingsVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHomeSetingsVc.m; sourceTree = "<group>"; };
 		437DC0672217CAA40071F5D2 /* CBHomeSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHomeSettings.h; sourceTree = "<group>"; };
@@ -530,7 +514,6 @@
 				2000A2FC22166E0200E3B68E /* ConstantInfo.h */,
 				433227FF21F8C19C0071B16E /* AppManager.h */,
 				4332286F21F8C19C0071B16E /* AppManager.m */,
-				437DC0502217C7E30071F5D2 /* CBTableViewDataSource */,
 				438337E3221311F600B04CFA /* AFNetworking */,
 				4332280021F8C19C0071B16E /* LoadingView */,
 				4332281221F8C19C0071B16E /* MJExtension */,
@@ -1048,24 +1031,6 @@
 			path = HMP;
 			sourceTree = "<group>";
 		};
-		437DC0502217C7E30071F5D2 /* CBTableViewDataSource */ = {
-			isa = PBXGroup;
-			children = (
-				437DC0512217C7E30071F5D2 /* CBDataSourceSection.h */,
-				437DC0522217C7E30071F5D2 /* CBTableViewSectionMaker.h */,
-				437DC0532217C7E30071F5D2 /* CBTableViewDataSource.h */,
-				437DC0542217C7E30071F5D2 /* CBBaseTableViewDataSource.m */,
-				437DC0552217C7E30071F5D2 /* UITableView+CBTableViewDataSource.h */,
-				437DC0562217C7E30071F5D2 /* CBTableViewDataSourceMaker.m */,
-				437DC0572217C7E30071F5D2 /* CBTableViewSectionMaker.m */,
-				437DC0582217C7E30071F5D2 /* CBDataSourceSection.m */,
-				437DC0592217C7E30071F5D2 /* UITableView+CBTableViewDataSource.m */,
-				437DC05A2217C7E30071F5D2 /* CBBaseTableViewDataSource.h */,
-				437DC05B2217C7E30071F5D2 /* CBTableViewDataSourceMaker.h */,
-			);
-			path = CBTableViewDataSource;
-			sourceTree = "<group>";
-		};
 		438337E3221311F600B04CFA /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1227,7 +1192,6 @@
 				4332295B21F8C19C0071B16E /* TAAnimatedDotView.m in Sources */,
 				4332296221F8C19C0071B16E /* UIImage+MultiFormat.m in Sources */,
 				4332293B21F8C19C0071B16E /* TZAssetCell.m in Sources */,
-				437DC0602217C7E30071F5D2 /* UITableView+CBTableViewDataSource.m in Sources */,
 				4332291221F8C19C0071B16E /* LoadingView.m in Sources */,
 				4332293F21F8C19C0071B16E /* UIView+Layout.m in Sources */,
 				4332295A21F8C19C0071B16E /* TAPageControl.m in Sources */,
@@ -1246,14 +1210,12 @@
 				434151D121FC304000577405 /* CBMineVc.m in Sources */,
 				4332295221F8C19C0071B16E /* IQUIScrollView+Additions.m in Sources */,
 				2000A302221690EC00E3B68E /* CBAccountSettingVC.m in Sources */,
-				437DC05F2217C7E30071F5D2 /* CBDataSourceSection.m in Sources */,
 				437DC04F2217BB690071F5D2 /* GroupModel.m in Sources */,
 				4332293921F8C19C0071B16E /* MJRefreshAutoFooter.m in Sources */,
 				2000A3052216940A00E3B68E /* CBChangePhoneVC.m in Sources */,
 				4332293121F8C19C0071B16E /* MJRefreshAutoGifFooter.m in Sources */,
 				4332291521F8C19C0071B16E /* LDView.m in Sources */,
 				4332292921F8C19C0071B16E /* MJRefreshConst.m in Sources */,
-				437DC05E2217C7E30071F5D2 /* CBTableViewSectionMaker.m in Sources */,
 				4332293321F8C19C0071B16E /* MJRefreshNormalHeader.m in Sources */,
 				4332292321F8C19C0071B16E /* NSObject+MJClass.m in Sources */,
 				4332291F21F8C19C0071B16E /* MJProperty.m in Sources */,
@@ -1266,7 +1228,6 @@
 				2000A2FF22168AD400E3B68E /* CBBlackOperateVC.m in Sources */,
 				438337F9221311F600B04CFA /* AFSecurityPolicy.m in Sources */,
 				4332293821F8C19C0071B16E /* MJRefreshBackFooter.m in Sources */,
-				437DC05C2217C7E30071F5D2 /* CBBaseTableViewDataSource.m in Sources */,
 				438337F8221311F600B04CFA /* AFNetworkReachabilityManager.m in Sources */,
 				4332294A21F8C19C0071B16E /* IQBarButtonItem.m in Sources */,
 				4332298D21F8C19C0071B16E /* CBArticleCell.m in Sources */,
@@ -1311,7 +1272,6 @@
 				A0BCC92F221581D20093EEF9 /* CBRedBagVC.m in Sources */,
 				4332295C21F8C19C0071B16E /* TAAbstractDotView.m in Sources */,
 				4332296121F8C19C0071B16E /* UIImage+GIF.m in Sources */,
-				437DC05D2217C7E30071F5D2 /* CBTableViewDataSourceMaker.m in Sources */,
 				4332295921F8C19C0071B16E /* TADotView.m in Sources */,
 				4332298721F8C19C0071B16E /* CBLoginVc.m in Sources */,
 				4332294C21F8C19C0071B16E /* IQPreviousNextView.m in Sources */,

@@ -9,7 +9,7 @@
 #import "CBSecretWordVC.h"
 #import "CBMessageVC.h"
 
-@interface CBSecretWordVC ()
+@interface CBSecretWordVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -17,6 +17,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    _titleView.hidden = NO;
     _titleView.top = 0;
     _titleView.centerX = CB_SCREENWIDTH/2.0;
     [self.navigationController.navigationBar addSubview:_titleView];
@@ -24,7 +25,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [_titleView removeFromSuperview];
+    _titleView.hidden = YES;
 }
 
 - (void)viewDidLoad {
@@ -49,7 +50,28 @@
     }
     else {
         SecretTabCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"SecretTabCell2"];
+        if (indexPath.row%2==0) {
+            cell.stateLab.text = @"回复";
+        }else {
+            cell.stateLab.text = @"已回复";
+        }
         return cell;
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (self.titleLeftBtn.selected) {
+        UIViewController *vc = [AppManager getVCInBoard:@"Mine" ID:@"CBLookReplyVC"];
+        PUSH(vc);
+    }else {
+        if (indexPath.row%2==0) {
+            UIViewController *vc = [AppManager getVCInBoard:@"Mine" ID:@"CBReplySecretWordVC"];
+            PUSH(vc);
+        }else {
+            UIViewController *vc = [AppManager getVCInBoard:@"Mine" ID:@"CBLookMineReplyVC"];
+            PUSH(vc);
+        }
     }
 }
 

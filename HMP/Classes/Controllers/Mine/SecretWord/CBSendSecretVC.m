@@ -7,7 +7,7 @@
 //
 
 #import "CBSendSecretVC.h"
-#define MaxLength 100
+#define MaxLength 60
 
 @interface CBSendSecretVC ()
 
@@ -19,8 +19,6 @@
     [super viewDidLoad];
     self.title = @"发密语";
     self.countLab.text = [NSString stringWithFormat:@"%ld/%ld",self.contentTV.text.length,MaxLength];
-    NSLog(@"设置前%f",self.sendScrectBtn.width);
-    // Do any additional setup after loading the view.
 }
 
 -(void)viewDidLayoutSubviews{
@@ -28,14 +26,7 @@
     [CBFastUI addGradintBg:self.sendScrectBtn];
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    NSLog(@"设置后%f",self.sendScrectBtn.width);
-
-}
-
 - (void)configUI{
-    [CBFastUI addGradintBg:self.sendScrectBtn];
 }
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {

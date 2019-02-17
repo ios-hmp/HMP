@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CBRequireVC : CBBaseVc
 @property (weak, nonatomic) IBOutlet UITableView *myTabView;
-@property (weak, nonatomic) IBOutlet UIScrollView *bgScrollView;
+@property (retain, nonatomic)  UIScrollView *bgScrollView;
 
 @end
 

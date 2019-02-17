@@ -18,16 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableview.mj_header = nil;
-    self.tableview.mj_footer = nil;
     titleArr = @[@"结婚安居地区",@"",@"民族",@"宗教",@"最低学历要求",@"婚姻情况",@"入赘要求",@"收入范围",@"吸烟情况",@"彩礼情况",@"身高"];
-    _bgScrollView.frame = CGRectMake(0, 64, CB_SCREENWIDTH, CB_SCREENHIGH-64);
-    _bgScrollView.contentSize = CGSizeMake(0, MAX(self.tableview.height+40, _bgScrollView.height+1));
-    
+    _bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, kNavBarH, CB_SCREENWIDTH, CB_SCREENHIGH-kNavBarH)];
+    [self.view addSubview:_bgScrollView];
+    [_bgScrollView addSubview:self.myTabView];
+    _bgScrollView.contentSize = CGSizeMake(0, MAX(self.myTabView.height+40, _bgScrollView.height+1));
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return titleArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -40,6 +39,10 @@
         cell.titleLab.text = titleArr[indexPath.row];
         return cell;
     }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /*

@@ -50,16 +50,28 @@
     }
     else {
         SecretTabCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"SecretTabCell2"];
+        if (indexPath.row%2==0) {
+            cell.stateLab.text = @"回复";
+        }else {
+            cell.stateLab.text = @"已回复";
+        }
         return cell;
     }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (self.titleLeftBtn.selected) {
-        
-    }else {
         UIViewController *vc = [AppManager getVCInBoard:@"Mine" ID:@"CBLookReplyVC"];
         PUSH(vc);
+    }else {
+        if (indexPath.row%2==0) {
+            UIViewController *vc = [AppManager getVCInBoard:@"Mine" ID:@"CBReplySecretWordVC"];
+            PUSH(vc);
+        }else {
+            UIViewController *vc = [AppManager getVCInBoard:@"Mine" ID:@"CBLookMineReplyVC"];
+            PUSH(vc);
+        }
     }
 }
 

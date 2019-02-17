@@ -172,6 +172,8 @@
 		A0712744221799D000DC3C20 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A071273E221799CF00DC3C20 /* FriendCell.xib */; };
 		A09D317222182E55000F5532 /* CBSecretWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A071274922179FC100DC3C20 /* CBSecretWordVC.m */; };
 		A09D317522183008000F5532 /* CBLookReplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D317422183008000F5532 /* CBLookReplyVC.m */; };
+		A09D31792218FC4E000F5532 /* CBReplySecretWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D31782218FC4E000F5532 /* CBReplySecretWordVC.m */; };
+		A09D317C221902AE000F5532 /* CBLookMineReplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D317B221902AE000F5532 /* CBLookMineReplyVC.m */; };
 		A0BCC92F221581D20093EEF9 /* CBRedBagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */; };
 		A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CE799F2217D94000927242 /* CBSendSecretVC.m */; };
 /* End PBXBuildFile section */
@@ -506,6 +508,10 @@
 		A071274922179FC100DC3C20 /* CBSecretWordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBSecretWordVC.m; sourceTree = "<group>"; };
 		A09D317322183008000F5532 /* CBLookReplyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBLookReplyVC.h; sourceTree = "<group>"; };
 		A09D317422183008000F5532 /* CBLookReplyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLookReplyVC.m; sourceTree = "<group>"; };
+		A09D31772218FC4E000F5532 /* CBReplySecretWordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBReplySecretWordVC.h; sourceTree = "<group>"; };
+		A09D31782218FC4E000F5532 /* CBReplySecretWordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBReplySecretWordVC.m; sourceTree = "<group>"; };
+		A09D317A221902AE000F5532 /* CBLookMineReplyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBLookMineReplyVC.h; sourceTree = "<group>"; };
+		A09D317B221902AE000F5532 /* CBLookMineReplyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLookMineReplyVC.m; sourceTree = "<group>"; };
 		A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRedBagVC.h; sourceTree = "<group>"; };
 		A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRedBagVC.m; sourceTree = "<group>"; };
 		A0CE799E2217D94000927242 /* CBSendSecretVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBSendSecretVC.h; sourceTree = "<group>"; };
@@ -975,40 +981,22 @@
 		434151BF21FC271600577405 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				A09D317F22190323000F5532 /* RedBag */,
+				A09D317E221902FC000F5532 /* BlackName */,
+				A09D31762218FB7F000F5532 /* SecretWord */,
+				A09D317D221902C2000F5532 /* Setting */,
 				434151CF21FC304000577405 /* CBMineVc.h */,
 				434151D021FC304000577405 /* CBMineVc.m */,
 				2074B880221564C700D03214 /* CBMessageVC.h */,
 				2074B881221564C700D03214 /* CBMessageVC.m */,
 				2074B88622156D2D00D03214 /* CBMemberVIPVC.h */,
 				2074B88722156D2D00D03214 /* CBMemberVIPVC.m */,
-				A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */,
-				A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */,
-				201ED5572216534B00362420 /* CBRedBagRecordVC.h */,
-				201ED5582216534B00362420 /* CBRedBagRecordVC.m */,
 				2000A30F2216B80900E3B68E /* CBRequireVC.h */,
 				2000A3102216B80900E3B68E /* CBRequireVC.m */,
 				2000A2F12216593100E3B68E /* CBMarryMessageVC.h */,
 				2000A2F22216593100E3B68E /* CBMarryMessageVC.m */,
 				2000A2F422165D5900E3B68E /* CBPhotoListVC.h */,
 				2000A2F522165D5900E3B68E /* CBPhotoListVC.m */,
-				A071274822179FC100DC3C20 /* CBSecretWordVC.h */,
-				A071274922179FC100DC3C20 /* CBSecretWordVC.m */,
-				A0CE799E2217D94000927242 /* CBSendSecretVC.h */,
-				A0CE799F2217D94000927242 /* CBSendSecretVC.m */,
-				A09D317322183008000F5532 /* CBLookReplyVC.h */,
-				A09D317422183008000F5532 /* CBLookReplyVC.m */,
-				2000A2F922166C0100E3B68E /* CBBlacklistVC.h */,
-				2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */,
-				2000A2FD22168AD400E3B68E /* CBBlackOperateVC.h */,
-				2000A2FE22168AD400E3B68E /* CBBlackOperateVC.m */,
-				2000A300221690EC00E3B68E /* CBAccountSettingVC.h */,
-				2000A301221690EC00E3B68E /* CBAccountSettingVC.m */,
-				2000A3032216940A00E3B68E /* CBChangePhoneVC.h */,
-				2000A3042216940A00E3B68E /* CBChangePhoneVC.m */,
-				2000A306221699BE00E3B68E /* CBChangePwdVC.h */,
-				2000A307221699BE00E3B68E /* CBChangePwdVC.m */,
-				2000A3092216A6C500E3B68E /* CBLogoutAccountVC.h */,
-				2000A30A2216A6C500E3B68E /* CBLogoutAccountVC.m */,
 				2000A30C2216A9F100E3B68E /* CBComplaintVC.h */,
 				2000A30D2216A9F100E3B68E /* CBComplaintVC.m */,
 			);
@@ -1142,6 +1130,60 @@
 				A0712743221799CF00DC3C20 /* GroupModel.m */,
 			);
 			path = Freinds;
+			sourceTree = "<group>";
+		};
+		A09D31762218FB7F000F5532 /* SecretWord */ = {
+			isa = PBXGroup;
+			children = (
+				A071274822179FC100DC3C20 /* CBSecretWordVC.h */,
+				A071274922179FC100DC3C20 /* CBSecretWordVC.m */,
+				A0CE799E2217D94000927242 /* CBSendSecretVC.h */,
+				A0CE799F2217D94000927242 /* CBSendSecretVC.m */,
+				A09D317322183008000F5532 /* CBLookReplyVC.h */,
+				A09D317422183008000F5532 /* CBLookReplyVC.m */,
+				A09D317A221902AE000F5532 /* CBLookMineReplyVC.h */,
+				A09D317B221902AE000F5532 /* CBLookMineReplyVC.m */,
+				A09D31772218FC4E000F5532 /* CBReplySecretWordVC.h */,
+				A09D31782218FC4E000F5532 /* CBReplySecretWordVC.m */,
+			);
+			path = SecretWord;
+			sourceTree = "<group>";
+		};
+		A09D317D221902C2000F5532 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2000A300221690EC00E3B68E /* CBAccountSettingVC.h */,
+				2000A301221690EC00E3B68E /* CBAccountSettingVC.m */,
+				2000A3032216940A00E3B68E /* CBChangePhoneVC.h */,
+				2000A3042216940A00E3B68E /* CBChangePhoneVC.m */,
+				2000A306221699BE00E3B68E /* CBChangePwdVC.h */,
+				2000A307221699BE00E3B68E /* CBChangePwdVC.m */,
+				2000A3092216A6C500E3B68E /* CBLogoutAccountVC.h */,
+				2000A30A2216A6C500E3B68E /* CBLogoutAccountVC.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		A09D317E221902FC000F5532 /* BlackName */ = {
+			isa = PBXGroup;
+			children = (
+				2000A2F922166C0100E3B68E /* CBBlacklistVC.h */,
+				2000A2FA22166C0100E3B68E /* CBBlacklistVC.m */,
+				2000A2FD22168AD400E3B68E /* CBBlackOperateVC.h */,
+				2000A2FE22168AD400E3B68E /* CBBlackOperateVC.m */,
+			);
+			path = BlackName;
+			sourceTree = "<group>";
+		};
+		A09D317F22190323000F5532 /* RedBag */ = {
+			isa = PBXGroup;
+			children = (
+				A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */,
+				A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */,
+				201ED5572216534B00362420 /* CBRedBagRecordVC.h */,
+				201ED5582216534B00362420 /* CBRedBagRecordVC.m */,
+			);
+			path = RedBag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1296,6 +1338,7 @@
 				4332293821F8C19C0071B16E /* MJRefreshBackFooter.m in Sources */,
 				438337F8221311F600B04CFA /* AFNetworkReachabilityManager.m in Sources */,
 				4332294A21F8C19C0071B16E /* IQBarButtonItem.m in Sources */,
+				A09D31792218FC4E000F5532 /* CBReplySecretWordVC.m in Sources */,
 				4332298D21F8C19C0071B16E /* CBArticleCell.m in Sources */,
 				A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */,
 				437DC06E2217D5C40071F5D2 /* CBCusService.m in Sources */,
@@ -1321,6 +1364,7 @@
 				4345DAF121F470F2008DCA65 /* main.m in Sources */,
 				4332296721F8C19C0071B16E /* NSData+ImageContentType.m in Sources */,
 				2000A308221699BE00E3B68E /* CBChangePwdVC.m in Sources */,
+				A09D317C221902AE000F5532 /* CBLookMineReplyVC.m in Sources */,
 				4332296321F8C19C0071B16E /* SDWebImageCompat.m in Sources */,
 				4332292C21F8C19C0071B16E /* UIView+MJExtension.m in Sources */,
 				4332291421F8C19C0071B16E /* UIView+YYAdd.m in Sources */,

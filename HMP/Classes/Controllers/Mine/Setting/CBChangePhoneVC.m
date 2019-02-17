@@ -17,8 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"更换手机号";
-    self.changePhoneBtn.layer.shadowColor = self.changePhoneBtn.backgroundColor.CGColor;
+    
+
+//    self.changePhoneBtn.layer.shadowColor = self.changePhoneBtn.backgroundColor.CGColor;
 }
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [CBFastUI addGradintBg:self.changePhoneBtn];
+}
+
 
 /*
 #pragma mark - Navigation

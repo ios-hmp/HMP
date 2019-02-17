@@ -17,8 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [CBFastUI addRoundCornerAnBorder:self.removeBlackBtn];
-    self.addFriendBtn.layer.shadowColor = self.addFriendBtn.backgroundColor.CGColor;
 }
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [CBFastUI addGradintBg:self.addFriendBtn];
+}
+
 
 /*
 #pragma mark - Navigation

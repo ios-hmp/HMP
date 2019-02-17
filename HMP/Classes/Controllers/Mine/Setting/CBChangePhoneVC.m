@@ -17,10 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"更换手机号";
-    
-
-//    self.changePhoneBtn.layer.shadowColor = self.changePhoneBtn.backgroundColor.CGColor;
-}
+    }
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];

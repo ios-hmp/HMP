@@ -17,9 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"修改密码";
- self.changePwdBtn.layer.shadowColor = self.changePwdBtn.backgroundColor.CGColor;
-
     // Do any additional setup after loading the view.
+}
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [CBFastUI addGradintBg:self.changePwdBtn];
 }
 
 /*

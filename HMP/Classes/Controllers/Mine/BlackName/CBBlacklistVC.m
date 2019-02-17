@@ -9,11 +9,11 @@
 #import "CBBlacklistVC.h"
 
 // 多少列
-#define CB_BRANDSECTION 3
+#define CB_BRANDSECTION 3.01
 // 列表间隔距离
 #define CB_BRANDDEV 10
 // cell宽度
-#define CB_LIST1CELLWIDTH (CB_SCREENWIDTH - (CB_BRANDSECTION + 1)*CB_BRANDDEV) / CB_BRANDSECTION
+#define CB_LIST1CELLWIDTH ((CB_SCREENWIDTH - (CB_BRANDSECTION + 1)*CB_BRANDDEV) / CB_BRANDSECTION)
 
 
 @interface CBBlacklistVC ()
@@ -89,11 +89,5 @@
 @end
 
 @implementation BlacKCollViewCell
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    NSLog(@"%f",self.headPhotoImgView.frame.size.width);
-    NSLog(@"%f",self.headPhotoImgView.frame.size.height);
-    self.headPhotoImgView.layer.cornerRadius = 30;
-    // 获取到约束后的控件frame
-}
+
 @end

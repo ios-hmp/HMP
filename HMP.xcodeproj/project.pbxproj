@@ -174,6 +174,8 @@
 		A09D317522183008000F5532 /* CBLookReplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D317422183008000F5532 /* CBLookReplyVC.m */; };
 		A09D31792218FC4E000F5532 /* CBReplySecretWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D31782218FC4E000F5532 /* CBReplySecretWordVC.m */; };
 		A09D317C221902AE000F5532 /* CBLookMineReplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D317B221902AE000F5532 /* CBLookMineReplyVC.m */; };
+		A09D318222193DE3000F5532 /* CBShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = A09D318122193DE3000F5532 /* CBShareView.m */; };
+		A09D318522194D79000F5532 /* VipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09D318422194D79000F5532 /* VipView.xib */; };
 		A0BCC92F221581D20093EEF9 /* CBRedBagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */; };
 		A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CE799F2217D94000927242 /* CBSendSecretVC.m */; };
 /* End PBXBuildFile section */
@@ -512,6 +514,9 @@
 		A09D31782218FC4E000F5532 /* CBReplySecretWordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBReplySecretWordVC.m; sourceTree = "<group>"; };
 		A09D317A221902AE000F5532 /* CBLookMineReplyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBLookMineReplyVC.h; sourceTree = "<group>"; };
 		A09D317B221902AE000F5532 /* CBLookMineReplyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLookMineReplyVC.m; sourceTree = "<group>"; };
+		A09D318022193DE3000F5532 /* CBShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBShareView.h; sourceTree = "<group>"; };
+		A09D318122193DE3000F5532 /* CBShareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBShareView.m; sourceTree = "<group>"; };
+		A09D318422194D79000F5532 /* VipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VipView.xib; sourceTree = "<group>"; };
 		A0BCC92D221581D20093EEF9 /* CBRedBagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBRedBagVC.h; sourceTree = "<group>"; };
 		A0BCC92E221581D20093EEF9 /* CBRedBagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBRedBagVC.m; sourceTree = "<group>"; };
 		A0CE799E2217D94000927242 /* CBSendSecretVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBSendSecretVC.h; sourceTree = "<group>"; };
@@ -948,6 +953,8 @@
 				437DC0672217CAA40071F5D2 /* CBHomeSettings.h */,
 				437DC0682217CAA40071F5D2 /* CBHomeSettings.m */,
 				437DC0692217CAA40071F5D2 /* CBHomeSettings.xib */,
+				A09D318022193DE3000F5532 /* CBShareView.h */,
+				A09D318122193DE3000F5532 /* CBShareView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -981,6 +988,7 @@
 		434151BF21FC271600577405 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				A09D318322194D5E000F5532 /* VIP */,
 				A09D317F22190323000F5532 /* RedBag */,
 				A09D317E221902FC000F5532 /* BlackName */,
 				A09D31762218FB7F000F5532 /* SecretWord */,
@@ -989,8 +997,6 @@
 				434151D021FC304000577405 /* CBMineVc.m */,
 				2074B880221564C700D03214 /* CBMessageVC.h */,
 				2074B881221564C700D03214 /* CBMessageVC.m */,
-				2074B88622156D2D00D03214 /* CBMemberVIPVC.h */,
-				2074B88722156D2D00D03214 /* CBMemberVIPVC.m */,
 				2000A30F2216B80900E3B68E /* CBRequireVC.h */,
 				2000A3102216B80900E3B68E /* CBRequireVC.m */,
 				2000A2F12216593100E3B68E /* CBMarryMessageVC.h */,
@@ -1186,6 +1192,16 @@
 			path = RedBag;
 			sourceTree = "<group>";
 		};
+		A09D318322194D5E000F5532 /* VIP */ = {
+			isa = PBXGroup;
+			children = (
+				2074B88622156D2D00D03214 /* CBMemberVIPVC.h */,
+				2074B88722156D2D00D03214 /* CBMemberVIPVC.m */,
+				A09D318422194D79000F5532 /* VipView.xib */,
+			);
+			path = VIP;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1267,6 +1283,7 @@
 				4332292A21F8C19C0071B16E /* MJRefresh.bundle in Resources */,
 				2000A2F8221668EA00E3B68E /* test.png in Resources */,
 				434151C821FC278F00577405 /* Search.storyboard in Resources */,
+				A09D318522194D79000F5532 /* VipView.xib in Resources */,
 				4345DAE921F470F0008DCA65 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1336,6 +1353,7 @@
 				2000A2FF22168AD400E3B68E /* CBBlackOperateVC.m in Sources */,
 				438337F9221311F600B04CFA /* AFSecurityPolicy.m in Sources */,
 				4332293821F8C19C0071B16E /* MJRefreshBackFooter.m in Sources */,
+				A09D318222193DE3000F5532 /* CBShareView.m in Sources */,
 				438337F8221311F600B04CFA /* AFNetworkReachabilityManager.m in Sources */,
 				4332294A21F8C19C0071B16E /* IQBarButtonItem.m in Sources */,
 				A09D31792218FC4E000F5532 /* CBReplySecretWordVC.m in Sources */,

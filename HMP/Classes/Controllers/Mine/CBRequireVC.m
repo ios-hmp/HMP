@@ -22,6 +22,7 @@
     _bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, kNavBarH, CB_SCREENWIDTH, CB_SCREENHIGH-kNavBarH)];
     [self.view addSubview:_bgScrollView];
     [_bgScrollView addSubview:self.myTabView];
+    _bgScrollView.showsVerticalScrollIndicator = NO;
     _bgScrollView.contentSize = CGSizeMake(0, MAX(self.myTabView.height+40, _bgScrollView.height+1));
 }
 

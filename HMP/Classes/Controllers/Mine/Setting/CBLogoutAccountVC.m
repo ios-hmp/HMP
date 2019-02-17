@@ -17,9 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"注销账号";
-    self.logoutBtn.layer.shadowColor = self.logoutBtn.backgroundColor.CGColor;
 
     // Do any additional setup after loading the view.
+}
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [CBFastUI addGradintBg:self.logoutBtn];
 }
 
 /*

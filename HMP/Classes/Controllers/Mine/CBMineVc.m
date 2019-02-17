@@ -7,6 +7,8 @@
 //
 
 #import "CBMineVc.h"
+#import "CBShareView.h"
+#import "CBMemberVIPVC.h"
 
 @interface CBMineVc ()
 {
@@ -53,19 +55,33 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [_mineTabView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row==7) {
+        CBShareView *shareV = [[CBShareView alloc]initWithFrame:CGRectZero];
+        shareV.shareFriendBlock = ^{
+            NSLog(@"分享给朋友");
+        };
+        shareV.shareFriendCircleBlock = ^{
+            NSLog(@"分享到朋友圈");
+        };
+        return;
+    }
     UIViewController *vc =[AppManager getVCInBoard:@"Mine" ID:classVCNameArr[indexPath.row]];
     PUSH(vc);
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"mineVip"]) {
+        CBMemberVIPVC * vc = (CBMemberVIPVC *)segue.destinationViewController;
+        vc.meVipType = YES;
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
 @implementation MineTabCell

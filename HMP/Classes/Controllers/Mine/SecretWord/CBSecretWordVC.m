@@ -17,15 +17,21 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    _titleView.hidden = NO;
+    __weak typeof(self) weakSelf = self;
     _titleView.top = 0;
     _titleView.centerX = CB_SCREENWIDTH/2.0;
     [self.navigationController.navigationBar addSubview:_titleView];
+    [UIView animateWithDuration:0.1 animations:^{
+        weakSelf.titleView.alpha = 1.0;
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    _titleView.hidden = YES;
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.1 animations:^{
+        weakSelf.titleView.alpha = 0.0;
+    }];
 }
 
 - (void)viewDidLoad {

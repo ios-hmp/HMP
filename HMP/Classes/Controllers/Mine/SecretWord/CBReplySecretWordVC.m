@@ -14,14 +14,9 @@
     [super viewDidLoad];
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [CBFastUI addGradintBg:self.replyBtn];
-
-}
-
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
+    [CBFastUI addGradintBg:self.replyBtn];
 }
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {

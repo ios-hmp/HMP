@@ -152,13 +152,13 @@
 		437DC06E2217D5C40071F5D2 /* CBCusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC06D2217D5C40071F5D2 /* CBCusService.m */; };
 		437DC0712217F02D0071F5D2 /* CBChatDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */; };
 		437DC08E2217FBBC0071F5D2 /* ChatDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0822217FBBC0071F5D2 /* ChatDetailVc.m */; };
-		437DC08F2217FBBC0071F5D2 /* chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0832217FBBC0071F5D2 /* chat.storyboard */; };
 		437DC0902217FBBC0071F5D2 /* ChatCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0882217FBBC0071F5D2 /* ChatCell2.xib */; };
 		437DC0912217FBBC0071F5D2 /* ChatImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC0892217FBBC0071F5D2 /* ChatImgCell.xib */; };
 		437DC0922217FBBC0071F5D2 /* ChatData.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC08A2217FBBC0071F5D2 /* ChatData.m */; };
 		437DC0932217FBBC0071F5D2 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC08B2217FBBC0071F5D2 /* ChatCell.m */; };
 		437DC0942217FBBC0071F5D2 /* ChatImgCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC08C2217FBBC0071F5D2 /* ChatImgCell2.xib */; };
 		437DC0952217FBBC0071F5D2 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC08D2217FBBC0071F5D2 /* ChatCell.xib */; };
+		437DC09622182DE90071F5D2 /* CBSecretWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A071274922179FC100DC3C20 /* CBSecretWordVC.m */; };
 		438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E8221311F600B04CFA /* AFURLResponseSerialization.m */; };
 		438337F4221311F600B04CFA /* Httprequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E9221311F600B04CFA /* Httprequest.m */; };
 		438337F5221311F600B04CFA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337EA221311F600B04CFA /* AFHTTPSessionManager.m */; };
@@ -464,7 +464,6 @@
 		437DC06F2217F02C0071F5D2 /* CBChatDetailVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBChatDetailVc.h; sourceTree = "<group>"; };
 		437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBChatDetailVc.m; sourceTree = "<group>"; };
 		437DC0822217FBBC0071F5D2 /* ChatDetailVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDetailVc.m; sourceTree = "<group>"; };
-		437DC0832217FBBC0071F5D2 /* chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = chat.storyboard; sourceTree = "<group>"; };
 		437DC0842217FBBC0071F5D2 /* ChatDetailVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDetailVc.h; sourceTree = "<group>"; };
 		437DC0862217FBBC0071F5D2 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
 		437DC0872217FBBC0071F5D2 /* ChatData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatData.h; sourceTree = "<group>"; };
@@ -1066,7 +1065,6 @@
 			children = (
 				437DC0842217FBBC0071F5D2 /* ChatDetailVc.h */,
 				437DC0822217FBBC0071F5D2 /* ChatDetailVc.m */,
-				437DC0832217FBBC0071F5D2 /* chat.storyboard */,
 				437DC0852217FBBC0071F5D2 /* View */,
 			);
 			path = Message;
@@ -1203,7 +1201,6 @@
 				4332291621F8C19C0071B16E /* wordLoading@3x.png in Resources */,
 				437DC0912217FBBC0071F5D2 /* ChatImgCell.xib in Resources */,
 				4332291121F8C19C0071B16E /* myCline.png in Resources */,
-				437DC08F2217FBBC0071F5D2 /* chat.storyboard in Resources */,
 				4332294D21F8C19C0071B16E /* IQKeyboardManager.bundle in Resources */,
 				434151C621FC277900577405 /* Chat.storyboard in Resources */,
 				4332291021F8C19C0071B16E /* icon.png in Resources */,
@@ -1234,6 +1231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437DC09622182DE90071F5D2 /* CBSecretWordVC.m in Sources */,
 				434151D721FC433A00577405 /* CBSearchInputVc.m in Sources */,
 				4332297D21F8C19C0071B16E /* CBBaseTabbarVc.m in Sources */,
 				438337F4221311F600B04CFA /* Httprequest.m in Sources */,
@@ -1520,8 +1518,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N294699B43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",
@@ -1546,8 +1544,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N294699B43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",

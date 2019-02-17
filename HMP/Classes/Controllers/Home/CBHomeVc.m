@@ -41,6 +41,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fillInfo) name:@"fillInfo" object:nil];
     tag = 1;
 //    [self testData];
+//    [self testAPI];
     
 }
 
@@ -75,8 +76,9 @@
         NSString *url = @"/question/index/index";
         __weak typeof(self) weakSelf = self;
         [[Httprequest share] postObjectByParameters:nil andUrl:url showLoading:NO showMsg:NO isFullUrk:NO andComplain:^(id obj) {
-            if (obj[@"data"] && [obj[@"data"] isKindOfClass:NSDictionary.class]) {
+            if (ISDIC(obj[@"data"])) {
                 self->askDatas = obj[@"data"];
+#warning 是否根据 is_can_answer 控制UI
                 [weakSelf updateAskView];
             }
         } andError:^(id error) {
@@ -195,9 +197,9 @@
     
     /*
      [self testAPI:@"/user/profile/userBaseInfo" par:@{
-     @"birthday":@"    是    string    用户生日",
-     @"name":@"    是    string    用户姓名",
-     @"user_nickname":@"    是    string    用户昵称",
+     @"birthday":@"测试-- 用户生日",
+     @"name":@"测试-- 用户姓名",
+     @"user_nickname":@"测试-- 用户昵称",
      @"nationality":@"1",
      @"constellation":@"1",
      @"gf_provinces":@"1",
@@ -211,10 +213,11 @@
      @"cr_area":@"1",
      @"work":@"1",
      @"work_nature":@"1",
-     @"profession":@"    是    string    职业",
+     @"profession":@"测试-- 职业",
      @"income":@"1",
+     @"self_evaluation":@"本人优秀美男一枚",
      @"max_education":@"1",
-     @"top_school":@"    是    string    最高毕业学历院校",
+     @"top_school":@"最高毕业学历院校",
      @"marital_status":@"1",
      @"height":@"1",
      @"body_type":@"1",
@@ -228,11 +231,14 @@
      @"car_status":@"1",
      @"matrilocal_residence":@1,
      @"betrothal_money":@"1",
-     @"hobbies":@"    是    string    兴趣爱好,拼接",
-     @"character":@"    是    string    性格,拼接",
+     @"hobbies":@"测试-- 兴趣爱好,拼接",
+     @"character":@"测试-- 性格,拼接",
      @"shortcomings":@"本人太优秀,找不到任何缺点"
      }];
      */
+    
+    
+    
     //    [self testAPI:@"user/profile/editLoveWord" par:@{@"love_words":@"This is my love_words"}];
     //    [self testUploadOne];
     
@@ -240,9 +246,27 @@
     //                            @"pics":@[@"http://love.test2.yikeapp.cn/upload/20190213/03c0377b36a4b2bb1848b993b4cf3fd5.png"]
     //                            }];
     //    [self testAPI:@"user/profile/getPhotos" par:nil];
-    [self testAPI:@"user/share/getList" par:nil];
+//    [self testAPI:@"user/share/getList" par:nil];
     //    [self testAPI:@"/user/cryptolalia/send" par:@{@"rev_uids":@"5,27",@"content":@"这里是谜语内容"}];
     
+    [self testAPI:@"/user/profile/userRequirements" par:
+    @{
+      @"type":@"1",
+      @"provinces":@"陕西",
+      @"city":@"西安",
+      @"area":@"雁塔",
+      @"age_min":@"18",
+      @"age_max":@"25",
+      @"nationality":@"汉族",
+      @"religion":@"1",
+      @"min_education":@"123",
+      @"marital_status":@"123",
+      @"matrilocal_residence":@"132",
+      @"income":@"1234",
+      @"smoking_status":@"132",
+      @"betrothal_money":@"123",
+      @"height":@"132"
+    }];
     
     
 }
@@ -547,6 +571,24 @@
         [cell.head sd_setImageWithURL:[NSURL URLWithString:ask[@"avatar"]?:@""]];
         [cell.like setTitle:[NSString stringWithFormat:@" %@",ask[@"number_of_agree"]?:@""] forState:UIControlStateNormal];
         [cell.hate setTitle:[NSString stringWithFormat:@" %@",ask[@"number_of_disagree"]?:@""] forState:UIControlStateNormal];
+        
+        BOOL is_can_agree = [ask[@"is_can_agree"] integerValue];
+        BOOL is_can_disagree = [ask[@"is_can_disagree"] integerValue];
+        if (is_can_agree) {
+            cell.like.userInteractionEnabled = YES;
+            [cell.like setImage:[UIImage imageNamed:@"like"] forState:UIControlStateNormal];
+        }else{
+            cell.like.userInteractionEnabled = NO;
+            [cell.like setImage:[UIImage imageNamed:@"like_pre"] forState:UIControlStateNormal];
+        }
+        if (is_can_disagree) {
+            cell.hate.userInteractionEnabled = YES;
+            [cell.hate setImage:[UIImage imageNamed:@"hate"] forState:UIControlStateNormal];
+        }else{
+            cell.hate.userInteractionEnabled = NO;
+            [cell.hate setImage:[UIImage imageNamed:@"hate_pre"] forState:UIControlStateNormal];
+        }
+        
         [cell.like addTarget:self action:@selector(likeAnswer:) forControlEvents:UIControlEventTouchUpInside];
         [cell.hate addTarget:self action:@selector(hateAnswer:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
@@ -571,7 +613,6 @@
     cell.detailTextLabel.textColor = [UIColor grayColor];
     UILabel *time = [cell.contentView viewWithTag:222];
     time.text = m.time;
-    
     return cell;
 }
 
@@ -598,12 +639,28 @@
     
 }
 
--(void)hateAnswer:(UIButton *)btn{
-    
+-(void)likeAnswer:(UIButton *)btn{
+    NSString *url = @"/question/index/agree";
+    UITableViewCell *cell = (UITableViewCell *)btn.superview.superview;
+    NSIndexPath *indexPath = [_askTableview indexPathForCell:cell];
+    NSDictionary *ask = askTableDatas[indexPath.row];
+    [[Httprequest share] postObjectByParameters:@{@"aid":ask[@"id"]?:@""} andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
+        
+    } andError:^(id error) {
+        
+    }];
 }
 
--(void)likeAnswer:(UIButton *)btn{
-    
+-(void)hateAnswer:(UIButton *)btn{
+    NSString *url = @"/question/index/disagree";
+    UITableViewCell *cell = (UITableViewCell *)btn.superview.superview;
+    NSIndexPath *indexPath = [_askTableview indexPathForCell:cell];
+    NSDictionary *ask = askTableDatas[indexPath.row];
+    [[Httprequest share] postObjectByParameters:@{@"aid":ask[@"id"]?:@""} andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
+        
+    } andError:^(id error) {
+        
+    }];
 }
 
 - (IBAction)askAnswerAct:(UIButton *)sender {

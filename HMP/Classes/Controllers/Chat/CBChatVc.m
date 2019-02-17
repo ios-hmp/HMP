@@ -8,8 +8,9 @@
 
 #import "CBChatVc.h"
 #import "CBFriendsVc.h"
+#import "ChatDetailVc.h"
 
-@interface CBChatVc ()
+@interface CBChatVc ()<UITableViewDelegate,UITableViewDataSource>
 {
     UIView *hunlianquanView;
 }
@@ -22,6 +23,13 @@
 
 
 @interface CBChatCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UIImageView *head;
+@property (weak, nonatomic) IBOutlet UIButton *type;
+@property (weak, nonatomic) IBOutlet UILabel *xz;
+@property (weak, nonatomic) IBOutlet UIImageView *vip;
+@property (weak, nonatomic) IBOutlet UILabel *msg;
+@property (weak, nonatomic) IBOutlet UILabel *time;
 
 @end
 
@@ -74,9 +82,14 @@
     [super viewWillAppear:animated];
     _titleView.top = 0;
     _titleView.centerX = CB_SCREENWIDTH/2.0;
+    _titleView.hidden = NO;
     [self.navigationController.navigationBar addSubview:_titleView];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    _titleView.hidden = YES;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.tableDatas.count;
@@ -85,7 +98,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CBChatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CBChatCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    EMConversation *con = self.tableDatas[indexPath.row];
+    cell.name.text = con.conversationId;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    EMConversation *con = self.tableDatas[indexPath.row];
+    ChatDetailVc *vc = (ChatDetailVc *)[AppManager getVCInBoard:@"Chat" ID:@"ChatDetailVc"];
+    vc.conver = con;
+    SHOW(vc);
 }
 
 - (IBAction)titleAction:(UIButton *)sender {

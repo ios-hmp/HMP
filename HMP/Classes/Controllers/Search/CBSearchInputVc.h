@@ -25,10 +25,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *pageLable;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UIImageView *bigHead;
+@property (weak, nonatomic) IBOutlet UILabel *seerrLable;
 @property (weak, nonatomic) IBOutlet UIButton *add;
 @property (weak, nonatomic) IBOutlet UIView *searchNoResultView;
 - (IBAction)addAct:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIView *resPersonView;
 
+- (IBAction)tousu:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIView *extView;
+
+
+@property (nonatomic,assign)BOOL isShow;//资料展示页面
 @end
 
 NS_ASSUME_NONNULL_END

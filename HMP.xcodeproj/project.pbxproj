@@ -158,6 +158,9 @@
 		437DC0932217FBBC0071F5D2 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC08B2217FBBC0071F5D2 /* ChatCell.m */; };
 		437DC0942217FBBC0071F5D2 /* ChatImgCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC08C2217FBBC0071F5D2 /* ChatImgCell2.xib */; };
 		437DC0952217FBBC0071F5D2 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437DC08D2217FBBC0071F5D2 /* ChatCell.xib */; };
+		437DC09622182DE90071F5D2 /* CBSecretWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A071274922179FC100DC3C20 /* CBSecretWordVC.m */; };
+		437DC099221941550071F5D2 /* CBApplyInputVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC098221941550071F5D2 /* CBApplyInputVc.m */; };
+		437DC09C221946670071F5D2 /* CBAddComplaint.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC09B221946670071F5D2 /* CBAddComplaint.m */; };
 		438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E8221311F600B04CFA /* AFURLResponseSerialization.m */; };
 		438337F4221311F600B04CFA /* Httprequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E9221311F600B04CFA /* Httprequest.m */; };
 		438337F5221311F600B04CFA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337EA221311F600B04CFA /* AFHTTPSessionManager.m */; };
@@ -478,6 +481,10 @@
 		437DC08B2217FBBC0071F5D2 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		437DC08C2217FBBC0071F5D2 /* ChatImgCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatImgCell2.xib; sourceTree = "<group>"; };
 		437DC08D2217FBBC0071F5D2 /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		437DC097221941550071F5D2 /* CBApplyInputVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBApplyInputVc.h; sourceTree = "<group>"; };
+		437DC098221941550071F5D2 /* CBApplyInputVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBApplyInputVc.m; sourceTree = "<group>"; usesTabs = 0; };
+		437DC09A221946670071F5D2 /* CBAddComplaint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAddComplaint.h; sourceTree = "<group>"; };
+		437DC09B221946670071F5D2 /* CBAddComplaint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBAddComplaint.m; sourceTree = "<group>"; };
 		438337E4221311F600B04CFA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		438337E5221311F600B04CFA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		438337E6221311F600B04CFA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -1016,6 +1023,10 @@
 				434151D321FC304C00577405 /* CBSearchVc.m */,
 				434151D521FC433A00577405 /* CBSearchInputVc.h */,
 				434151D621FC433A00577405 /* CBSearchInputVc.m */,
+				437DC097221941550071F5D2 /* CBApplyInputVc.h */,
+				437DC098221941550071F5D2 /* CBApplyInputVc.m */,
+				437DC09A221946670071F5D2 /* CBAddComplaint.h */,
+				437DC09B221946670071F5D2 /* CBAddComplaint.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -1295,6 +1306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437DC09622182DE90071F5D2 /* CBSecretWordVC.m in Sources */,
 				A09D317222182E55000F5532 /* CBSecretWordVC.m in Sources */,
 				434151D721FC433A00577405 /* CBSearchInputVc.m in Sources */,
 				4332297D21F8C19C0071B16E /* CBBaseTabbarVc.m in Sources */,
@@ -1334,6 +1346,7 @@
 				434151D121FC304000577405 /* CBMineVc.m in Sources */,
 				4332295221F8C19C0071B16E /* IQUIScrollView+Additions.m in Sources */,
 				2000A302221690EC00E3B68E /* CBAccountSettingVC.m in Sources */,
+				437DC09C221946670071F5D2 /* CBAddComplaint.m in Sources */,
 				437DC04F2217BB690071F5D2 /* GroupModel.m in Sources */,
 				4332293921F8C19C0071B16E /* MJRefreshAutoFooter.m in Sources */,
 				2000A3052216940A00E3B68E /* CBChangePhoneVC.m in Sources */,
@@ -1356,6 +1369,7 @@
 				A09D318222193DE3000F5532 /* CBShareView.m in Sources */,
 				438337F8221311F600B04CFA /* AFNetworkReachabilityManager.m in Sources */,
 				4332294A21F8C19C0071B16E /* IQBarButtonItem.m in Sources */,
+				437DC099221941550071F5D2 /* CBApplyInputVc.m in Sources */,
 				A09D31792218FC4E000F5532 /* CBReplySecretWordVC.m in Sources */,
 				4332298D21F8C19C0071B16E /* CBArticleCell.m in Sources */,
 				A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */,
@@ -1587,7 +1601,7 @@
 				CLANG_ANALYZER_NONNULL = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K3A6XD8P7R;
+				DEVELOPMENT_TEAM = N294699B43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",
@@ -1613,7 +1627,7 @@
 				CLANG_ANALYZER_NONNULL = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K3A6XD8P7R;
+				DEVELOPMENT_TEAM = N294699B43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HMP/Tools&Lib",

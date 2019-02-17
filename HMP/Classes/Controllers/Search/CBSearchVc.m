@@ -8,6 +8,7 @@
 
 #import "CBSearchVc.h"
 #import "CBBaseInfoVc.h"
+#import "CBSearchInputVc.h"
 
 #define CB_SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 #define CB_SCREENHIGH  [UIScreen mainScreen].bounds.size.height
@@ -46,15 +47,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self test];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self showFillInfo];
-    });
+
     
     //cell点击后大图显示
-    //    左右滑动切换相册其他照片，上下滑动切换人
+    //左右滑动切换相册其他照片，上下滑动切换人
 }
 
+-(void)loadNetData{
+    NSString *url = @"/user/list/index";
+    __weak typeof(self) weakSelf = self;
+    [[Httprequest share] postObjectByParameters:nil andUrl:url showLoading:NO showMsg:NO isFullUrk:NO andComplain:^(id obj) {
+        if ([obj[@"msg"] containsString:@""]) {
+            [weakSelf showFillInfo];
+            return ;
+        }
+        if (ISDIC(obj[@"data"])) {
+            
+        }
+    } andError:^(id error) {
+        
+    }];
+}
 -(void)configUI{
     UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"sz"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(settings)];
     item1.width = 30;
@@ -141,5 +154,17 @@
     } completion:^(BOOL finished) {
         self.fillInfoView.hidden = YES;
     }];
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //test
+    [self showAperson];
+}
+
+-(void)showAperson{
+    CBSearchInputVc *vc = (CBSearchInputVc *)[AppManager getVCInBoard:@"Search" ID:@"CBInfowShow"];
+    vc.isShow = YES;
+    PUSH(vc);
 }
 @end

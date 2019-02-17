@@ -21,7 +21,7 @@
     // Override point for customization after application launch.
     [[UINavigationBar appearance] setTintColor:[UIColor darkGrayColor]];
     //无token，去登录；登录后保存token
-    
+    [[UITabBar appearance] setTranslucent:NO];
     BOOL goLogin = ![CBUser share].token;
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     if (goLogin) {

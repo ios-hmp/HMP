@@ -50,13 +50,16 @@
     for (int i=0; i<30; i++) {
         ChatData *data = [[ChatData alloc]init];
         data.from_suer = arc4random()%2?@"hh":@"bb";
-        data.type = arc4random()%3?@"text":@"image";
+        data.type = arc4random()%2?@"text":@"image";
         data.message = [self message];
         data.isme = arc4random()%2;
         data.created_at = @"2018-06-21 15:34";
         [dataArr addObject:data];
     }
     [self.tableView reloadData];
+    
+    NSString *nickname = @"";
+    self.title = self.conver.conversationId;
 }
 -(NSString *)message{
     int c = arc4random()%200+10;

@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)tousu:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIView *extView;
 
+@property (strong, nonatomic) IBOutlet UIView *loveView;
+@property (weak, nonatomic) IBOutlet UIImageView *love1;
+@property (weak, nonatomic) IBOutlet UIImageView *love2;
 
 @property (nonatomic,assign)BOOL isShow;//资料展示页面
 @end

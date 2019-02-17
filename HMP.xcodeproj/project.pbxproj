@@ -22,6 +22,7 @@
 		2074B882221564C700D03214 /* CBMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B881221564C700D03214 /* CBMessageVC.m */; };
 		2074B88822156D2D00D03214 /* CBMemberVIPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B88722156D2D00D03214 /* CBMemberVIPVC.m */; };
 		4323603521FC589700D86862 /* CBHomeMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 4323603421FC589700D86862 /* CBHomeMsg.m */; };
+		432E876B22199E830045D2C6 /* CBInAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 432E876A22199E830045D2C6 /* CBInAppPurchase.m */; };
 		4332291021F8C19C0071B16E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 433227FD21F8C19C0071B16E /* icon.png */; };
 		4332291121F8C19C0071B16E /* myCline.png in Resources */ = {isa = PBXBuildFile; fileRef = 4332280221F8C19C0071B16E /* myCline.png */; };
 		4332291221F8C19C0071B16E /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332280421F8C19C0071B16E /* LoadingView.m */; };
@@ -161,6 +162,12 @@
 		437DC09622182DE90071F5D2 /* CBSecretWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A071274922179FC100DC3C20 /* CBSecretWordVC.m */; };
 		437DC099221941550071F5D2 /* CBApplyInputVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC098221941550071F5D2 /* CBApplyInputVc.m */; };
 		437DC09C221946670071F5D2 /* CBAddComplaint.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC09B221946670071F5D2 /* CBAddComplaint.m */; };
+		437DC0A82219662E0071F5D2 /* HXTagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC09E2219662E0071F5D2 /* HXTagCollectionViewCell.m */; };
+		437DC0A92219662E0071F5D2 /* HXTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0A02219662E0071F5D2 /* HXTagsView.m */; };
+		437DC0AA2219662E0071F5D2 /* HXTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0A12219662E0071F5D2 /* HXTagsCell.m */; };
+		437DC0AB2219662E0071F5D2 /* HXTagAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0A32219662E0071F5D2 /* HXTagAttribute.m */; };
+		437DC0AC2219662E0071F5D2 /* HXTagCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0A62219662E0071F5D2 /* HXTagCollectionViewFlowLayout.m */; };
+		437DC0AF221979690071F5D2 /* CBUserInfoVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 437DC0AE221979690071F5D2 /* CBUserInfoVc.m */; };
 		438337F3221311F600B04CFA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E8221311F600B04CFA /* AFURLResponseSerialization.m */; };
 		438337F4221311F600B04CFA /* Httprequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337E9221311F600B04CFA /* Httprequest.m */; };
 		438337F5221311F600B04CFA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 438337EA221311F600B04CFA /* AFHTTPSessionManager.m */; };
@@ -228,6 +235,8 @@
 		2074B88722156D2D00D03214 /* CBMemberVIPVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMemberVIPVC.m; sourceTree = "<group>"; };
 		4323603321FC589700D86862 /* CBHomeMsg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHomeMsg.h; sourceTree = "<group>"; };
 		4323603421FC589700D86862 /* CBHomeMsg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHomeMsg.m; sourceTree = "<group>"; };
+		432E876922199E830045D2C6 /* CBInAppPurchase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBInAppPurchase.h; sourceTree = "<group>"; };
+		432E876A22199E830045D2C6 /* CBInAppPurchase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBInAppPurchase.m; sourceTree = "<group>"; };
 		433227FD21F8C19C0071B16E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		433227FF21F8C19C0071B16E /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
 		4332280121F8C19C0071B16E /* InfiniteRotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteRotationView.h; sourceTree = "<group>"; };
@@ -485,6 +494,18 @@
 		437DC098221941550071F5D2 /* CBApplyInputVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBApplyInputVc.m; sourceTree = "<group>"; usesTabs = 0; };
 		437DC09A221946670071F5D2 /* CBAddComplaint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAddComplaint.h; sourceTree = "<group>"; };
 		437DC09B221946670071F5D2 /* CBAddComplaint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBAddComplaint.m; sourceTree = "<group>"; };
+		437DC09E2219662E0071F5D2 /* HXTagCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewCell.m; sourceTree = "<group>"; };
+		437DC09F2219662E0071F5D2 /* HXTagAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagAttribute.h; sourceTree = "<group>"; };
+		437DC0A02219662E0071F5D2 /* HXTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagsView.m; sourceTree = "<group>"; };
+		437DC0A12219662E0071F5D2 /* HXTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagsCell.m; sourceTree = "<group>"; };
+		437DC0A22219662E0071F5D2 /* HXTagCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		437DC0A32219662E0071F5D2 /* HXTagAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagAttribute.m; sourceTree = "<group>"; };
+		437DC0A42219662E0071F5D2 /* HXTagCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagCollectionViewCell.h; sourceTree = "<group>"; };
+		437DC0A52219662E0071F5D2 /* HXTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsView.h; sourceTree = "<group>"; };
+		437DC0A62219662E0071F5D2 /* HXTagCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		437DC0A72219662E0071F5D2 /* HXTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsCell.h; sourceTree = "<group>"; };
+		437DC0AD221979690071F5D2 /* CBUserInfoVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBUserInfoVc.h; sourceTree = "<group>"; };
+		437DC0AE221979690071F5D2 /* CBUserInfoVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBUserInfoVc.m; sourceTree = "<group>"; };
 		438337E4221311F600B04CFA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		438337E5221311F600B04CFA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		438337E6221311F600B04CFA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -556,6 +577,7 @@
 			children = (
 				43C0B8AF221592B000F22A8F /* HyphenateLite.framework */,
 				433228C321F8C19C0071B16E /* PrefixHeader.pch */,
+				437DC09D2219662E0071F5D2 /* label */,
 				2000A2FC22166E0200E3B68E /* ConstantInfo.h */,
 				433227FF21F8C19C0071B16E /* AppManager.h */,
 				4332286F21F8C19C0071B16E /* AppManager.m */,
@@ -988,6 +1010,8 @@
 				434151CD21FC303600577405 /* CBChatVc.m */,
 				437DC06F2217F02C0071F5D2 /* CBChatDetailVc.h */,
 				437DC0702217F02C0071F5D2 /* CBChatDetailVc.m */,
+				437DC0AD221979690071F5D2 /* CBUserInfoVc.h */,
+				437DC0AE221979690071F5D2 /* CBUserInfoVc.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1095,6 +1119,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		437DC09D2219662E0071F5D2 /* label */ = {
+			isa = PBXGroup;
+			children = (
+				437DC09E2219662E0071F5D2 /* HXTagCollectionViewCell.m */,
+				437DC09F2219662E0071F5D2 /* HXTagAttribute.h */,
+				437DC0A02219662E0071F5D2 /* HXTagsView.m */,
+				437DC0A12219662E0071F5D2 /* HXTagsCell.m */,
+				437DC0A22219662E0071F5D2 /* HXTagCollectionViewFlowLayout.h */,
+				437DC0A32219662E0071F5D2 /* HXTagAttribute.m */,
+				437DC0A42219662E0071F5D2 /* HXTagCollectionViewCell.h */,
+				437DC0A52219662E0071F5D2 /* HXTagsView.h */,
+				437DC0A62219662E0071F5D2 /* HXTagCollectionViewFlowLayout.m */,
+				437DC0A72219662E0071F5D2 /* HXTagsCell.h */,
+			);
+			path = label;
+			sourceTree = "<group>";
+		};
 		438337E3221311F600B04CFA /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1131,6 +1172,8 @@
 				433228E721F8C19C0071B16E /* CBBaseTabbarVc.m */,
 				433228EA21F8C19C0071B16E /* CBBaseNaviVc.h */,
 				433228E521F8C19C0071B16E /* CBBaseNaviVc.m */,
+				432E876922199E830045D2C6 /* CBInAppPurchase.h */,
+				432E876A22199E830045D2C6 /* CBInAppPurchase.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1324,6 +1367,7 @@
 				4332292621F8C19C0071B16E /* MJDictionaryCache.m in Sources */,
 				4332294F21F8C19C0071B16E /* IQNSArray+Sort.m in Sources */,
 				4332296F21F8C19C0071B16E /* CBBaseModel.m in Sources */,
+				437DC0AF221979690071F5D2 /* CBUserInfoVc.m in Sources */,
 				4332295B21F8C19C0071B16E /* TAAnimatedDotView.m in Sources */,
 				4332296221F8C19C0071B16E /* UIImage+MultiFormat.m in Sources */,
 				4332293B21F8C19C0071B16E /* TZAssetCell.m in Sources */,
@@ -1358,6 +1402,7 @@
 				4332291F21F8C19C0071B16E /* MJProperty.m in Sources */,
 				4332292521F8C19C0071B16E /* MJPropertyKey.m in Sources */,
 				4332294721F8C19C0071B16E /* IQTextView.m in Sources */,
+				437DC0AC2219662E0071F5D2 /* HXTagCollectionViewFlowLayout.m in Sources */,
 				437DC06A2217CAA40071F5D2 /* CBHomeSettings.m in Sources */,
 				434151CB21FC2CC800577405 /* CBHomeVc.m in Sources */,
 				4332292421F8C19C0071B16E /* NSString+MJExtension.m in Sources */,
@@ -1368,8 +1413,10 @@
 				4332293821F8C19C0071B16E /* MJRefreshBackFooter.m in Sources */,
 				A09D318222193DE3000F5532 /* CBShareView.m in Sources */,
 				438337F8221311F600B04CFA /* AFNetworkReachabilityManager.m in Sources */,
+				437DC0AA2219662E0071F5D2 /* HXTagsCell.m in Sources */,
 				4332294A21F8C19C0071B16E /* IQBarButtonItem.m in Sources */,
 				437DC099221941550071F5D2 /* CBApplyInputVc.m in Sources */,
+				432E876B22199E830045D2C6 /* CBInAppPurchase.m in Sources */,
 				A09D31792218FC4E000F5532 /* CBReplySecretWordVC.m in Sources */,
 				4332298D21F8C19C0071B16E /* CBArticleCell.m in Sources */,
 				A0CE79A02217D94000927242 /* CBSendSecretVC.m in Sources */,
@@ -1387,6 +1434,7 @@
 				4332297A21F8C19C0071B16E /* CBBaseVc.m in Sources */,
 				4332296521F8C19C0071B16E /* SDImageCache.m in Sources */,
 				2000A2FB22166C0100E3B68E /* CBBlacklistVC.m in Sources */,
+				437DC0A82219662E0071F5D2 /* HXTagCollectionViewCell.m in Sources */,
 				4332293221F8C19C0071B16E /* MJRefreshAutoNormalFooter.m in Sources */,
 				201ED5592216534B00362420 /* CBRedBagRecordVC.m in Sources */,
 				4332292821F8C19C0071B16E /* UIScrollView+MJRefresh.m in Sources */,
@@ -1419,9 +1467,11 @@
 				4332295921F8C19C0071B16E /* TADotView.m in Sources */,
 				4332298721F8C19C0071B16E /* CBLoginVc.m in Sources */,
 				4332294C21F8C19C0071B16E /* IQPreviousNextView.m in Sources */,
+				437DC0AB2219662E0071F5D2 /* HXTagAttribute.m in Sources */,
 				4332293C21F8C19C0071B16E /* TZVideoPlayerController.m in Sources */,
 				437DC04D2217BB690071F5D2 /* CBFriendsVc.m in Sources */,
 				4332297C21F8C19C0071B16E /* CBWebVc.m in Sources */,
+				437DC0A92219662E0071F5D2 /* HXTagsView.m in Sources */,
 				437DC0922217FBBC0071F5D2 /* ChatData.m in Sources */,
 				4332292D21F8C19C0071B16E /* MJRefreshBackGifFooter.m in Sources */,
 				2074B882221564C700D03214 /* CBMessageVC.m in Sources */,

@@ -9,6 +9,7 @@
 #import "CBChatVc.h"
 #import "CBFriendsVc.h"
 #import "ChatDetailVc.h"
+#import "CBUserInfoVc.h"
 
 @interface CBChatVc ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -51,7 +52,15 @@
     //test
     [[EMClient sharedClient].chatManager getConversation:@"27" type:EMConversationTypeChat createIfNotExist:YES];
     [self loadNetData];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self goPersonInfo];
+    });
     
+}
+
+-(void)goPersonInfo{
+    CBUserInfoVc *vc = (CBUserInfoVc *)[AppManager getVCInBoard:@"Chat" ID:@"CBUserInfoVc"];
+    SHOW(vc);
 }
 
 - (void)loadNetData{

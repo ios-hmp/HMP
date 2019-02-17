@@ -67,12 +67,16 @@
         }
         
         [self updateInfo];
-        self.love1.layer.borderColor = [UIColor whiteColor].CGColor;
-        self.love2.layer.borderColor = [UIColor whiteColor].CGColor;
-        [self.view addSubview:self.loveView];
-        self.loveView.frame = self.view.frame;
+        
     }
 
+}
+
+-(void)showLoveUI{
+    self.love1.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.love2.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.view addSubview:self.loveView];
+    self.loveView.frame = self.view.frame;
 }
 
 -(void)showExt{

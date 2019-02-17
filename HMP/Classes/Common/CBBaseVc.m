@@ -44,6 +44,7 @@
 }
 
 -(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
     if (!hasConfigUI) {
         hasConfigUI = YES;
         [self configUI];

@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CBBaseVc : UIViewController
+@interface CBBaseVc : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *tableDatas;
 @property (nonatomic,strong)NSMutableArray *subDatas;

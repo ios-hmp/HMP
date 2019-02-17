@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CBChatCell" rowHeight="81" id="thf-ZN-qXH" customClass="CBComplaintTabCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CBChatCell" rowHeight="81" id="thf-ZN-qXH" customClass="CBChatCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="thf-ZN-qXH" id="6q7-eh-fsk">
@@ -142,6 +142,15 @@
                                                 <constraint firstItem="Zmh-TR-5V1" firstAttribute="leading" secondItem="6q7-eh-fsk" secondAttribute="leading" constant="10" id="zdo-Py-fYz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="head" destination="6B3-fS-aHG" id="2Lb-XM-dUk"/>
+                                            <outlet property="msg" destination="NTD-C3-6bt" id="3EC-90-uBC"/>
+                                            <outlet property="name" destination="zqN-zB-6Tx" id="ZrY-mI-89T"/>
+                                            <outlet property="time" destination="Eoh-Bj-Zh7" id="c3B-or-Gnv"/>
+                                            <outlet property="type" destination="TwE-Vf-GjF" id="zN9-VC-D1P"/>
+                                            <outlet property="vip" destination="c4p-jI-tpB" id="1nc-0N-0o2"/>
+                                            <outlet property="xz" destination="fP2-dX-jd8" id="vwZ-tF-4az"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

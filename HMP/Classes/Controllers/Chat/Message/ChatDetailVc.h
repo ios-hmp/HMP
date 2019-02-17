@@ -12,6 +12,6 @@
 @interface ChatDetailVc : ViewController
 @property (nonatomic,copy)NSString *from_user;
 @property (nonatomic,copy)NSString *to_user;
-
+@property (nonatomic,strong)EMConversation *conver;
 @end
 

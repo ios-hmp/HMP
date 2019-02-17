@@ -110,7 +110,7 @@ static AFHTTPSessionManager *manager;
             Error(error);
         }
         [LoadingView stopLoading];
-        [LoadingView showAMessage:[NSString stringWithFormat:@"网络错误：%ld",(long)error.code]];
+        [LoadingView showAMessage:[NSString stringWithFormat:@"出错了：%ld",(long)error.code]];
         
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

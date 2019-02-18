@@ -89,5 +89,11 @@
 @end
 
 @implementation BlacKCollViewCell
-
+-(void)layoutSubviews {
+    [super layoutSubviews];
+//    CB_LIST1CELLWIDTH, CB_LIST1CELLWIDTH*1.3
+    _headPhotoImgView.frame = CGRectMake(CB_LIST1CELLWIDTH*0.1, (CB_LIST1CELLWIDTH*0.5-30)/2.0, CB_LIST1CELLWIDTH*0.8, CB_LIST1CELLWIDTH*0.8);
+    _nameLab.top =_headPhotoImgView.bottom+10;
+    _headPhotoImgView.layer.cornerRadius = _headPhotoImgView.width/2.0;
+}
 @end

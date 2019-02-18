@@ -41,6 +41,7 @@
         UIView *view = [[[NSBundle mainBundle]loadNibNamed:@"VipView" owner:self options:nil]firstObject];
         CGFloat viewWidth = CB_SCREENWIDTH-80;
         view.left = leftSpace+viewWidth*index;
+        view.top = 20;
         view.width = viewWidth;
         if (count==1||_meVipType) {
             view.width = CB_SCREENWIDTH-30;

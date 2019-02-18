@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *addFriendBtn;
 - (IBAction)removeBlackAction:(UIButton *)sender;
 - (IBAction)addFriendAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *headWConstraint;
 
 @end
 

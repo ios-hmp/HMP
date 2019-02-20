@@ -21,6 +21,8 @@
 		201ED5592216534B00362420 /* CBRedBagRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 201ED5582216534B00362420 /* CBRedBagRecordVC.m */; };
 		2074B882221564C700D03214 /* CBMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B881221564C700D03214 /* CBMessageVC.m */; };
 		2074B88822156D2D00D03214 /* CBMemberVIPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2074B88722156D2D00D03214 /* CBMemberVIPVC.m */; };
+		209A1E39221D4BDC00D140CB /* UIViewController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = 209A1E37221D4BDC00D140CB /* UIViewController+Cloudox.m */; };
+		209A1E3A221D4BDC00D140CB /* UINavigationController+Cloudox.m in Sources */ = {isa = PBXBuildFile; fileRef = 209A1E38221D4BDC00D140CB /* UINavigationController+Cloudox.m */; };
 		4323603521FC589700D86862 /* CBHomeMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 4323603421FC589700D86862 /* CBHomeMsg.m */; };
 		432E876B22199E830045D2C6 /* CBInAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 432E876A22199E830045D2C6 /* CBInAppPurchase.m */; };
 		4332291021F8C19C0071B16E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 433227FD21F8C19C0071B16E /* icon.png */; };
@@ -233,6 +235,10 @@
 		2074B881221564C700D03214 /* CBMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMessageVC.m; sourceTree = "<group>"; };
 		2074B88622156D2D00D03214 /* CBMemberVIPVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMemberVIPVC.h; sourceTree = "<group>"; };
 		2074B88722156D2D00D03214 /* CBMemberVIPVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMemberVIPVC.m; sourceTree = "<group>"; };
+		209A1E35221D4BDC00D140CB /* UINavigationController+Cloudox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Cloudox.h"; sourceTree = "<group>"; };
+		209A1E36221D4BDC00D140CB /* UIViewController+Cloudox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Cloudox.h"; sourceTree = "<group>"; };
+		209A1E37221D4BDC00D140CB /* UIViewController+Cloudox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Cloudox.m"; sourceTree = "<group>"; };
+		209A1E38221D4BDC00D140CB /* UINavigationController+Cloudox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Cloudox.m"; sourceTree = "<group>"; };
 		4323603321FC589700D86862 /* CBHomeMsg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHomeMsg.h; sourceTree = "<group>"; };
 		4323603421FC589700D86862 /* CBHomeMsg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHomeMsg.m; sourceTree = "<group>"; };
 		432E876922199E830045D2C6 /* CBInAppPurchase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBInAppPurchase.h; sourceTree = "<group>"; };
@@ -563,6 +569,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		209A1E34221D4BC500D140CB /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				209A1E35221D4BDC00D140CB /* UINavigationController+Cloudox.h */,
+				209A1E38221D4BDC00D140CB /* UINavigationController+Cloudox.m */,
+				209A1E36221D4BDC00D140CB /* UIViewController+Cloudox.h */,
+				209A1E37221D4BDC00D140CB /* UIViewController+Cloudox.m */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
 		433227FC21F8C19C0071B16E /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -581,6 +598,7 @@
 				2000A2FC22166E0200E3B68E /* ConstantInfo.h */,
 				433227FF21F8C19C0071B16E /* AppManager.h */,
 				4332286F21F8C19C0071B16E /* AppManager.m */,
+				209A1E34221D4BC500D140CB /* Nav */,
 				438337E3221311F600B04CFA /* AFNetworking */,
 				4332280021F8C19C0071B16E /* LoadingView */,
 				4332281221F8C19C0071B16E /* MJExtension */,
@@ -1396,6 +1414,7 @@
 				2000A3052216940A00E3B68E /* CBChangePhoneVC.m in Sources */,
 				4332293121F8C19C0071B16E /* MJRefreshAutoGifFooter.m in Sources */,
 				4332291521F8C19C0071B16E /* LDView.m in Sources */,
+				209A1E39221D4BDC00D140CB /* UIViewController+Cloudox.m in Sources */,
 				4332292921F8C19C0071B16E /* MJRefreshConst.m in Sources */,
 				4332293321F8C19C0071B16E /* MJRefreshNormalHeader.m in Sources */,
 				4332292321F8C19C0071B16E /* NSObject+MJClass.m in Sources */,
@@ -1504,6 +1523,7 @@
 				4332295821F8C19C0071B16E /* SDCollectionViewCell.m in Sources */,
 				2000A3112216B80900E3B68E /* CBRequireVC.m in Sources */,
 				4332294621F8C19C0071B16E /* AppManager.m in Sources */,
+				209A1E3A221D4BDC00D140CB /* UINavigationController+Cloudox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

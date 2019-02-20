@@ -17,10 +17,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    __weak typeof(self) weakSelf = self;
     _titleView.top = 0;
     _titleView.centerX = CB_SCREENWIDTH/2.0;
     [self.navigationController.navigationBar addSubview:_titleView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:0.1 animations:^{
         weakSelf.titleView.alpha = 1.0;
     }];

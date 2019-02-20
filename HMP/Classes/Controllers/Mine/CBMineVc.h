@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 @interface CBMineVc : CBBaseVc<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *mineTabView;
+@property (weak, nonatomic) IBOutlet UIButton *navRightBtn;
 @property (weak, nonatomic) IBOutlet UIView *tabHeadView;
 
 @end

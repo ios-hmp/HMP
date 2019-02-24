@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-iq-4xZ">
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-iq-4xZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -135,7 +135,7 @@
                                         <color key="textColor" red="0.34849613904953003" green="0.36449268460273743" blue="0.38114273548126221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlc-hH-A5z">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlc-hH-A5z">
                                         <rect key="frame" x="71" y="384" width="39" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" image="weixin"/>
@@ -150,7 +150,7 @@
                                         <color key="textColor" red="0.34849613899999998" green="0.36449268460000001" blue="0.3811427355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOB-Xd-ry1">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOB-Xd-ry1">
                                         <rect key="frame" x="153" y="384" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" image="qq"/>
@@ -181,9 +181,16 @@
                     <navigationItem key="navigationItem" id="91t-UZ-v91"/>
                     <connections>
                         <outlet property="accountField" destination="rrw-aR-RW0" id="T4B-dl-l8b"/>
+                        <outlet property="alipayImg" destination="rj2-uU-3PS" id="hME-Jg-FcS"/>
+                        <outlet property="alipayLable" destination="SjT-1G-zmZ" id="gJn-tB-JD1"/>
                         <outlet property="login" destination="Rc3-HT-Ecg" id="bgu-DF-deg"/>
                         <outlet property="pwdField" destination="veM-Cn-bTi" id="m94-dj-psp"/>
+                        <outlet property="qqImg" destination="pOB-Xd-ry1" id="UaO-W4-QhQ"/>
+                        <outlet property="qqLable" destination="lc9-tb-vnC" id="bvV-j5-tQF"/>
                         <outlet property="registerBn" destination="RzR-hA-O6V" id="NzQ-9T-v2t"/>
+                        <outlet property="thirdLable" destination="zJa-r6-UWm" id="1xH-Ac-oJX"/>
+                        <outlet property="wxImg" destination="jlc-hH-A5z" id="lsS-eC-3Py"/>
+                        <outlet property="wxlable" destination="gpa-X4-1dg" id="3M8-om-a5K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldO-e1-QJ7" sceneMemberID="firstResponder"/>
@@ -217,7 +224,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JeZ-nX-aCe">
                                         <rect key="frame" x="14" y="49" width="344" height="1"/>
@@ -249,18 +256,18 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0R-cJ-gwb">
-                                        <rect key="frame" x="235" y="61" width="99" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="259" y="62" width="99" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="获取验证码">
                                             <color key="titleColor" red="1" green="0.42859393359999998" blue="0.68713635210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="codeAction:" destination="w9d-lV-vUv" eventType="touchUpInside" id="y02-84-uXA"/>
+                                            <action selector="codeAction:" destination="KwP-By-7wW" eventType="touchUpInside" id="DEg-Ci-FgE"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hd3-Ry-o2Q">
-                                        <rect key="frame" x="250" y="69" width="1" height="12"/>
+                                        <rect key="frame" x="274" y="70" width="1" height="12"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.42859393359999998" blue="0.68713635210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -304,6 +311,10 @@
                     <navigationItem key="navigationItem" id="8UO-uS-PGp"/>
                     <connections>
                         <outlet property="findPwd" destination="YS6-s9-1v7" id="wXc-5h-2TU"/>
+                        <outlet property="phone" destination="D7b-74-AlY" id="BgT-sC-9HM"/>
+                        <outlet property="pwdField" destination="APf-7M-khD" id="ISo-pE-t7D"/>
+                        <outlet property="pwdField2" destination="O9L-SF-g0m" id="C23-Qa-dfQ"/>
+                        <outlet property="verifycode" destination="CPV-vs-x3X" id="6Hn-FV-T8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPI-rJ-pjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,8 +499,7 @@
                                     <color key="titleColor" red="1" green="0.42859393359999998" blue="0.68713635210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backAct:" destination="w9d-lV-vUv" eventType="touchUpInside" id="VJW-d3-C8R"/>
-                                    <action selector="codeAction:" destination="w9d-lV-vUv" eventType="touchUpInside" id="yTK-bc-C6O"/>
+                                    <action selector="backAct:" destination="w9d-lV-vUv" eventType="touchUpInside" id="MPk-oM-csI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -553,7 +563,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wwd-qM-bbj">
                                         <rect key="frame" x="14" y="49" width="344" height="1"/>
@@ -595,18 +605,18 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lep-79-GEh">
-                                        <rect key="frame" x="235" y="61" width="99" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="259" y="62" width="99" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="获取验证码">
                                             <color key="titleColor" red="1" green="0.42859393359999998" blue="0.68713635210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="codeAction:" destination="w9d-lV-vUv" eventType="touchUpInside" id="zBO-M6-Sbs"/>
+                                            <action selector="codeAction:" destination="SRG-Zq-QgR" eventType="touchUpInside" id="zlp-R2-fAV"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgv-dU-tcJ">
-                                        <rect key="frame" x="250" y="69" width="1" height="12"/>
+                                        <rect key="frame" x="274" y="70" width="1" height="12"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.42859393359999998" blue="0.68713635210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -631,6 +641,9 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="bindAction:" destination="SRG-Zq-QgR" eventType="touchUpInside" id="HZs-L5-EQC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95281344649999999" green="0.95285421609999998" blue="0.96099084619999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -645,6 +658,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iJE-I7-3CP"/>
+                    <connections>
+                        <outlet property="phone" destination="Fqc-GC-iUh" id="za6-Lo-sUy"/>
+                        <outlet property="sureBind" destination="KXf-Fa-nNV" id="unP-Mc-fUn"/>
+                        <outlet property="verifycode" destination="Ilz-Pd-8D1" id="bCw-fi-CKa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07p-Uh-Keg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="6i4-yX-FSw"/>

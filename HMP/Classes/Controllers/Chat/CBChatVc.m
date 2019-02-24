@@ -10,6 +10,8 @@
 #import "CBFriendsVc.h"
 #import "ChatDetailVc.h"
 #import "CBUserInfoVc.h"
+#import "CBSearchInputVc.h"
+#import "CBAddFrVc.h"
 
 @interface CBChatVc ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -52,9 +54,9 @@
     //test
     [[EMClient sharedClient].chatManager getConversation:@"27" type:EMConversationTypeChat createIfNotExist:YES];
     [self loadNetData];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self goPersonInfo];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self goPersonInfo];
+//    });
     
 }
 
@@ -75,8 +77,23 @@
     }
 }
 
-                       
+-(void)exhange{
+    
+}
+
+-(void)goFrReq{
+    CBAddFrVc *vc = (CBAddFrVc *)[AppManager getVCInBoard:@"Search" ID:@"CBAddFrVc"];
+    SHOW(vc);
+}
 -(void)configUI{
+    
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"data"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(goFrReq)];
+    item1.width = 30;
+    UIBarButtonItem *item2 = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"switch"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(exhange)];
+    item2.width = 30;
+
+    self.navigationItem.leftBarButtonItems = @[item1];
+    self.navigationItem.rightBarButtonItem = item2;
     CBFriendsVc *friendVc = [[CBFriendsVc alloc]init];
     
     friendVc.view.frame = self.tableview.frame;

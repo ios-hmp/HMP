@@ -77,6 +77,11 @@ static AFHTTPSessionManager *manager;
     }
     NSMutableDictionary *dic = parameters;
     [self.manager POST:uuSTRing parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [LoadingView stopLoading];
+                //状态栏旁边的菊花停止
+                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            });
         //向loger视图打印log
         NSDictionary *dd = responseObject;
         if (dd) {
@@ -95,11 +100,7 @@ static AFHTTPSessionManager *manager;
         }else{
             Error(responseObject);
         }
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [LoadingView stopLoading];
-            //状态栏旁边的菊花停止
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        });
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (error.code==3840) {
             NSLog(@"Json解析出错");
@@ -125,12 +126,6 @@ static AFHTTPSessionManager *manager;
     NSString *msg = info[@"msg"];
     if ([msg containsString:@"失效"]) {
         [[CBUser share] logout];
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            EMError *error = [[EMClient sharedClient] logout:YES];
-            if (!error) {
-                NSLog(@"退出环信成功");
-            }
-        });
     }else if([msg containsString:@"请先补充信息"]){
         [[NSNotificationCenter defaultCenter] postNotificationName:@"fillInfo" object:nil];
     }

@@ -25,5 +25,7 @@
 @property (nonatomic,assign)BOOL isFroget;
 @property (nonatomic,assign)BOOL isBind;
 - (IBAction)findPwdAct:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *sureBind;
+- (IBAction)bindAction:(UIButton *)sender;
 
 @end

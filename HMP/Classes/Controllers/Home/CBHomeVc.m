@@ -198,7 +198,7 @@
     /*
      [self testAPI:@"/user/profile/userBaseInfo" par:@{
      @"birthday":@"测试-- 用户生日",
-     @"name":@"测试-- 用户姓名",
+     @"name":@"迟迟不",
      @"user_nickname":@"测试-- 用户昵称",
      @"nationality":@"1",
      @"constellation":@"1",
@@ -236,6 +236,7 @@
      @"shortcomings":@"本人太优秀,找不到任何缺点"
      }];
      */
+    
     
     
     
@@ -644,7 +645,7 @@
     UITableViewCell *cell = (UITableViewCell *)btn.superview.superview;
     NSIndexPath *indexPath = [_askTableview indexPathForCell:cell];
     NSDictionary *ask = askTableDatas[indexPath.row];
-    [[Httprequest share] postObjectByParameters:@{@"aid":ask[@"id"]?:@""} andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
+    [[Httprequest share] postObjectByParameters:@{@"aid":ask[@"id"]?:@""} andUrl:url showLoading:NO showMsg:YES isFullUrk:NO andComplain:^(id obj) {
         
     } andError:^(id error) {
         
@@ -656,7 +657,7 @@
     UITableViewCell *cell = (UITableViewCell *)btn.superview.superview;
     NSIndexPath *indexPath = [_askTableview indexPathForCell:cell];
     NSDictionary *ask = askTableDatas[indexPath.row];
-    [[Httprequest share] postObjectByParameters:@{@"aid":ask[@"id"]?:@""} andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
+    [[Httprequest share] postObjectByParameters:@{@"aid":ask[@"id"]?:@""} andUrl:url showLoading:NO showMsg:YES isFullUrk:NO andComplain:^(id obj) {
         
     } andError:^(id error) {
         
@@ -668,6 +669,7 @@
         return;
     }
     [self.askTableview scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:askTableDatas.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    [_askCommentField becomeFirstResponder];
 }
 - (IBAction)goSettings:(UIBarButtonItem *)sender {
 //    CBHomeSetingsVc *vc = [[CBHomeSetingsVc alloc]init];

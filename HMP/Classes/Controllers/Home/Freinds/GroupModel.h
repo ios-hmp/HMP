@@ -11,19 +11,21 @@
 
 @interface GroupModel : NSObject
 @property (nonatomic, assign)BOOL isOpened;
-@property (nonatomic, retain)NSString *groupName;
-@property (nonatomic, assign)NSInteger groupCount;
+@property (nonatomic, retain)NSString *grop_name;
+@property (nonatomic, assign)NSInteger limit_number;
 
-@property (nonatomic, retain)NSArray <CBFriends *>*groupFriends;
+@property (nonatomic, retain)NSArray <CBFriends *>*friend_list;
 @end
 @interface CBFriends : CBBaseModel
 @property (nonatomic, assign)BOOL vip;
-@property (nonatomic, assign)BOOL decrease;
-@property (nonatomic, assign)NSInteger uid;
+@property (nonatomic, copy)NSString *uid;
 @property (nonatomic, copy)NSString *name;
-@property (nonatomic, copy)NSString *star;
-@property (nonatomic, copy)NSString *qmd;
-@property (nonatomic, copy)NSString *hyd;
-@property (nonatomic, copy)NSString *head;
+@property (nonatomic, copy)NSString *user_nickname;
+@property (nonatomic, copy)NSString *avatar;
+@property (nonatomic, copy)NSString *birthday;
+@property (nonatomic, copy)NSString *intimacy;
+@property (nonatomic, copy)NSString *matching_rate;
+@property (nonatomic, copy)NSString *user_level;
+@property (nonatomic, copy)NSString *constellation;
 
 @end

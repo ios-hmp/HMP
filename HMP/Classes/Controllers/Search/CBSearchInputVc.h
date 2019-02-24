@@ -39,6 +39,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *love2;
 
 @property (nonatomic,assign)BOOL isShow;//资料展示页面
+@property (nonatomic,assign)BOOL isAddFr;//添加朋友
+@property (weak, nonatomic) IBOutlet UILabel *req_msg;
+@property (weak, nonatomic) IBOutlet UIButton *jujue;
+@property (weak, nonatomic) IBOutlet UIButton *agree;
+- (IBAction)agreeFriends:(UIButton *)sender;
+@property (nonatomic,strong)NSDictionary *applyInfo;
 @end
 
 NS_ASSUME_NONNULL_END

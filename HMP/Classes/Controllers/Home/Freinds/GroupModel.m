@@ -10,6 +10,10 @@
 
 @implementation GroupModel
 
++ (NSDictionary *)mj_objectClassInArray{
+    return @{@"friend_list" : @"CBFriends"};
+}
+
 @end
 @implementation CBFriends
 

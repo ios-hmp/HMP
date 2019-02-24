@@ -10,11 +10,14 @@
 #import <StoreKit/StoreKit.h>
 
 //在内购项目中创的商品单号
-#define ProductID_IAP0p20 @"100002"//20  //Nada.JPYF02
-#define ProductID_IAP1p100 @"Nada.JPYF02" //100
-#define ProductID_IAP4p600 @"Nada.JPYF03" //600
-#define ProductID_IAP9p1000 @"Nada.JPYF04" //1000
-#define ProductID_IAP24p6000 @"Nada.JPYF05" //6000
+//类型1普通会员充值2vip充值3vip差价4修改资料5同方申请解除爱人关系普通6同方申请解除爱人关系vip
+
+#define ProductID_IAP1 @"ZR.HMP01" //20
+#define ProductID_IAP2 @"ZR.HMP02" //100
+#define ProductID_IAP3 @"ZR.HMP03" //600
+#define ProductID_IAP4 @"ZR.HMP04" //1000
+#define ProductID_IAP5 @"ZR.HMP05" //6000
+#define ProductID_IAP6 @"ZR.HMP06" //6000
 
 @interface CBInAppPurchase ()<SKProductsRequestDelegate,SKRequestDelegate,SKPaymentTransactionObserver>
 {
@@ -23,16 +26,7 @@
     NSString *cur_Buy;
 }
 
-
 @end
-
-enum {
-    IAP0p20=20,
-    IAP1p100,
-    IAP4p600,
-    IAP9p1000,
-    IAP24p6000,
-}buyCoinsTag;
 
 @implementation CBInAppPurchase
 
@@ -94,7 +88,7 @@ enum {
 
     
     
-    allProducts = response.products;
+    allProducts = response.products.mutableCopy;
     // populate UI
     for(SKProduct *product in myProduct){
         NSLog(@"product info");
@@ -102,8 +96,6 @@ enum {
         NSLog(@"产品标题 %@" , product.localizedTitle);
         NSLog(@"产品描述信息: %@" , product.localizedDescription);
         NSLog(@"Product id: %@" , product.productIdentifier);
-        
-        
     }
     
 }
@@ -112,8 +104,6 @@ enum {
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error{
     NSLog(@"-------弹出错误信息----------");
     [LoadingView stopLoading];
-
-    
 }
 
 -(void) requestDidFinish:(SKRequest *)request
@@ -216,7 +206,7 @@ enum {
 #pragma mark - 购买该产品成功，此处保存到服务器
 -(void)recordTransaction:(NSString *)product{
     NSLog(@"-----记录交易--------");
-    
+    [self verifyRecipt:product];
 }
 
 
@@ -244,4 +234,46 @@ enum {
     NSLog(@"-------paymentQueue----");
 }
 
+
+#pragma mark - 与自己server交互
+-(void)verifyRecipt:(NSString *)product{
+    [LoadingView showLoading];
+    [CBBaseModel request:@"notify/Index/applePay" par:@{@"receipt_data":product?:@""} callback:^(id  _Nonnull data, NSString * _Nonnull msg) {
+        [LoadingView stopLoading];
+
+        [LoadingView showAMessage:msg];
+        
+    }];
+    
+}
+
+- (void)createOrder:(HMPOrderType)type jiechuId:(NSString *)uid{
+    [LoadingView showLoading];
+//    类型1普通会员充值2vip充值3vip差价4修改资料5同方申请解除爱人关系普通6同方申请解除爱人关系vip
+    __weak typeof(self) weakSelf = self;
+    [CBBaseModel request:@"order/index/create" par:@{@"type":@(type),@"pay_type":@3,@"uid":uid} callback:^(id  _Nonnull data, NSString * _Nonnull msg) {
+        [LoadingView stopLoading];
+
+        if ([msg containsString:@"下单成功"]) {
+            NSString *goodsID = ProductID_IAP1;
+            if (type==HMPOrderTypeNormal) {
+                goodsID = ProductID_IAP1;
+            }else if (type==HMPOrderTypeVIP) {
+                goodsID = ProductID_IAP2;
+            }else if (type==HMPOrderTypeVIPCha) {
+                goodsID = ProductID_IAP3;
+            }else if (type==HMPOrderTypeChangeInfo) {
+                goodsID = ProductID_IAP4;
+            }else if (type==HMPOrderTypeJiechuNormal) {
+                goodsID = ProductID_IAP5;
+            }else if (type==HMPOrderTypeJiechuVIP) {
+                goodsID = ProductID_IAP6;
+            }
+            [weakSelf buy:goodsID];
+        }
+        [LoadingView showAMessage:msg];
+        
+    }];
+    
+}
 @end

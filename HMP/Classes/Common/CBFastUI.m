@@ -80,6 +80,6 @@
         i+=1;
     }
 
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertVc animated:YES completion:nil];
+    [[UIApplication sharedApplication].windows.lastObject.rootViewController presentViewController:alertVc animated:YES completion:nil];
 }
 @end

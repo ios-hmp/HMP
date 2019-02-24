@@ -10,13 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^NetCallback)(BOOL succs,id value,NSError *error);
-
+typedef void(^APICallback)(id data,NSString *msg);
 @interface CBBaseModel : NSObject
 
 + (instancetype)share;
 
-- (void)request:(NSString *)url par:(nullable NSDictionary *)dic callback:(nullable NetCallback)callback;
++ (void)request:(NSString *)url par:(nullable NSDictionary *)dic callback:(nullable APICallback)callback;
 
 @end
 

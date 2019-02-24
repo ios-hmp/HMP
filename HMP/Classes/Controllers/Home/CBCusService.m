@@ -29,11 +29,32 @@
     orgTxt = _field.text;
 }
 
+- (void)loadNetData{
+//    "worktime": "8：00～18：00（节假日除外）",
+//    "telphone": "12345678"
+    [CBBaseModel request:@"/service/index/index" par:nil callback:^(id  _Nonnull data, NSString * _Nonnull msg) {
+        if (data) {
+            self.time.text = [NSString stringWithFormat:@"工作时间：%@",data[@"worktime"]];
+            self.call.text = [NSString stringWithFormat:@"%@",data[@"telphone"]];
+        }
+    }];
+}
+
 -(void)sendContent{
-    if (_field.text.length<10 && [_field.text hasPrefix:orgTxt]) {
+    if (_field.text.length<5 || [_field.text hasPrefix:orgTxt]) {
         [LoadingView showAMessage:orgTxt];
         return;
     }
+    [LoadingView showLoading];
+    [CBBaseModel request:@"/service/index/addQuestion" par:@{@"content":_field.text} callback:^(id  _Nonnull data, NSString * _Nonnull msg) {
+        
+        [LoadingView showAMessage:msg];
+        if ([msg containsString:@"成功"]) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                POP;
+            });
+        }
+    }];
 }
 
 -(void)textViewDidBeginEditing:(UITextView *)textView{

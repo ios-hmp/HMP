@@ -13,7 +13,8 @@
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define ADDTarget(btn,tgr,slc) [btn addTarget:tgr action:slc forControlEvents:UIControlEventTouchUpInside]
 
-
+#define KWXAPPID @"wx5d6eec777464a4e9"
+#define KWXSECRET @""
 #define KDURL @"https://itunes.apple.com/cn/app/id1447772016"
 #define BUser [BmobUser currentUser]
 #define PUSH(vc) [self.navigationController pushViewController:vc animated:YES];

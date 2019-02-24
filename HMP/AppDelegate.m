@@ -9,9 +9,12 @@
 #import "AppDelegate.h"
 #import "CBBaseTabbarVc.h"
 #import <HyphenateLite/HyphenateLite.h>
+#import "WXApi.h"
 
-@interface AppDelegate ()<EMClientDelegate>
-
+@interface AppDelegate ()<EMClientDelegate,WXApiDelegate>
+{
+    UIViewController *loginVc;
+}
 @end
 
 @implementation AppDelegate
@@ -22,11 +25,13 @@
     [[UINavigationBar appearance] setTintColor:[UIColor darkGrayColor]];
     //无token，去登录；登录后保存token
     [[UITabBar appearance] setTranslucent:NO];
+//    [[CBUser share] logout];
     BOOL goLogin = ![CBUser share].token;
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     if (goLogin) {
-        UIViewController *vc = [AppManager getVCInBoard:@"Login" ID:@"loginNav"];
-        self.window.rootViewController = vc;
+        UINavigationController *nav = (UINavigationController *)[AppManager getVCInBoard:@"Login" ID:@"loginNav"];
+        loginVc = nav.topViewController;
+        self.window.rootViewController = nav;
     }else{
         self.window.rootViewController = [[CBBaseTabbarVc alloc]init];        
     }
@@ -39,6 +44,9 @@
     [[EMClient sharedClient] initializeSDKWithOptions:options];
     [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
 
+    //向微信注册
+    [WXApi registerApp:@"wx5d6eec777464a4e9"];
+    
     //用户登录app后同步登录环信
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginEM:) name:@"loginEM" object:nil];
     
@@ -79,6 +87,23 @@
 {
     [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+-(void)onResp:(BaseResp *)resp{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"wxcbk" object:resp];
+    NSLog(@"%@",resp);
+}
+-(void)onReq:(BaseReq *)req{
+    NSLog(@"%@",req);
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

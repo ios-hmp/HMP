@@ -68,6 +68,8 @@
         
         [self updateInfo];
         
+    }else if (self.isAddFr){
+        self.title = @"朋友关系申请";
     }
 
 }
@@ -219,9 +221,9 @@
     __weak typeof(self) weakSelf = self;
     for (NSString *tit in @[@"取消",@"申请"]) {
         UIAlertAction *act1 = [UIAlertAction actionWithTitle:tit style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            if ([act1.title isEqualToString:@"申请"]) {
+            if ([action.title isEqualToString:@"申请"]) {
                 
-                [weakSelf sendApply];
+                [weakSelf sendApply:alertVc.textFields.firstObject.text];
             }
         }];
         [alertVc addAction:act1];
@@ -246,8 +248,10 @@
 }
 
 
--(void)sendApply{
-    
+-(void)sendApply:(NSString *)msg{
+    [CBBaseModel request:@"friends/index/apply" par:@{@"uid":cur_res[@"id"]?:@"",@"req_message":msg?:@""} callback:^(id  _Nonnull data, NSString * _Nonnull msg) {
+        [LoadingView showAMessage:msg];
+    }];
 }
 - (IBAction)tousu:(UIButton *)sender {
     
@@ -262,16 +266,30 @@
         case 2:
         {
             //黑名单
-            
+            [CBBaseModel request:@"friends/index/block" par:@{@"uid":cur_res[@"id"]?:@""} callback:^(id  _Nonnull data, NSString * _Nonnull msg) {
+                [LoadingView showAMessage:msg];
+            }];
         }
             break;
         case 3:
         {
             //解除关系
+            __weak typeof(self) weakSelf = self;
             [CBFastUI showAlert:@"缴纳平台年度服务费" content:@"您将与对方解除爱人关系，达成爱人关系期间不收取费用，因为您是爱人关系申请方且主动提出解除爱人关系，您需要缴纳年度服务费后，才能使用平台功能，然后从爱人关系解除之日重新计算收费周期。" btns:@[@"不同意",@"同意"] callBack:^(NSString * _Nonnull title) {
                 if ([title isEqualToString:@"同意"]) {
                     [CBFastUI showAlert:@"您正在与****解除关系，请确认" content:@"" btns:@[@"不解除",@"确认解除"] callBack:^(NSString * _Nonnull title) {
-                       
+                        if ([title isEqualToString:@"确认解除"]) {
+                            
+                            [[Httprequest share] postObjectByParameters:nil andUrl:@"friends/index/applyRelieveLover" showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
+                                //解除爱人关系 当返回的code=1005 需要创建交费订单并且支付才能解除
+                                NSInteger code = [obj[@"code"] integerValue];
+                                if (code==1005) {
+                                    //创建订单并支付再解除
+                                    [weakSelf createOrder];
+                                }
+                            } andError:^(NSError *error) {
+                            }];
+                        }
                     }];
                 }
             }];
@@ -289,5 +307,21 @@
             break;
     }
     extBgView.hidden = YES;
+}
+
+- (void)createOrder{
+    
+}
+
+- (IBAction)agreeFriends:(UIButton *)sender {
+    if ([sender.currentTitle isEqualToString:@"拒绝"]) {
+        [CBBaseModel request:@"friends/index/disAgree" par:@{@"apply_id":self.applyInfo[@"apply_id"]?:@""} callback:^(id  _Nonnull data, NSString * _Nonnull msg) {
+            [LoadingView showAMessage:msg];
+        }];
+    }else{
+        [CBBaseModel request:@"friends/index/agree" par:@{@"apply_id":self.applyInfo[@"apply_id"]?:@""} callback:^(id  _Nonnull data, NSString * _Nonnull msg) {
+            [LoadingView showAMessage:msg];
+        }];
+    }
 }
 @end

@@ -54,7 +54,7 @@
 }
 
 -(void)loadNetData{
-    NSString *url = @"/user/list/index";
+    NSString *url = @"user/list/index";
     __weak typeof(self) weakSelf = self;
     [[Httprequest share] postObjectByParameters:nil andUrl:url showLoading:NO showMsg:NO isFullUrk:NO andComplain:^(id obj) {
         if ([obj[@"msg"] containsString:@""]) {

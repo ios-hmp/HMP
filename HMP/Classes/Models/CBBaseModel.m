@@ -23,9 +23,19 @@ CBBaseModel *_md;
     
 }
 
--(void)request:(NSString *)url par:(NSDictionary *)dic callback:(NetCallback)callback{
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        callback(1,@"",nil);
-//    });
++(void)request:(NSString *)url par:(NSDictionary *)dic callback:(APICallback)callback{
+
+    [[Httprequest share] postObjectByParameters:dic andUrl:url showLoading:NO showMsg:NO isFullUrk:NO andComplain:^(id obj) {
+        NSString *msg = obj[@"msg"];
+        if ([obj[@"data"] isKindOfClass:[NSArray class]] || ISDIC(obj[@"data"])) {
+            NSDictionary *info = [obj[@"data"] mutableCopy];
+            callback(info,msg);
+        }else{
+            callback(nil,msg);
+        }
+    } andError:^(NSError *error) {
+        callback(nil,[NSString stringWithFormat:@"出错了：%ld",(long)error.code]);
+    }];
+    
 }
 @end

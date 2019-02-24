@@ -26,7 +26,11 @@
     [CBFastUI addGradintBg:self.registerBtn];
     if (self.isFroget) {
         [CBFastUI addGradintBg:self.findPwd];
+        self.title = @"找回密码";
 
+    }
+    if (self.isBind) {
+        self.title = @"绑定手机号";
     }
 }
 
@@ -121,7 +125,7 @@
     
     NSDictionary *par = @{
                           @"username":_phone.text,
-                          @"is_register":@1,
+                          @"is_register":self.isFroget?@0:@1,
                           };
     [[Httprequest share] postObjectByParameters:par andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
         
@@ -129,7 +133,7 @@
             NSDictionary *info = obj;
             if (ISDIC(info) && [info[@"code"] integerValue]==0) {
                 [LoadingView showAMessage:@"验证码发送成功"];
-                
+                [self->_verifycode becomeFirstResponder];
                 [weakSelf countDown];
             }else{
                 sender.userInteractionEnabled = YES;
@@ -162,6 +166,68 @@
     [timer invalidate];
 }
 - (IBAction)findPwdAct:(id)sender {
+    if (_phone.text.length<5) {
+        return;
+    }
+    if (_verifycode.text.length<4) {
+        return;
+    }
+    if (_pwdField.text.length<1) {
+        return;
+    }
+    if (_pwdField2.text.length<1) {
+        return;
+    }
+    if (![_pwdField.text isEqualToString:_pwdField2.text]) {
+        [LoadingView showAMessage:@"两次密码输入不一致"];
+        return;
+    }
+    NSString *url = @"user/public/passwordReset";
+    
+    NSDictionary *par = @{
+                          @"username":_phone.text,
+                          @"password":_pwdField2.text ,
+                          @"verification_code":_verifycode.text,
+                          
+                          };
+    [[Httprequest share] postObjectByParameters:par andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
+        if (obj && [obj[@"msg"] containsString:@"成功"]) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                POP;
+            });
+        }
+    } andError:^(id error) {
+        
+    }];
+    
+    
+}
+
+
+- (IBAction)bindAction:(UIButton *)sender {
+    if (_phone.text.length<5) {
+        return;
+    }
+    if (_verifycode.text.length<4) {
+        return;
+    }
+   
+    NSString *url = @"user/public/bindPhone";
+    
+    NSDictionary *par = @{
+                          @"username":_phone.text,
+                          @"verification_code":_verifycode.text,
+                          };
+    [[Httprequest share] postObjectByParameters:par andUrl:url showLoading:YES showMsg:YES isFullUrk:NO andComplain:^(id obj) {
+        if (obj && [obj[@"msg"] containsString:@"成功"]) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                POP;
+            });
+        }
+    } andError:^(id error) {
+        
+    }];
+    
     
 }
 @end

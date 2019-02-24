@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CBApplyInputVc : CBBaseVc
-
+@property (nonatomic,strong)NSDictionary *applyInfo;
+@property (nonatomic,assign)int type;//1 升级好友 2恋人  3爱人
 @end
 
 NS_ASSUME_NONNULL_END

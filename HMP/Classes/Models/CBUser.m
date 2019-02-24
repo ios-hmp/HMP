@@ -50,6 +50,12 @@ CBUser *_user;
 
 -(void)logout{
     self.token = nil;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        EMError *error = [[EMClient sharedClient] logout:YES];
+        if (!error) {
+            NSLog(@"退出环信成功");
+        }
+    });
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"UINFO"];
 }
 

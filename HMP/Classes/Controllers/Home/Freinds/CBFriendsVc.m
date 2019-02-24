@@ -40,37 +40,14 @@ char* const buttonKey = "buttonKey";
 
 - (void)initDataSource
 {
+//
+    NSString *url = @"friends/index/friendList";
     dataSource = [[NSMutableArray alloc]init];
-    NSDictionary *JSONDic =@{@"group":
-                                 @[
-                                     @{@"groupName":@"爱人",@"groupArray":@[]},
-                                     @{@"groupName":@"恋人(2/5)",@"groupArray":@[]},
-                                     @{@"groupName":@"好友(8/30)",@"groupArray":@[]},
-                                     @{@"groupName":@"朋友(2/200)",@"groupArray":@[]}
-                                     ]
-                                     };
-    NSArray *imgs = @[@"http://img.52z.com/upload/news/image/20180828/20180828090306_57295.jpg",@"http://img.52z.com/upload/news/image/20171113/20171113103706_61654.jpg",@"http://img.52z.com/upload/news/image/20180309/20180309090651_48055.jpg"];
-    NSMutableArray *friends = [NSMutableArray array];
-    for (int i=0; i<3; i++) {
-        CBFriends *fr = [[CBFriends alloc]init];
-        fr.name = [NSString stringWithFormat:@"%c%c%c-%c%c",arc4random()%50+50,arc4random()%50+50,arc4random()%50+50,arc4random()%50+50,arc4random()%50+50];
-        fr.vip = arc4random()%2;
-        fr.uid = i+10;
-        fr.star = arc4random()%2?@"双鱼":@"狮子";
-        fr.head = imgs[i];
-        fr.qmd = [@(arc4random()%100) stringValue];
-        fr.hyd = [@(arc4random()%100) stringValue];
-        [friends addObject:fr];
-    }
-    
-    for (NSDictionary *groupInfoDic in JSONDic[@"group"]) {
-        GroupModel *model = [[GroupModel alloc]init];
-        model.groupName = groupInfoDic[@"groupName"];
-        model.groupCount = [groupInfoDic[@"groupCount"] integerValue];
-        model.isOpened = NO;
-        model.groupFriends = friends;
-        [dataSource addObject:model];
-    }
+    [CBBaseModel request:url par:nil callback:^(id data, NSString *msg) {
+        if (data) {
+            self->dataSource = [GroupModel mj_objectArrayWithKeyValuesArray:data];
+        }
+    }];
 }
 
 -(void)initTable{
@@ -95,19 +72,19 @@ char* const buttonKey = "buttonKey";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     GroupModel *groupModel = dataSource[section];
-    NSInteger count = groupModel.isOpened?groupModel.groupFriends.count:0;
+    NSInteger count = groupModel.isOpened?groupModel.friend_list.count:0;
     return count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     GroupModel *groupModel = dataSource[indexPath.section];
-    CBFriends *fr = groupModel.groupFriends[indexPath.row];
+    CBFriends *fr = groupModel.friend_list[indexPath.row];
     cell.nameLabel.text = fr.name;
-    [cell.avatarIV sd_setImageWithURL:[NSURL URLWithString:fr.head?:@""]];
-    [cell.qmd setTitle:fr.qmd?:@"--" forState:UIControlStateNormal];
-    [cell.hyd setTitle:fr.hyd?:@"--" forState:UIControlStateNormal];
-    cell.star.text = fr.star?:@"--";
+    [cell.avatarIV sd_setImageWithURL:[NSURL URLWithString:fr.avatar?:@""]];
+    [cell.qmd setTitle:fr.intimacy?:@"--" forState:UIControlStateNormal];
+    [cell.hyd setTitle:fr.matching_rate?:@"--" forState:UIControlStateNormal];
+    cell.star.text = fr.constellation?:@"--";
     cell.vip.hidden = fr.vip;
     [cell.nameLabel sizeToFit];
     cell.vip.left = cell.nameLabel.right+5;
@@ -143,7 +120,7 @@ char* const buttonKey = "buttonKey";
     button.height = 50;
     [button setTag:section];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button setTitle:groupModel.groupName forState:UIControlStateNormal];
+    [button setTitle:groupModel.grop_name forState:UIControlStateNormal];
     [button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 27, 0, 0)];
     [button addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
@@ -177,7 +154,7 @@ char* const buttonKey = "buttonKey";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GroupModel *groupModel = dataSource[indexPath.section];
-    CBFriends *friendInfoDic = groupModel.groupFriends[indexPath.row];
+    CBFriends *friendInfoDic = groupModel.friend_list[indexPath.row];
 }
 
 - (void)buttonPress:(UIButton *)sender//headButton点击
@@ -235,5 +212,37 @@ char* const buttonKey = "buttonKey";
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return NO;
+    }
+    return YES;
+}
+
+// 定义编辑样式
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+// 进入编辑模式，按下出现的编辑按钮后,进行删除操作
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        GroupModel *groupModel = dataSource[indexPath.section];
+        CBFriends *friendInfoDic = groupModel.friend_list[indexPath.row];
+        [self deleteFriends:friendInfoDic.uid];
+    }
+}
+
+// 修改编辑按钮文字
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"删除";
+}
+
+
+- (void)deleteFriends:(NSString *)uid{
+    [CBBaseModel request:@"friends/index/delFriend" par:@{@"uid":uid} callback:^(id  _Nonnull data, NSString * _Nonnull msg) {
+        [LoadingView showAMessage:msg];
+    }];
+}
 @end
 

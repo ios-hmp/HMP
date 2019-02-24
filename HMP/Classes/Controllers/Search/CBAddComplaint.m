@@ -80,7 +80,7 @@
     return _firstTagsView;
 }
 -(void)sendContent{
-    if (_field.text.length<10 && [_field.text hasPrefix:orgTxt]) {
+    if (_field.text.length<5 || [_field.text hasPrefix:orgTxt]) {
         [LoadingView showAMessage:orgTxt];
         return;
     }
